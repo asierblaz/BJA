@@ -11,14 +11,12 @@ public class Kikara {
     Context context;
     Bitmap kikaraIrudia;
     int kikaraX, kikaraY;
-    Random random;
 
 
     public Kikara(Context context) {
         this.context = context;
         kikaraIrudia = BitmapFactory.decodeResource(context.getResources(), R.drawable.kikara);
-        random = new Random();
-        kikaraX = random.nextInt(JolasaView.pantallaAncho);
+        kikaraX = (JolasaView.pantallaAncho-kikaraIrudia.getWidth())/2;
         kikaraY = JolasaView.pantallaAlto - kikaraIrudia.getHeight();
     }
 
