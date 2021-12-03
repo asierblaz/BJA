@@ -16,6 +16,7 @@ import android.view.View;
 public class JolasaView extends View {
 
     Context context;
+   static Context c;
     Bitmap fondo;
     static int pantallaAncho, pantallaAlto;
     Kikara kikara;
@@ -49,9 +50,9 @@ public class JolasaView extends View {
         handler = new Handler();//evento para movimiento con el dedo
         kikara = new Kikara(context);
 
-        azucar= new Azucar(context);
         esnea= new Esnea(context);
-
+        azucar = new Azucar(context);
+        //c=context;
         fondo = BitmapFactory.decodeResource(context.getResources(), R.drawable.background);
     }
 
@@ -60,16 +61,10 @@ public class JolasaView extends View {
         Log.d("a","1");
         canvas.drawBitmap(fondo,0,0,null);
         crearTaza(canvas);
-    int n=0;
-    
-            crearAzucar(canvas);
 
+        crearAzucar(canvas);
 
-            crearEsnea(canvas);
-
-
-
-
+        crearEsnea(canvas);
 
         // se ejecuta el juego con el hilo
         caida.run();
@@ -108,24 +103,24 @@ public class JolasaView extends View {
    }
 
    public void crearAzucar(Canvas canvas){
-       //------------------- AZUCAR --------------------------------------
-       //para que siempre este en la pantalla
+        //azucar= new Azucar(c);
+
        if(azucar.azucarX > pantallaAncho - azucar.getAzucarIrudiaAncho()){
            azucar.azucarX = pantallaAncho - azucar.getAzucarIrudiaAncho();
        }else if(azucar.azucarX < 0){
            azucar.azucarX = 0;
        }
-       //añadir azucar
+
        canvas.drawBitmap(azucar.getAzucarIrudia(), azucar.azucarX, azucar.azucarY, null);
    }
 
    public  void crearEsnea(Canvas canvas){
+        //esnea = new Esnea(c);
        if(esnea.esneaX > pantallaAncho - esnea.getEsneaIrudiaAncho()){
            esnea.esneaX = pantallaAncho - esnea.getEsneaIrudiaAncho();
        }else if(azucar.azucarX < 0){
            azucar.azucarX = 0;
        }
-       //añadir leche
        canvas.drawBitmap(esnea.getEsneaIrudia(), esnea.esneaX, esnea.esneaY, null);
    }
 
