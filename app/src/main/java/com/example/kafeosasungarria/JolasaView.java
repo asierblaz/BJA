@@ -20,6 +20,7 @@ public class JolasaView extends View {
     static int pantallaAncho, pantallaAlto;
     Kikara kikara;
     Azucar azucar;
+    Esnea esnea;
     Handler handler;
     int velocidad=50;
     int vida=50;
@@ -47,7 +48,10 @@ public class JolasaView extends View {
         pantallaAncho= size.x;
         handler = new Handler();//evento para movimiento con el dedo
         kikara = new Kikara(context);
+
         azucar= new Azucar(context);
+        esnea= new Esnea(context);
+
         fondo = BitmapFactory.decodeResource(context.getResources(), R.drawable.background);
     }
 
@@ -96,6 +100,19 @@ public class JolasaView extends View {
         //añadir azucar
         canvas.drawBitmap(azucar.getAzucarIrudia(), azucar.azucarX, azucar.azucarY, null);
 
+        //---------------LECHE --------------------------------
+        //para que siempre este en la pantalla
+        if(esnea.esneaX > pantallaAncho - esnea.getEsneaIrudiaAncho()){
+            esnea.esneaX = pantallaAncho - esnea.getEsneaIrudiaAncho();
+        }else if(azucar.azucarX < 0){
+            azucar.azucarX = 0;
+        }
+        //añadir leche
+        canvas.drawBitmap(esnea.getEsneaIrudia(), esnea.esneaX, esnea.esneaY, null);
+
+
+
+
 
         // se ejecuta el juego con el hilo
         caida.run();
@@ -119,6 +136,7 @@ public class JolasaView extends View {
 
 
         }*/ azucar.azucarY +=velocidad;
+            esnea.esneaY +=velocidad;
    }
 
 }
