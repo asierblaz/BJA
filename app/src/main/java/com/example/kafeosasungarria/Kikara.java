@@ -18,8 +18,8 @@ public class Kikara {
         this.context = context;
         kikaraIrudia = BitmapFactory.decodeResource(context.getResources(), R.drawable.kikara);
         random = new Random();
-        kikaraX = random.nextInt(Jolasa.pantallaAncho);
-        kikaraY = Jolasa.pantallaAlto - kikaraIrudia.getHeight();
+        kikaraX = random.nextInt(JolasaView.pantallaAncho);
+        kikaraY = JolasaView.pantallaAlto - kikaraIrudia.getHeight();
     }
 
     public Bitmap getKikaraIrudia(){
@@ -30,28 +30,3 @@ public class Kikara {
         return kikaraIrudia.getWidth();
     }
 }
-
-    /*public class OurSpaceship {
-    Context context;
-    Bitmap ourSpaceship;
-    int ox, oy;
-    Random random;
-
-    public OurSpaceship(Context context) {
-        this.context = context;
-        ourSpaceship = BitmapFactory.decodeResource(context.getResources(), R.drawable.rocket1);
-        random = new Random();
-        ox = random.nextInt(SpaceShooter.screenWidth);
-        oy = SpaceShooter.screenHeight - ourSpaceship.getHeight();
-    }
-
-    public Bitmap getOurSpaceship(){
-        return ourSpaceship;
-    }
-
-    int getOurSpaceshipWidth(){
-        return ourSpaceship.getWidth();
-    }
-}
-*/
-
