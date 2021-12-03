@@ -22,7 +22,7 @@ public class JolasaView extends View {
     Azucar azucar;
     Esnea esnea;
     Handler handler;
-    int velocidad=50;
+    int velocidad=10;
     int vida=50;
     final Runnable haria = new Runnable() {
         @Override
@@ -59,56 +59,13 @@ public class JolasaView extends View {
         //añadir el fondo al canvas
         Log.d("a","1");
         canvas.drawBitmap(fondo,0,0,null);
-
-        //------------- TAZA -----------------------
-
-       //para que siempre este en la pantalla
-        if(kikara.kikaraX > pantallaAncho - kikara.getKikaraIrudiaAncho()){
-            kikara.kikaraX = pantallaAncho - kikara.getKikaraIrudiaAncho();
-        }else if(kikara.kikaraX < 0){
-            kikara.kikaraX = 0;
-        }
-
-        //añadir la taza
-        canvas.drawBitmap(kikara.getKikaraIrudia(), kikara.kikaraX, kikara.kikaraY, null);
-
-        //------------------- AZUCAR --------------------------------------
-        //para que siempre este en la pantalla
-        if(azucar.azucarX > pantallaAncho - azucar.getAzucarIrudiaAncho()){
-            azucar.azucarX = pantallaAncho - azucar.getAzucarIrudiaAncho();
-        }else if(azucar.azucarX < 0){
-            azucar.azucarX = 0;
-        }
-
-        /*for(int i=0; i < azucar.size(); i++){
-            ourShots.get(i).shy -= 15;
-            canvas.drawBitmap(ourShots.get(i).getShot(), ourShots.get(i).shx, ourShots.get(i).shy, null);
-            if((ourShots.get(i).shx >= enemySpaceship.ex)
-                    && ourShots.get(i).shx <= enemySpaceship.ex + enemySpaceship.getEnemySpaceshipWidth()
-                    && ourShots.get(i).shy <= enemySpaceship.getEnemySpaceshipWidth()
-                    && ourShots.get(i).shy >= enemySpaceship.ey){
-                points++;
-                ourShots.remove(i);
-                explosion = new Explosion(context, enemySpaceship.ex, enemySpaceship.ey);
-                explosions.add(explosion);
-            }else if(ourShots.get(i).shy <=0){
-                ourShots.remove(i);
-            }
-        }*/
+        crearTaza(canvas);
+    int n=0;
+    
+            crearAzucar(canvas);
 
 
-        //añadir azucar
-        canvas.drawBitmap(azucar.getAzucarIrudia(), azucar.azucarX, azucar.azucarY, null);
-
-        //---------------LECHE --------------------------------
-        //para que siempre este en la pantalla
-        if(esnea.esneaX > pantallaAncho - esnea.getEsneaIrudiaAncho()){
-            esnea.esneaX = pantallaAncho - esnea.getEsneaIrudiaAncho();
-        }else if(azucar.azucarX < 0){
-            azucar.azucarX = 0;
-        }
-        //añadir leche
-        canvas.drawBitmap(esnea.getEsneaIrudia(), esnea.esneaX, esnea.esneaY, null);
+            crearEsnea(canvas);
 
 
 
@@ -139,6 +96,46 @@ public class JolasaView extends View {
             esnea.esneaY +=velocidad;
    }
 
+   public void crearTaza(Canvas canvas){
+       if(kikara.kikaraX > pantallaAncho - kikara.getKikaraIrudiaAncho()){
+           kikara.kikaraX = pantallaAncho - kikara.getKikaraIrudiaAncho();
+       }else if(kikara.kikaraX < 0){
+           kikara.kikaraX = 0;
+       }
+
+       //añadir la taza
+       canvas.drawBitmap(kikara.getKikaraIrudia(), kikara.kikaraX, kikara.kikaraY, null);
+   }
+
+   public void crearAzucar(Canvas canvas){
+       //------------------- AZUCAR --------------------------------------
+       //para que siempre este en la pantalla
+       if(azucar.azucarX > pantallaAncho - azucar.getAzucarIrudiaAncho()){
+           azucar.azucarX = pantallaAncho - azucar.getAzucarIrudiaAncho();
+       }else if(azucar.azucarX < 0){
+           azucar.azucarX = 0;
+       }
+       //añadir azucar
+       canvas.drawBitmap(azucar.getAzucarIrudia(), azucar.azucarX, azucar.azucarY, null);
+   }
+
+   public  void crearEsnea(Canvas canvas){
+       if(esnea.esneaX > pantallaAncho - esnea.getEsneaIrudiaAncho()){
+           esnea.esneaX = pantallaAncho - esnea.getEsneaIrudiaAncho();
+       }else if(azucar.azucarX < 0){
+           azucar.azucarX = 0;
+       }
+       //añadir leche
+       canvas.drawBitmap(esnea.getEsneaIrudia(), esnea.esneaX, esnea.esneaY, null);
+   }
+
+    public void froga(Canvas canvas) {
+        Thread hilo = new Thread(() ->
+        {
+
+
+        });
+    }
 }
 
 
