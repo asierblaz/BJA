@@ -27,4 +27,9 @@ public class Kikara {
     int getKikaraIrudiaAncho(){
         return kikaraIrudia.getWidth();
     }
+
+    int getKikaraIrudiaAlto(){
+        return kikaraIrudia.getHeight();
+    }
+
 }

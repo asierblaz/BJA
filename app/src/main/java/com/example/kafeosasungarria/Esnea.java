@@ -29,4 +29,9 @@ public class Esnea {
     int getEsneaIrudiaAncho(){
         return EsneaIrudia.getWidth();
     }
+
+    int getEsneaIrudiaAlto(){
+        return EsneaIrudia.getHeight();
+    }
+
 }
