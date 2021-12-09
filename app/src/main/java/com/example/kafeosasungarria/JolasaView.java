@@ -162,9 +162,11 @@ public class JolasaView extends View {
 
 
 
-          if((azucares.get(i).azucarY >= kikara.kikaraY) && azucares.get(i).azucarY <= kikara.kikaraY + kikara.getKikaraIrudiaAlto()
-                && azucares.get(i).azucarX >= kikara.kikaraX
-                && azucares.get(i).azucarY <= pantallaAlto){
+          if((azucares.get(i).azucarY >= kikara.kikaraY)
+                  && azucares.get(i).azucarY <= kikara.kikaraY + kikara.getKikaraIrudiaAlto()
+                  && azucares.get(i).azucarX <= kikara.kikaraX + kikara.getKikaraIrudiaAncho()
+                  && azucares.get(i).azucarX >= kikara.kikaraX
+                  && azucares.get(i).azucarX <= pantallaAncho){
                 vida--;
                 Log.d("vida",vida+"");
                 azucares.remove(i);
