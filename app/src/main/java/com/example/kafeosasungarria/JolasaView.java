@@ -5,15 +5,14 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Point;
 import android.os.Handler;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
-
-import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
@@ -27,24 +26,23 @@ public class JolasaView extends View {
     static int pantallaAncho, pantallaAlto;
     ArrayList<Azucar> azucares;
     ArrayList<Esnea> leches;
+    ArrayList<Cafe> cafes;
     Kikara kikara;
     Azucar azucar;
     Esnea esnea;
+    Cafe cafe;
     Handler handler;
     int velocidad=10;
-    int vida=50;
+    int vida=5;
     int puntuacion=0;
+    Paint paintPuntuacion;
+
+
+
     final Runnable haria = new Runnable() {
         @Override
         public void run() {
             invalidate();
-        }
-    };
-    final Runnable caida = new Runnable() {
-        @Override
-        public void run() {
-            lanzar();
-
         }
     };
 
@@ -59,32 +57,35 @@ public class JolasaView extends View {
         kikara = new Kikara(context);
         esnea= new Esnea(context);
         azucar = new Azucar(context);
+        cafe = new Cafe(context);
         azucares= new ArrayList<Azucar>();
         leches= new ArrayList<Esnea>();
+        cafes= new ArrayList<Cafe>();
         c=context;
         fondo = BitmapFactory.decodeResource(context.getResources(), R.drawable.background);
+        paintPuntuacion = new Paint();
+        paintPuntuacion.setColor(Color.GREEN);
+        paintPuntuacion.setTextSize(80);
+        paintPuntuacion.setTextAlign(Paint.Align.LEFT);
     }
-
-
-
 
 
     protected void onDraw(Canvas canvas){
         //añadir el fondo al canvas
         canvas.drawBitmap(fondo,0,0,null);
+        canvas.drawText("Pt: " + puntuacion+"\n"+"Vi: "+ vida, 0, 80, paintPuntuacion);
+
         canv= canvas;
         crearTaza(canvas);
       //  crearAzucar(canvas);
 
        // crearEsnea(canvas);
 
-        // se ejecuta el juego con el hilo
-        caida.run();
-        //Log.d("",cont+"");
 
         if(cont % 27 ==0){
             //addAzucar();
             addEsnea();
+            addCafe();
         }
         if(cont % 25 ==0){
             addAzucar();
@@ -94,7 +95,7 @@ public class JolasaView extends View {
             velocidad= 30;
         }*/
 //---------------ESNEA----------------------------------
-
+/*
         for(int i =0; i<leches.size();i++){
 
             if(leches.get(i).esneaX > pantallaAncho - leches.get(i).getEsneaIrudiaAncho()){
@@ -112,14 +113,39 @@ public class JolasaView extends View {
                     && leches.get(i).esneaX >= kikara.kikaraX
                     && leches.get(i).esneaY <= pantallaAlto){
                 puntuacion++;
-                Log.d("vida",puntuacion+"");
+                Log.d("puntu",puntuacion+"");
                 leches.remove(i);
             }else if(leches.get(i).esneaY >= (pantallaAlto)) { //para eliminar los que se salen de la pantalla
                 leches.remove(i);
             }
 
         }
+*/
+//---------------CAFE----------------------------------
 
+       /* for(int i =0; i<cafes.size();i++){
+            if(cafes.get(i).cafeX > pantallaAncho - cafes.get(i).getCafeIrudiaAncho()){
+                cafes.get(i).cafeX = pantallaAncho - cafes.get(i).getCafeIrudiaAncho();
+            }else if(cafes.get(i).cafeX < 0){
+                cafes.get(i).cafeX = 0;
+            }
+
+            canvas.drawBitmap(cafes.get(i).getCafeIrudia(), cafes.get(i).cafeX, cafes.get(i).cafeY, null);
+            cafes.get(i).cafeY +=velocidad;
+
+
+
+            if((cafes.get(i).cafeY >= kikara.kikaraY) && cafes.get(i).cafeY <= kikara.kikaraY + kikara.getKikaraIrudiaAlto()
+                    && cafes.get(i).cafeX >= kikara.kikaraX
+                    && cafes.get(i).cafeY <= pantallaAlto){
+                puntuacion++;
+                Log.d("puntu",puntuacion+"");
+                cafes.remove(i);
+            }else if(cafes.get(i).cafeY >= (pantallaAlto)) { //para eliminar los que se salen de la pantalla
+                cafes.remove(i);
+            }
+
+        }*/
 
      //-------------AZUCAR--------------------------------
 
@@ -166,14 +192,6 @@ public class JolasaView extends View {
         return true;
     }
 
-   public void lanzar(){
-      /*  Log.d("op",o.getClass().getName()+"");
-        if(o.getClass().getName()+""=="com.example.kafeosasungarria.Azucar"){
-        }*/
-       azucar.azucarY +=velocidad;
-    //   esnea.esneaY +=velocidad;
-   }
-
    public void crearTaza(Canvas canvas){
        if(kikara.kikaraX > pantallaAncho - kikara.getKikaraIrudiaAncho()){
            kikara.kikaraX = pantallaAncho - kikara.getKikaraIrudiaAncho();
@@ -203,7 +221,10 @@ public class JolasaView extends View {
         Esnea e= new Esnea(c);
         leches.add(e);
     }
-
+    public void addCafe(){
+        Cafe cafe= new Cafe(c);
+        cafes.add(cafe);
+    }
    public  void crearEsnea(Canvas canvas){
         //esnea = new Esnea(c);
        if(esnea.esneaX > pantallaAncho - esnea.getEsneaIrudiaAncho()){
