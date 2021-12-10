@@ -6,17 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button jolastuButton;
+    TextView jolastuButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        jolastuButton=this.findViewById(R.id.buttonEmpezarJuego);
+        jolastuButton=this.findViewById(R.id.jolastuText);
         jolastuButton.setOnClickListener(this::jolastu);
     }
 

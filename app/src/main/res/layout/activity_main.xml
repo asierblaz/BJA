@@ -4,18 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/fondo">
 
-    <Button
-        android:id="@+id/buttonEmpezarJuego"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jugar"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="336dp"
+        android:layout_height="55dp"
+        android:text="Kafe Osasungarria"
+        android:textColor="#E4E4E1"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.061" />
+
+    <TextView
+        android:id="@+id/jolastuText"
+        android:layout_width="153dp"
+        android:layout_height="108dp"
+        android:text="Jolastu"
+        android:textColor="#050505"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.208" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

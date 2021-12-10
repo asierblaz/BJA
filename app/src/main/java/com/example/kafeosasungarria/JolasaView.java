@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
@@ -63,7 +64,8 @@ public class JolasaView extends View {
         leches= new ArrayList<Esnea>();
         vidas= new ArrayList<Vida>();//son las vidas que caen
         cafes= new ArrayList<Cafe>();
-        fondo = BitmapFactory.decodeResource(context.getResources(), R.drawable.background);
+        fondo = BitmapFactory.decodeResource(context.getResources(), R.drawable.fondo);
+        fondo=Bitmap.createScaledBitmap(fondo,pantallaAncho,pantallaAlto,false);
         lifeImg = BitmapFactory.decodeResource(context.getResources(), R.drawable.vida);
         paintPuntuacion = new Paint();
         paintPuntuacion.setColor(Color.GREEN);
@@ -111,6 +113,9 @@ public class JolasaView extends View {
       if(cont % 50==0){
             velocidad++;
         }
+      if(cont == 1000){
+          cont =0;
+      }
 //---------------ESNEA----------------------------------
 
         for(int i =0; i<leches.size();i++){
@@ -243,6 +248,7 @@ public class JolasaView extends View {
 
         if(event.getAction() == MotionEvent.ACTION_MOVE){
             kikara.kikaraX = touchX;
+
         }
         return true;
     }
