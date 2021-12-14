@@ -16,7 +16,7 @@ public class Cafe {
 
     public Cafe(Context context) {
         this.context = context;
-        CafeIrudia = BitmapFactory.decodeResource(context.getResources(), R.drawable.cafe);
+        CafeIrudia = BitmapFactory.decodeResource(context.getResources(), R.drawable.kafea);
         random = new Random();
         cafeX = random.nextInt(JolasaView.pantallaAncho);
         cafeY =0;

@@ -34,12 +34,12 @@ public class JolasaView extends View {
     Esnea esnea;
     Cafe cafe;
     Handler handler;
-    int velocidad=10;
+    int velocidad=20;
     int life =5;
     int puntuacion=0;
     Paint paintPuntuacion;
     boolean amaitu=false;
-
+    int zenbat=35;
 
     final Runnable haria = new Runnable() {
         @Override
@@ -64,7 +64,7 @@ public class JolasaView extends View {
         leches= new ArrayList<Esnea>();
         vidas= new ArrayList<Vida>();//son las vidas que caen
         cafes= new ArrayList<Cafe>();
-        fondo = BitmapFactory.decodeResource(context.getResources(), R.drawable.fondo);
+        fondo = BitmapFactory.decodeResource(context.getResources(), R.drawable.fondo2);
         fondo=Bitmap.createScaledBitmap(fondo,pantallaAncho,pantallaAlto,false);
         lifeImg = BitmapFactory.decodeResource(context.getResources(), R.drawable.vida);
         paintPuntuacion = new Paint();
@@ -85,19 +85,18 @@ public class JolasaView extends View {
         }
         crearTaza(canvas);
 
-//        if(random.nextInt(3)==)
 
-        /* switch (random.nextInt(10)){
+         switch (random.nextInt(zenbat)){
             case 0:addCafe();
             break;
             case 1:addEsnea();
             break;
             case 2:addAzucar();
             break;
-            default:break;
+
         }
-*/
-        if(cont % 26 ==0){
+
+ /*   if(cont % 26 ==0){
             addEsnea();
 
         }
@@ -106,15 +105,17 @@ public class JolasaView extends View {
         }
         if(cont % 33 ==0){
             addAzucar();
-        }
+        }*/
         if(cont % 597==0){
-            addVida();;
+            addVida();
         }
       if(cont % 50==0){
             velocidad++;
+            zenbat--;
         }
       if(cont == 1000){
           cont =0;
+
       }
 //---------------ESNEA----------------------------------
 
@@ -146,31 +147,31 @@ public class JolasaView extends View {
 
 //----------------------Caida de vidas------------------------------
 
-        for(int i =0; i<vidas.size();i++){
+    for (int i = 0; i < vidas.size(); i++) {
 
-            if(vidas.get(i).vidaX > pantallaAncho - leches.get(i).getEsneaIrudiaAncho()){
-                vidas.get(i).vidaX = pantallaAncho - leches.get(i).getEsneaIrudiaAncho();
-            }else if(vidas.get(i).vidaX < 0){
-                vidas.get(i).vidaX = 0;
-            }
-
-            canvas.drawBitmap(vidas.get(i).getVidaIrudia(), vidas.get(i).vidaX, vidas.get(i).vidaY, null);
-            vidas.get(i).vidaY +=velocidad;
-
-
-
-            if((vidas.get(i).vidaY >= kikara.kikaraY)
-                    && vidas.get(i).vidaY <= kikara.kikaraY + kikara.getKikaraIrudiaAlto()
-                    && vidas.get(i).vidaX <= kikara.kikaraX + kikara.getKikaraIrudiaAncho()
-                    && vidas.get(i).vidaX >= kikara.kikaraX
-                    && vidas.get(i).vidaX <= pantallaAncho){
-                life++;
-                vidas.remove(i);
-            }else if(vidas.get(i).vidaY >= (pantallaAlto)) { //para eliminar los que se salen de la pantalla
-                vidas.remove(i);
-            }
-
+        if (vidas.get(i).vidaX > pantallaAncho - vidas.get(i).getVidaIrudiaAncho()) {
+            vidas.get(i).vidaX = pantallaAncho - vidas.get(i).getVidaIrudiaAncho();
+        } else if (vidas.get(i).vidaX < 0) {
+            vidas.get(i).vidaX = 0;
         }
+
+        canvas.drawBitmap(vidas.get(i).getVidaIrudia(), vidas.get(i).vidaX, vidas.get(i).vidaY, null);
+        vidas.get(i).vidaY += velocidad;
+
+
+        if ((vidas.get(i).vidaY >= kikara.kikaraY)
+                && vidas.get(i).vidaY <= kikara.kikaraY + kikara.getKikaraIrudiaAlto()
+                && vidas.get(i).vidaX <= kikara.kikaraX + kikara.getKikaraIrudiaAncho()
+                && vidas.get(i).vidaX >= kikara.kikaraX
+                && vidas.get(i).vidaX <= pantallaAncho) {
+            life++;
+            vidas.remove(i);
+        } else if (vidas.get(i).vidaY >= (pantallaAlto)) { //para eliminar los que se salen de la pantalla
+            vidas.remove(i);
+        }
+
+    }
+
 
 //---------------CAFE----------------------------------
 
