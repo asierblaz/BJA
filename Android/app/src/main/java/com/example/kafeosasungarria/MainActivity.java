@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     public  void jolastu (View v){
         startActivity(new Intent(this, Jolastu.class));
-        finish();
+     //   finish();
 
     }
 

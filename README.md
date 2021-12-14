@@ -1,2 +1,0 @@
-# BJA
-Erronka-rako errepositorioa
