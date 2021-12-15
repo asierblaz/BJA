@@ -34,8 +34,8 @@ public class JolasaView extends View {
     Esnea esnea;
     Cafe cafe;
     Handler handler;
-    int velocidad=20;
-    int life =5;
+    int velocidad=15;
+    int life =1;
     int puntuacion=0;
     Paint paintPuntuacion;
     boolean amaitu=false;
@@ -109,7 +109,7 @@ public class JolasaView extends View {
         if(cont % 597==0){
             addVida();
         }
-      if(cont % 50==0){
+      if(cont % 60==0){
             velocidad++;
             zenbat--;
         }
@@ -238,7 +238,7 @@ public class JolasaView extends View {
 
         if(!amaitu) {
             cont++;
-            handler.postDelayed(haria, 10);
+            handler.postDelayed(haria, 0);
         }
 
 

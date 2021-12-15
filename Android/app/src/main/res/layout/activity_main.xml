@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="336dp"
+        android:layout_width="337dp"
         android:layout_height="55dp"
         android:text="Kafe Osasungarria"
         android:textColor="#E4E4E1"
@@ -26,13 +26,13 @@
         android:layout_height="82dp"
         android:text="Jolastu"
         android:textAlignment="center"
-        android:textColor="#009688"
+        android:textColor="#ffffff"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintVertical_bias="0.295" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
