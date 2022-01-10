@@ -1,6 +1,7 @@
 package com.example.kafeosasungarria;
 
 import android.app.Activity;
+import android.app.job.JobScheduler;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -71,6 +72,8 @@ public class JolasaView extends View {
         paintPuntuacion.setColor(Color.GREEN);
         paintPuntuacion.setTextSize(80);
         paintPuntuacion.setTextAlign(Paint.Align.LEFT);
+
+
     }
 
 
@@ -230,8 +233,10 @@ public class JolasaView extends View {
         if(life <=0){
             amaitu= true;
             handler= null;
+            Jolastu.getPartida().setPuntuacion(puntuacion);
             Intent gameOver = new Intent(getContext(),GameOver.class);
-           getContext().startActivity(gameOver);
+            gameOver.putExtra("partida",Jolastu.getPartida());
+            getContext().startActivity(gameOver);
             ((Activity) getContext()).finish();
 
         }

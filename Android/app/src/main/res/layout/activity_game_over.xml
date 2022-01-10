@@ -17,4 +17,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.346"
         app:srcCompat="@drawable/george" />
+<<<<<<< Updated upstream
+=======
+
+    <LinearLayout
+        android:layout_width="413dp"
+        android:layout_height="303dp"
+        android:layout_marginTop="428dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="142dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/play_btn"
+            android:layout_width="132dp"
+            android:layout_height="57dp"
+            android:background="@drawable/bordes_redondos"
+            android:text="Berriz Jolastu"
+            android:textColor="@drawable/txtboton" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+>>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>
