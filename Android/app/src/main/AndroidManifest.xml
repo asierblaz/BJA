@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         <activity
+            android:name=".TiendaActivity"
+            android:exported="false" />
+        <activity
             android:name=".GameOver"
             android:exported="false" />
         <activity

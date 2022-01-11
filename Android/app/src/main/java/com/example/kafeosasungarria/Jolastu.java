@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Jolastu extends AppCompatActivity {
 
     TextView play;
@@ -25,8 +28,10 @@ public class Jolastu extends AppCompatActivity {
 
 
     public void cambiar(View v){
-
         p = new Partida(j);
+        Date fecha = new Date(System.currentTimeMillis());
+        p.setFecha(fecha);
+        Log.d("",p.printFecha());
         setContentView(new JolasaView(this));
     }
 

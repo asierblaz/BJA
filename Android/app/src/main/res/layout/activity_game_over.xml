@@ -15,10 +15,8 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346"
+        app:layout_constraintVertical_bias="0.124"
         app:srcCompat="@drawable/george" />
-<<<<<<< Updated upstream
-=======
 
     <LinearLayout
         android:layout_width="413dp"
@@ -51,5 +49,4 @@
         </LinearLayout>
     </LinearLayout>
 
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>
