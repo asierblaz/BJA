@@ -12,10 +12,9 @@ public class Kikara {
     Bitmap kikaraIrudia;
     int kikaraX, kikaraY;
 
-
     public Kikara(Context context) {
         this.context = context;
-        kikaraIrudia = BitmapFactory.decodeResource(context.getResources(), R.drawable.kikara3);
+        kikaraIrudia = BitmapFactory.decodeResource(context.getResources(), R.drawable.kikaracolacao);
         kikaraX = (JolasaView.pantallaAncho-kikaraIrudia.getWidth())/2;
         kikaraY = JolasaView.pantallaAlto - kikaraIrudia.getHeight()-55;
     }
