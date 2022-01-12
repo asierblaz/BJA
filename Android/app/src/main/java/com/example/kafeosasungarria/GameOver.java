@@ -11,11 +11,21 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class GameOver extends AppCompatActivity {
 
     Button play;
     Partida p;
+    TextView cutreCoin;
+    TextView cutrecoinImg;
+    TextView nombreJugador;
+    TextView puntuacion;
+    TextView hora;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +34,20 @@ public class GameOver extends AppCompatActivity {
         play.setOnClickListener(this::cambiar);
         p = (Partida) getIntent().getSerializableExtra("partida");
         guardarPartida(p);
+
+        cutrecoinImg=findViewById(R.id.cutrecoin2);
+        cutreCoin=findViewById(R.id.coinCantidad2);
+        nombreJugador=findViewById(R.id.nombreJugadorTextview);
+        puntuacion=findViewById(R.id.puntuazioaTextView);
+
+        hora=findViewById(R.id.horaTextView);
+
+
+        cutreCoin.setText(p.getJokalaria().getSaldo()+"");
+        nombreJugador.setText(p.getJokalaria().getName());
+        puntuacion.setText("Puntuazioa:\t "+p.getPuntuacion());
+        hora.setText(p.printFecha());
+
     }
     public void cambiar(View v){
         Intent cambiar =  new Intent(this, Jolastu.class);

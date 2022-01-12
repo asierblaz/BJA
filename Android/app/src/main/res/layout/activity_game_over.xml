@@ -6,47 +6,103 @@
     android:layout_height="match_parent"
     android:background="@drawable/gameover">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="304dp"
-        android:layout_height="434dp"
+    <TextView
+        android:id="@+id/coinCantidad2"
+        android:layout_width="67dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.124"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <TextView
+        android:id="@+id/cutrecoin2"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:background="@drawable/cutrecoin"
+        android:textAlignment="center"
+        android:textColor="#F61C1C"
+        android:textSize="96sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="231dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59"
         app:srcCompat="@drawable/george" />
 
-    <LinearLayout
-        android:layout_width="413dp"
-        android:layout_height="303dp"
-        android:layout_marginTop="428dp"
-        android:orientation="horizontal"
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_width="132dp"
+        android:layout_height="57dp"
+        android:background="@drawable/bordes_redondos"
+        android:text="Berriz Jolastu"
+        android:textColor="@drawable/txtboton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842" />
 
-        <LinearLayout
-            android:layout_width="142dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/puntuazioaTextView"
+        android:layout_width="269dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="207dp"
+        android:text="Puntuazioa: "
+        android:textColor="#F3EEED"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="228dp" />
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/horaTextView"
+        android:layout_width="149dp"
+        android:layout_height="45dp"
+        android:text="horaPartida"
+        android:textColor="#F3EEED"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128" />
 
-        <Button
-            android:id="@+id/play_btn"
-            android:layout_width="132dp"
-            android:layout_height="57dp"
-            android:background="@drawable/bordes_redondos"
-            android:text="Berriz Jolastu"
-            android:textColor="@drawable/txtboton" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-        </LinearLayout>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/nombreJugadorTextview"
+        android:layout_width="149dp"
+        android:layout_height="45dp"
+        android:text="nombreJugador"
+        android:textColor="#F3EEED"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.129" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
