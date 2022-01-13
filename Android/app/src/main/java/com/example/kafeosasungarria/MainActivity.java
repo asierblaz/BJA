@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         comprobarSiLogin();
         DataConnect dt = new DataConnect(this);
         dt.connect2();
+        dt.jokalariakToSqlite();
     }
 
 

@@ -125,7 +125,59 @@ public class DataConnect extends Thread {
         return partidas;
     }
 
-    public void jokalariakToSqlite(){
+    public void jokalariakToSqlite() {
+        Thread thread = new Thread(new Runnable() {
+            //            Datu basera konektatu
+            @Override
+            public void run() {
+                try {
+                    //Query-a
+                    String query = "select identification_id, name from hr_employee";
+                    //Connect() funtzioari deitzen zaio konexioa gordetzeko
+                    Connection conn = Connect();
+                    //Query-a gorde eta exekutatzen da
+                    Statement st = conn.createStatement();
+                    ResultSet rs = st.executeQuery(query);
+                    //Hemen bueltatutako bezero guztiak
+                    while (rs.next()) {
+                        Jokalaria j= new Jokalaria();
+                        j.setDni(rs.getString(0));
+                        j.setName(rs.getString(1));
+                        j.setSurname("a");
+                        j.setSaldo(0);
+                        jokalariak.add(j);
+                        //System.out.println(j.toString());
+                    }
+
+                    Log.d("Jokalaria", jokalariak.toString());
+
+
+                    //cargo los jugadores en sqlite
+                    SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
+                    db.execSQL("DELETE FROM jugador");
+                    for (Jokalaria  j:jokalariak) {
+                        db.execSQL("INSERT INTO jugador  VALUES ('"+ j.getDni()+"', '"+j.getName()+"','"+j.getSurname()+"','"+j.getSaldo()+"')");
+                    }
+
+                    //Konexioa ixten da
+                    conn.close();
+                    //Salbuespena
+                } catch (Exception e) {
+                    Log.d("Exception", "run: Failed " + e.getMessage());
+                }
+
+            }
+        });
+        thread.start();
+        try {
+            thread.join();
+        } catch (Exception e) {
+            e.printStackTrace();
+            this.status = false;
+        }
+    }
+
+    /*public void jokalariakToSqlite(){
         JokalariakQuery.setPriority(Thread.NORM_PRIORITY);
         if (JokalariakQuery.getState() == State.NEW){
             JokalariakQuery.start();
@@ -137,7 +189,7 @@ public class DataConnect extends Thread {
     {
         try {
             //Query-a
-            String query = "select * from jugador";
+            String query = "select identification_id, name from hr_employee";
             //Connect() funtzioari deitzen zaio konexioa gordetzeko
             Connection conn = Connect();
             //Query-a gorde eta exekutatzen da
@@ -148,17 +200,17 @@ public class DataConnect extends Thread {
                 Jokalaria  j= new Jokalaria();
                 j.setDni(rs.getString(0));
                 j.setName(rs.getString(1));
-                j.setSurname(rs.getString(2));
-                j.setSaldo(rs.getInt(3));
                 jokalariak.add(j);
+                //System.out.println(j.toString());
             }
+
 
 
             //cargo los jugadores en sqlite
             SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
-
+            db.execSQL("DELETE FROM jugador");
             for (Jokalaria  j:jokalariak) {
-                db.execSQL("INSERT INTO Jokalaria  VALUES ('"+ j.getDni()+"', '"+j.getName()+"','"+j.getSurname()+"', '"+j.getSaldo()+"')");
+                db.execSQL("INSERT INTO jugador  VALUES ('"+ j.getDni()+"', '"+j.getName()+"',' ', 0)");
             }
 
             //Konexioa ixten da
@@ -167,7 +219,7 @@ public class DataConnect extends Thread {
         } catch (Exception e) {
             Log.d("Exception", "run: Failed " + e.getMessage());
         }
-    });
+    });*/
 
 
 }
