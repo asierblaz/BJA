@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL("CREATE TABLE IF NOT EXISTS partida(id Integer PRIMARY KEY AUTOINCREMENT, idjugador VARCHAR(9), puntuacion int,fecha DATETIME, FOREIGN KEY (idjugador) REFERENCES jugador(dni));");
         db.execSQL("CREATE TABLE IF NOT EXISTS cosmetico(idjugador int NOT NULL, idtaza int NOT NULL, actual boolean, FOREIGN KEY (idjugador) REFERENCES jugador(dni), FOREIGN KEY (idtaza) REFERENCES taza(id), primary key (idjugador, idtaza));");
         db.execSQL("CREATE TABLE IF NOT EXISTS login(dni VARCHAR(9));");
-        //db.execSQL("INSERT INTO jugador VALUES ('123','pablo','p',100)");
+       // db.execSQL("INSERT INTO jugador VALUES ('123','pablo','p',100)");
 
 
         jolastuButton=this.findViewById (R.id.jolastuText);
@@ -67,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         cerrarSesion.setOnClickListener(this::cerrarSesion);
 
         comprobarSiLogin();
+        DataConnect dt = new DataConnect(this);
+        dt.connect2();
     }
 
 
