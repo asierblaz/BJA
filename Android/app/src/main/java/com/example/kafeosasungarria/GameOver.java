@@ -23,6 +23,7 @@ public class GameOver extends AppCompatActivity {
     TextView puntuacion;
     TextView hora;
 
+    DataConnect dt = new DataConnect(this);
 
 
 
@@ -63,18 +64,11 @@ public class GameOver extends AppCompatActivity {
 
         int saldoNew = p.getJokalaria().getSaldo()+ p.getPuntuacion();
         p.getJokalaria().setSaldo(saldoNew);
+        Log.d("saldo new",saldoNew+"");
         db.execSQL("UPDATE Jugador SET saldo="+p.getJokalaria().getSaldo()+" WHERE dni='"+p.getJokalaria().getDni()+"'");
 
-        DataConnect dt = new DataConnect(this);
-        dt.connect2();
-        if(dt.isStatus()) {
-            dt.partidakToPostgre();
-        }
 
-   /*     UPDATE table_name
-        SET column1 = value1, column2 = value2, ...
-        WHERE condition;*/
-
+       dt.partidakToPostgre();
     };
 
 

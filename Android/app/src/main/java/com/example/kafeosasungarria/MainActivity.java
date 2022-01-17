@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     TextView cutreCoinCantidad;
     TextView cutreCoin;
     Jokalaria j;
+    DataConnect dt = new DataConnect(this);
 
 
     @Override
@@ -52,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL("CREATE TABLE IF NOT EXISTS cosmetico(idjugador int NOT NULL, idtaza int NOT NULL, actual boolean, FOREIGN KEY (idjugador) REFERENCES jugador(dni), FOREIGN KEY (idtaza) REFERENCES taza(id), primary key (idjugador, idtaza));");
         db.execSQL("CREATE TABLE IF NOT EXISTS login(dni VARCHAR(9));");
        // db.execSQL("INSERT INTO jugador VALUES ('123','pablo','p',100)");
-        DataConnect dt = new DataConnect(this);
 
-        dt.connect2();
         dt.jokalariakToSqlite();
 
         jolastuButton=this.findViewById (R.id.jolastuText);

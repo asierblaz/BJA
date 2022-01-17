@@ -75,10 +75,9 @@ public class DataConnect extends Thread {
             user  =>  openpg
             pass  =>  openpgpwd
             */
-            Log.d("h","Hola");
             Connection conn = DriverManager.getConnection(url, user, pass);
             status = true;
-            Log.d("correcto", "Kaixo estoy online euskaltel fibra 300");
+            Log.d("correcto", "Online");
 
             return conn;
             //SQL salbuespena
@@ -108,17 +107,15 @@ public class DataConnect extends Thread {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                Cursor c2 = db.rawQuery("SELECT name FROM jugador WHERE dni = '"+ c.getString(1) +"'", null);
+                Cursor c2 = db.rawQuery("SELECT name,saldo FROM jugador WHERE dni = '"+ c.getString(1) +"'", null);
                 while(c2.moveToNext()) {
-                    Jokalaria jsolodni = new Jokalaria();
-                    jsolodni.setDni(c.getString(1));
-                    jsolodni.setName(c2.getString(0));
-                    Partida p = new Partida(c.getInt(0), c.getInt(2), jsolodni, date);
-
+                    Jokalaria j = new Jokalaria();
+                    j.setDni(c.getString(1));
+                    j.setName(c2.getString(0));
+                    j.setSaldo(c2.getInt(1));
+                    Partida p = new Partida(c.getInt(0), c.getInt(2), j, date);
                     partidas.add(p);
                 }
-
-
             }
         }
         return partidas;
@@ -145,20 +142,20 @@ public class DataConnect extends Thread {
                             Jokalaria j = new Jokalaria();
                             j.setDni(rs.getString(1));
                             j.setName(rs.getString(2));
-                            j.setSurname("a");
+                            j.setSurname("");
                             j.setSaldo(rs.getInt(3));
                             jokalariak.add(j);
                         }
 
-                        Log.d("Jokalaria", jokalariak.toString());
-
-
                         //cargo los jugadores en sqlite
                         SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
                         db.execSQL("DELETE FROM jugador");
-                        for (int i = 0; i < jokalariak.size(); i++) {
-                            db.execSQL("INSERT INTO jugador(dni, name, saldo)  VALUES ('" + jokalariak.get(i).getDni() + "', '" + jokalariak.get(i).getName() + "', '"+ jokalariak.get(i).getSaldo() +"')");
+
+                        for (Jokalaria j: jokalariak){
+                         db.execSQL("INSERT INTO jugador(dni, name, saldo)  VALUES ('" + j.getDni() + "', '" + j.getName() + "', '"+ j.getSaldo() +"')");
+
                         }
+
                     }
                     //Konexioa ixten da
                     conn.close();
@@ -192,16 +189,27 @@ public class DataConnect extends Thread {
                     //Query-a gorde eta exekutatzen da
                     Statement st = conn.createStatement();
 
-                    for (int i=0;i<partidas.size();i++) {
+                    for (Partida p : partidas){
+
                         String sql = "INSERT INTO lehiaketa_puntuazioa (name, puntuak, data) "
-                                + "VALUES ('"+ partidas.get(i).getJokalaria().getName()+"', '"+ partidas.get(i).getPuntuacion() +"', '"+ partidas.get(i).getFecha() +"');";
+                                + "VALUES ('"+ p.getJokalaria().getName()+"', '"+ p.getPuntuacion() +"', '"+ p.getFecha() +"');";
                         st.executeUpdate(sql);
 
+                        Log.d("saldoJ", p.toString());
+
+                        String sql2 = "UPDATE hr_employee set x_saldo='"+p.getJokalaria().getSaldo() +"' WHERE identification_id='"+p.getJokalaria().getDni() +"'";
+                        st.executeUpdate(sql2);
+
+                        Log.d("partida",p.toString());
+
                     }
-                    saldoToPostgre();
+                    SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
+                    db.execSQL("DELETE FROM partida");
 
                     //Konexioa ixten da
                     conn.close();
+
+
                     //Salbuespena
                 } catch (Exception e) {
                     Log.d("Exception", "run: Failed " + e.getMessage());
@@ -218,7 +226,7 @@ public class DataConnect extends Thread {
         }
     }
 
-    public void saldoToPostgre() {
+    /*public void saldoToPostgre() {
         Thread thread = new Thread(new Runnable() {
             //            Datu basera konektatu
             @Override
@@ -232,11 +240,11 @@ public class DataConnect extends Thread {
                     //Query-a gorde eta exekutatzen da
                     Statement st = conn.createStatement();
 
-                    for (int i=0;i<partidas.size();i++) {
-                        String sql = "UPDATE hr_employee SET x_saldo = x_saldo + '"+ partidas.get(i).getPuntuacion() +"' WHERE name = '"+ partidas.get(i).getJokalaria().getName() +"'";
+                    for (Partida p: partidas){
+                        String sql = "UPDATE hr_employee SET x_saldo = x_saldo + '"+ p.getPuntuacion() +"' WHERE name = '"+ p.getJokalaria().getName() +"'";
                         st.executeUpdate(sql);
-
                     }
+
                     SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
                     db.execSQL("DELETE FROM partida");
 
@@ -256,7 +264,7 @@ public class DataConnect extends Thread {
             e.printStackTrace();
             this.status = false;
         }
-    }
+    }*/
 
     public boolean isStatus() {
         return status;
