@@ -37,7 +37,7 @@ public class Partida implements Serializable {
     }
 
     public String printFecha(){
-        SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd");
 
         return formatter.format(fecha);
 

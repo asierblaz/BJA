@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         // SQLite datu basea sortu edo atzitu
         db = openOrCreateDatabase("BJA", Context.MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS jugador(dni VARCHAR(9) PRIMARY KEY, name VARCHAR, surname VARCHAR, saldo int);");
@@ -50,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL("CREATE TABLE IF NOT EXISTS cosmetico(idjugador int NOT NULL, idtaza int NOT NULL, actual boolean, FOREIGN KEY (idjugador) REFERENCES jugador(dni), FOREIGN KEY (idtaza) REFERENCES taza(id), primary key (idjugador, idtaza));");
         db.execSQL("CREATE TABLE IF NOT EXISTS login(dni VARCHAR(9));");
        // db.execSQL("INSERT INTO jugador VALUES ('123','pablo','p',100)");
+        DataConnect dt = new DataConnect(this);
 
+        dt.connect2();
+        dt.jokalariakToSqlite();
 
         jolastuButton=this.findViewById (R.id.jolastuText);
         jolastuButton.setOnClickListener(this::jolastu);
@@ -68,9 +73,6 @@ public class MainActivity extends AppCompatActivity {
         cerrarSesion.setOnClickListener(this::cerrarSesion);
 
         comprobarSiLogin();
-        DataConnect dt = new DataConnect(this);
-        dt.connect2();
-        dt.jokalariakToSqlite();
     }
 
 

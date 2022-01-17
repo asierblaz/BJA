@@ -42,11 +42,11 @@ public class GameOver extends AppCompatActivity {
 
         hora=findViewById(R.id.horaTextView);
 
-
         cutreCoin.setText(p.getJokalaria().getSaldo()+"");
         nombreJugador.setText(p.getJokalaria().getName());
         puntuacion.setText("Puntuazioa:\t "+p.getPuntuacion());
         hora.setText(p.printFecha());
+
 
     }
     public void cambiar(View v){
@@ -61,11 +61,15 @@ public class GameOver extends AppCompatActivity {
         db = openOrCreateDatabase("BJA", Context.MODE_PRIVATE, null);
         db.execSQL("INSERT INTO Partida (idjugador,puntuacion,fecha) VALUES ('"+ p.getJokalaria().getDni()+"', '"+p.getPuntuacion()+"','"+p.printFecha()+"')");
 
-        int saldoOld= p.getJokalaria().getSaldo();
-        int saldoNew = saldoOld+ p.getPuntuacion();
+        int saldoNew = p.getJokalaria().getSaldo()+ p.getPuntuacion();
         p.getJokalaria().setSaldo(saldoNew);
         db.execSQL("UPDATE Jugador SET saldo="+p.getJokalaria().getSaldo()+" WHERE dni='"+p.getJokalaria().getDni()+"'");
 
+        DataConnect dt = new DataConnect(this);
+        dt.connect2();
+        if(dt.isStatus()) {
+            dt.partidakToPostgre();
+        }
 
    /*     UPDATE table_name
         SET column1 = value1, column2 = value2, ...
