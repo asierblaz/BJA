@@ -2,6 +2,12 @@ package com.example.kafeosasungarria;
 
 import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -16,7 +22,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
+import android.provider.Telephony;
+import android.util.JsonWriter;
 import android.util.Log;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class DataConnect extends Thread {
@@ -24,17 +35,16 @@ public class DataConnect extends Thread {
     final public static String url = "jdbc:postgresql://192.168.65.48:5432/BJA";
     final public static String user = "jon";
     final public static String pass = "admin";
-    ArrayList<Jokalaria> jokalariak= new ArrayList<>();
+    ArrayList<Jokalaria> jokalariak = new ArrayList<>();
     private Connection connection;
     private boolean status;
 
 
-    private  Context context;
+    private Context context;
 
     public DataConnect(Context context) {
         this.context = context;
     }
-
 
 
     public void connect2() {
@@ -64,7 +74,7 @@ public class DataConnect extends Thread {
     }
 
     //Konexio funtzioa
-    public  Connection Connect() throws SQLException, ClassNotFoundException {
+    public Connection Connect() throws SQLException, ClassNotFoundException {
         //Konexioa egiten saiatzen da
         try {
             //PostgreSQL-ren driver-a
@@ -92,23 +102,23 @@ public class DataConnect extends Thread {
         return null;
     }
 
-    public ArrayList<Partida> getPartidas(){
+    public ArrayList<Partida> getPartidas() {
         SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
         ArrayList<Partida> partidas = new ArrayList<>();
         Cursor c = db.rawQuery("SELECT * FROM partida", null);
-        if(c.getCount() > 0){
-            while(c.moveToNext()) {
-                String fecha= c.getString(3);
-                Date date= new Date();
+        if (c.getCount() > 0) {
+            while (c.moveToNext()) {
+                String fecha = c.getString(3);
+                Date date = new Date();
                 try {
-                    SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");
-                    date=formatter1.parse(fecha);
+                    SimpleDateFormat formatter1 = new SimpleDateFormat("dd/MM/yyyy");
+                    date = formatter1.parse(fecha);
 
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                Cursor c2 = db.rawQuery("SELECT name,saldo FROM jugador WHERE dni = '"+ c.getString(1) +"'", null);
-                while(c2.moveToNext()) {
+                Cursor c2 = db.rawQuery("SELECT name,saldo FROM jugador WHERE dni = '" + c.getString(1) + "'", null);
+                while (c2.moveToNext()) {
                     Jokalaria j = new Jokalaria();
                     j.setDni(c.getString(1));
                     j.setName(c2.getString(0));
@@ -133,7 +143,7 @@ public class DataConnect extends Thread {
                     //Connect() funtzioari deitzen zaio konexioa gordetzeko
                     Connection conn = Connect();
                     connect2();
-                    if(isStatus()) {
+                    if (isStatus()) {
                         //Query-a gorde eta exekutatzen da
                         Statement st = conn.createStatement();
                         ResultSet rs = st.executeQuery(query);
@@ -151,8 +161,8 @@ public class DataConnect extends Thread {
                         SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
                         db.execSQL("DELETE FROM jugador");
 
-                        for (Jokalaria j: jokalariak){
-                         db.execSQL("INSERT INTO jugador(dni, name, saldo)  VALUES ('" + j.getDni() + "', '" + j.getName() + "', '"+ j.getSaldo() +"')");
+                        for (Jokalaria j : jokalariak) {
+                            db.execSQL("INSERT INTO jugador(dni, name, saldo)  VALUES ('" + j.getDni() + "', '" + j.getName() + "', '" + j.getSaldo() + "')");
 
                         }
 
@@ -189,18 +199,16 @@ public class DataConnect extends Thread {
                     //Query-a gorde eta exekutatzen da
                     Statement st = conn.createStatement();
 
-                    for (Partida p : partidas){
+                    for (Partida p : partidas) {
 
                         String sql = "INSERT INTO lehiaketa_puntuazioa (name, puntuak, data) "
-                                + "VALUES ('"+ p.getJokalaria().getName()+"', '"+ p.getPuntuacion() +"', '"+ p.getFecha() +"');";
+                                + "VALUES ('" + p.getJokalaria().getName() + "', '" + p.getPuntuacion() + "', '" + p.getFecha() + "');";
                         st.executeUpdate(sql);
 
-                        Log.d("saldoJ", p.toString());
 
-                        String sql2 = "UPDATE hr_employee set x_saldo='"+p.getJokalaria().getSaldo() +"' WHERE identification_id='"+p.getJokalaria().getDni() +"'";
+                        String sql2 = "UPDATE hr_employee set x_saldo='" + p.getJokalaria().getSaldo() + "' WHERE identification_id='" + p.getJokalaria().getDni() + "'";
                         st.executeUpdate(sql2);
 
-                        Log.d("partida",p.toString());
 
                     }
                     SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
@@ -226,48 +234,119 @@ public class DataConnect extends Thread {
         }
     }
 
-    /*public void saldoToPostgre() {
-        Thread thread = new Thread(new Runnable() {
-            //            Datu basera konektatu
+
+    public boolean isStatus() {
+        return status;
+    }
+
+
+  /*  public ArrayList<String> json() throws JSONException {
+
+        ArrayList<String> a = new ArrayList<>();
+
+
+        int i=0;
+        for (Partida p : getPartidas()) {
+            JSONObject datos = new JSONObject();
+            datos.put("id",i++);
+            JSONObject jokalariObj = new JSONObject();
+
+            jokalariObj.put("dni", p.getJokalaria().getDni());
+            jokalariObj.put("name", p.getJokalaria().getName());
+            jokalariObj.put("surname", p.getJokalaria().getSurname());
+            jokalariObj.put("saldo", p.getJokalaria().getSaldo());
+
+
+            JSONObject partidaObj = new JSONObject();
+            partidaObj.put("puntuacion", p.getPuntuacion());
+            partidaObj.put("fecha", p.printFecha());
+            partidaObj.put("jokalaria", jokalariObj);
+
+            datos.put("partida",partidaObj);
+
+            a.add(datos.toString());
+        }
+
+
+        return a;
+
+    }*/
+
+    public String datosJson() throws JSONException {
+        String s="[";
+        String separador=",";
+        int i=0;
+        for (Partida p : getPartidas()) {
+            JSONObject datos = new JSONObject();
+            JSONObject jokalariObj = new JSONObject();
+            jokalariObj.put("dni", p.getJokalaria().getDni());
+            jokalariObj.put("name", p.getJokalaria().getName());
+            jokalariObj.put("surname", p.getJokalaria().getSurname());
+            jokalariObj.put("saldo", p.getJokalaria().getSaldo());
+
+
+            JSONObject partidaObj = new JSONObject();
+            partidaObj.put("puntuacion", p.getPuntuacion());
+            partidaObj.put("fecha", p.printFecha());
+            partidaObj.put("jokalaria", jokalariObj);
+
+            datos.put("partida",partidaObj);
+
+
+            if(i!=getPartidas().size()-1) {
+                s = s + datos.toString() + separador;
+            }else{
+                s = s + datos.toString()+"]";
+            }
+            i++;
+
+        }
+        return s;
+
+
+    }
+
+ public void  enviarDatos(){
+
+     try{
+         Socket socketZerbitzareakin = new Socket("192.168.65.8", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
+         OutputStream os = socketZerbitzareakin.getOutputStream();		// Zerbitzariari idazteko zabaldutako OutputStream
+         DataOutputStream dout = new DataOutputStream(os);  				// OutputStream-arekin lan egiteko objektu bat
+         //	String bezeroaren_mezua = "que pasa";
+
+         dout.writeUTF(datosJson());  								// Zerbitzariari bidalitako mezua
+         dout.flush();
+         dout.close();
+         os.close();
+         socketZerbitzareakin.close();
+     }catch(Exception e)
+     {
+         System.out.println(e);
+     }
+
+ }
+
+    public void connectSocket(){
+        Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    //Query-a
-                    ArrayList<Partida> partidas = getPartidas();
-                    //Connect() funtzioari deitzen zaio konexioa gordetzeko
+                    Socket socketZerbitzareakin = new Socket("192.168.65.8", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
+                    OutputStream os = socketZerbitzareakin.getOutputStream();		// Zerbitzariari idazteko zabaldutako OutputStream
+                    DataOutputStream dout = new DataOutputStream(os);  				// OutputStream-arekin lan egiteko objektu bat
 
-                    Connection conn = Connect();
-                    //Query-a gorde eta exekutatzen da
-                    Statement st = conn.createStatement();
-
-                    for (Partida p: partidas){
-                        String sql = "UPDATE hr_employee SET x_saldo = x_saldo + '"+ p.getPuntuacion() +"' WHERE name = '"+ p.getJokalaria().getName() +"'";
-                        st.executeUpdate(sql);
-                    }
-
-                    SQLiteDatabase db = context.openOrCreateDatabase("BJA", context.MODE_PRIVATE, null);
-                    db.execSQL("DELETE FROM partida");
-
-                    //Konexioa ixten da
-                    conn.close();
-                    //Salbuespena
-                } catch (Exception e) {
-                    Log.d("Exception", "run: Failed " + e.getMessage());
+                    dout.writeUTF(datosJson());  								// Zerbitzariari bidalitako mezua
+                    dout.flush();
+                    dout.close();
+                    os.close();
+                    socketZerbitzareakin.close();
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
                 }
 
             }
         });
-        thread.start();
-        try {
-            thread.join();
-        } catch (Exception e) {
-            e.printStackTrace();
-            this.status = false;
-        }
-    }*/
-
-    public boolean isStatus() {
-        return status;
+        t2.start();
     }
 
 

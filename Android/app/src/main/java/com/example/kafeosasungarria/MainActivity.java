@@ -16,9 +16,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
 import org.w3c.dom.Text;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.logging.Logger;
 
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         cerrarSesion.setOnClickListener(this::cerrarSesion);
 
         comprobarSiLogin();
+
+
     }
 
 

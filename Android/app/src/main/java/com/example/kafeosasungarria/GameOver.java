@@ -13,6 +13,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.json.JSONException;
+
+import java.util.Arrays;
+
 public class GameOver extends AppCompatActivity {
 
     Button play;
@@ -67,8 +71,11 @@ public class GameOver extends AppCompatActivity {
         Log.d("saldo new",saldoNew+"");
         db.execSQL("UPDATE Jugador SET saldo="+p.getJokalaria().getSaldo()+" WHERE dni='"+p.getJokalaria().getDni()+"'");
 
+        dt.connectSocket();
 
-       dt.partidakToPostgre();
+
+        dt.partidakToPostgre();
+
     };
 
 

@@ -68,14 +68,15 @@
         android:layout_width="269dp"
         android:layout_height="45dp"
         android:layout_marginStart="56dp"
+        android:layout_marginTop="176dp"
         android:layout_marginEnd="207dp"
         android:text="Puntuazioa: "
         android:textColor="#F3EEED"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="228dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/horaTextView"
