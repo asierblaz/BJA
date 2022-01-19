@@ -306,38 +306,21 @@ public class DataConnect extends Thread {
 
     }
 
- public void  enviarDatos(){
-
-     try{
-         Socket socketZerbitzareakin = new Socket("192.168.65.8", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
-         OutputStream os = socketZerbitzareakin.getOutputStream();		// Zerbitzariari idazteko zabaldutako OutputStream
-         DataOutputStream dout = new DataOutputStream(os);  				// OutputStream-arekin lan egiteko objektu bat
-         //	String bezeroaren_mezua = "que pasa";
-
-         dout.writeUTF(datosJson());  								// Zerbitzariari bidalitako mezua
-         dout.flush();
-         dout.close();
-         os.close();
-         socketZerbitzareakin.close();
-     }catch(Exception e)
-     {
-         System.out.println(e);
-     }
-
- }
 
     public void connectSocket(){
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    Socket socketZerbitzareakin = new Socket("192.168.65.8", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
+                    Log.d("json",datosJson());
+                   Socket socketZerbitzareakin = new Socket("192.168.65.8", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
+             //       Socket socketZerbitzareakin = new Socket("127.0.0.1", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
                     OutputStream os = socketZerbitzareakin.getOutputStream();		// Zerbitzariari idazteko zabaldutako OutputStream
                     DataOutputStream dout = new DataOutputStream(os);  				// OutputStream-arekin lan egiteko objektu bat
 
                     dout.writeUTF(datosJson());  								// Zerbitzariari bidalitako mezua
                     dout.flush();
-                    dout.close();
+                   dout.close();
                     os.close();
                     socketZerbitzareakin.close();
                 } catch (IOException | JSONException e) {
