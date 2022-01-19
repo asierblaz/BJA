@@ -12,7 +12,8 @@ import eus.uni.dam.model.Partida;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import org.json.JSONArray;
+import org.json.JSONObject;
 @RestController
 public class PartidaController {
 
@@ -27,6 +28,7 @@ public class PartidaController {
 	   @GetMapping("/partidak2")
 	    public String getPartidak2() {
 		   String s="hola";
+		   pruebaJson();
 	        return s;
 	    }	 
 	   
@@ -41,4 +43,23 @@ public class PartidaController {
 		   partidak.add(p2);
 		   return partidak;
 	    }
+	   
+	   
+	   	   
+	   public void pruebaJson() {
+		   
+	        String data = "[{\"userName\": \"sandeep\",\"age\":30},{\"userName\": \"vivan\",\"age\":5}]  ";
+	        
+	        JSONArray jsonArr = new JSONArray(data);
+
+	        for (int i = 0; i < jsonArr.length(); i++)
+	        {
+	            JSONObject jsonObj = jsonArr.getJSONObject(i);
+
+	            System.out.println(jsonObj);
+	        }
+		   
+	   }
+	   
+	   
 }

@@ -38,7 +38,7 @@ public class EskatzaileaController {
 	CodecProvider pojoCodecProvider = PojoCodecProvider.builder().automatic(true).build();
     CodecRegistry pojoCodecRegistry = fromRegistries(getDefaultCodecRegistry(), fromProviders(pojoCodecProvider));
     // Replace the uri string with your MongoDB deployment's connection string
-    String uri = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
+    String uri = "mongodb://192.168.65.8:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
     String s="";
 	   @GetMapping("/prueba")
 	   public String get() {
