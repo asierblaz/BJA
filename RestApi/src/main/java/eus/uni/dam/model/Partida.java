@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Partida {
 
-	private int id;
+
 	private int puntuazioa;
 	private Date fecha;
 	private Jokalaria jokalaria;
@@ -15,8 +15,7 @@ public class Partida {
 
 
 
-	public Partida(int id, int puntuazioa, Date fecha, Jokalaria jokalaria) {
-		this.id = id;
+	public Partida( int puntuazioa, Date fecha, Jokalaria jokalaria) {
 		this.puntuazioa = puntuazioa;
 		this.fecha = fecha;
 		this.jokalaria=jokalaria;
@@ -35,16 +34,6 @@ public class Partida {
 	}
 
 
-
-	public int getId() {
-		return id;
-	}
-
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 
 
@@ -74,13 +63,9 @@ public class Partida {
 
 	@Override
 	public String toString() {
-		return "Partida [id=" + id + ", puntuazioa=" + puntuazioa + ", fecha=" + fecha + ", jokalaria=" + jokalaria
+		return "Partida [puntuazioa=" + puntuazioa + ", fecha=" + fecha + ", jokalaria=" + jokalaria
 				+ "]";
 	}
-
-
-
-	
 	
 	
 	

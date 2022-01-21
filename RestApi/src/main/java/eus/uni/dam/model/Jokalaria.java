@@ -4,7 +4,6 @@ public class Jokalaria {
 
 	private String dni;
 	private String name;
-	private String surname;
 	private int saldo;
 
 	
@@ -13,10 +12,9 @@ public class Jokalaria {
 		super();
 	}
 
-	public Jokalaria(String dni, String name, String surname, int saldo) {
+	public Jokalaria(String dni, String name, int saldo) {
 		this.dni = dni;
 		this.name = name;
-		this.surname = surname;
 		this.saldo = saldo;
 	}
 
@@ -36,12 +34,9 @@ public class Jokalaria {
 		this.name = name;
 	}
 
-	public String getSurname() {
-		return surname;
-	}
-
-	public void setSurname(String surname) {
-		this.surname = surname;
+	@Override
+	public String toString() {
+		return "Jokalaria [dni=" + dni + ", name=" + name + ", saldo=" + saldo + "]";
 	}
 
 	public int getSaldo() {

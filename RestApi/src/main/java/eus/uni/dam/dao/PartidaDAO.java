@@ -27,5 +27,7 @@ public class PartidaDAO {
     public List<Partida> findAll(){
     	return collection.find().into(new ArrayList<>());
     }
-   
+   public void insertPartida(Partida p) {
+	   collection.insertOne(p);
+   }
 } 
