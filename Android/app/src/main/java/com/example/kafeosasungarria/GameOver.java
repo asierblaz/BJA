@@ -71,7 +71,7 @@ public class GameOver extends AppCompatActivity {
         Log.d("saldo new",saldoNew+"");
         db.execSQL("UPDATE Jugador SET saldo="+p.getJokalaria().getSaldo()+" WHERE dni='"+p.getJokalaria().getDni()+"'");
 
-        dt.connectSocket();
+        dt.bidali();
 
 
         dt.partidakToPostgre();

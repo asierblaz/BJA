@@ -38,7 +38,10 @@ public class DataConnect extends Thread {
     ArrayList<Jokalaria> jokalariak = new ArrayList<>();
     private Connection connection;
     private boolean status;
-
+ /*   private Socket socketZerbitzareakin;
+    private OutputStream os;
+    private DataOutputStream dout;
+*/
 
     private Context context;
 
@@ -307,7 +310,7 @@ public class DataConnect extends Thread {
     }
 
 
-    public void connectSocket(){
+    public void bidali(){
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -332,5 +335,51 @@ public class DataConnect extends Thread {
         t2.start();
     }
 
+   /*public void connectSocket(){
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
 
+                try {
+                    socketZerbitzareakin = new Socket("192.168.65.17", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+        t2.start();
+    }*/
+   /* public void connectSocket2(){
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+
+                    os = socketZerbitzareakin.getOutputStream();		// Zerbitzariari idazteko zabaldutako OutputStream
+                    dout = new DataOutputStream(os);  				// OutputStream-arekin lan egiteko objektu bat
+
+                    if(datosJson() == "agur") {
+                        try {
+                            dout.close();
+                            os.close();
+                            socketZerbitzareakin.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        Log.d("json",datosJson());
+                        dout.writeUTF(datosJson());  								// Zerbitzariari bidalitako mezua
+
+                    }
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+        t2.start();
+    }*/
 }

@@ -22,10 +22,10 @@ import eus.uni.dam.model.Partida;
 
 public class InsertMongoController {
 
-	  @Autowired
-	   private PartidaDAO partidaDao;
+	@Autowired
+	private PartidaDAO partidaDao;
 	
-	  public void zebitzaria() {
+	 public void zebitzaria() {
 		   System.out.println("Zerbitzaria: HASI da.");
 			try{  
 				System.out.println("Zerbitzaria: 12345 portuan entzuten...");
@@ -97,14 +97,17 @@ public class InsertMongoController {
 	  
 	  
 	  public void greatServer() {
+		  System.out.println("hola ");
+		  System.out.println("12345 portuan konexioa bilatzen...");
 		  try {
+			  
 			    ServerSocket zerbitzaria = new ServerSocket(12345);
 			    Socket bezeroa = zerbitzaria.accept();
+			    System.out.println("Konektatuta!!!");
 			           
 			    InputStream is = bezeroa.getInputStream();
 			    InputStreamReader isr = new InputStreamReader(is);
 			    BufferedReader br = new BufferedReader(isr);
-
 			    String jasotakoTestua;
 			   
 			    jasotakoTestua = br.readLine();

@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         cerrarSesion.setOnClickListener(this::cerrarSesion);
 
         comprobarSiLogin();
+   //     dt.connectSocket();
 
 
     }
