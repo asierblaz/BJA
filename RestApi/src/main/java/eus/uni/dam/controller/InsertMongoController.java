@@ -1,8 +1,11 @@
 package eus.uni.dam.controller;
 
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -91,6 +94,59 @@ public class InsertMongoController {
 			}   
 			System.out.println("Zerbitzaria: BUKATU da.");
 	   }
+	  
+	  
+	  public void greatServer() {
+		  try {
+			    ServerSocket zerbitzaria = new ServerSocket(12345);
+			    Socket bezeroa = zerbitzaria.accept();
+			           
+			    InputStream is = bezeroa.getInputStream();
+			    InputStreamReader isr = new InputStreamReader(is);
+			    BufferedReader br = new BufferedReader(isr);
+
+			    String jasotakoTestua;
+			   
+			    jasotakoTestua = br.readLine();
+
+
+			    while ("agur" != jasotakoTestua) {
+			   
+
+			    if (jasotakoTestua != null) {
+			    //JSONObject json = new JSONObject ();
+			    //json.entrySet(jasotakoTestua);
+	/*		    JSONParser jsonParser = new JSONParser();
+			    Object json = jsonParser.parse(jasotakoTestua);
+			    System.out.println(jasotakoTestua);
+			               //System.out.println(json.toString());
+			               
+			               
+			               try (FileWriter file = new FileWriter("employees.json")) {
+			                   //We can write any JSONArray or JSONObject instance to the file
+			                   file.write(json.toString());
+			                   file.flush();
+			       
+			               } catch (IOException e) {
+			                   e.printStackTrace();
+			               }
+			               
+			               System.out.println(json.toString());*/
+			    	
+			    	System.out.println(jasotakoTestua);
+			    	
+			    }
+			   
+			    jasotakoTestua = br.readLine();
+			   
+			    }
+
+			    bezeroa.close();
+			    zerbitzaria.close();
+			    } catch (IOException ex) {
+			   
+			    }
+	  }
 	   
 	
 }

@@ -313,7 +313,7 @@ public class DataConnect extends Thread {
             public void run() {
                 try {
                     Log.d("json",datosJson());
-                   Socket socketZerbitzareakin = new Socket("192.168.65.8", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
+                   Socket socketZerbitzareakin = new Socket("192.168.65.17", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
              //       Socket socketZerbitzareakin = new Socket("127.0.0.1", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
                     OutputStream os = socketZerbitzareakin.getOutputStream();		// Zerbitzariari idazteko zabaldutako OutputStream
                     DataOutputStream dout = new DataOutputStream(os);  				// OutputStream-arekin lan egiteko objektu bat
