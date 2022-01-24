@@ -16,8 +16,8 @@ public class ApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ApiApplication.class, args);
 
-		//pc.zebitzaria();
-		// ic.greatServer();
+		pc.zebitzaria();
+	//	 ic.greatServer();
 	}
 
 }

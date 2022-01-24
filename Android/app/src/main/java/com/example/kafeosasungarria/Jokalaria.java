@@ -7,7 +7,9 @@ public class Jokalaria implements Serializable {
    private String dni;
     private String name;
     private String surname;
+    private String departamentua;
     private int saldo;
+    private int adina;
 
 
     public Jokalaria() {
@@ -37,6 +39,14 @@ public class Jokalaria implements Serializable {
         this.surname = surname;
     }
 
+    public String getDepartamentua() {
+        return departamentua;
+    }
+
+    public void setDepartamentua(String departamentua) {
+        this.departamentua = departamentua;
+    }
+
     public int getSaldo() {
         return saldo;
     }
@@ -45,13 +55,11 @@ public class Jokalaria implements Serializable {
         this.saldo = saldo;
     }
 
-    @Override
-    public String toString() {
-        return "Jokalaria{" +
-                "dni='" + dni + '\'' +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", saldo=" + saldo +
-                '}';
+    public int getAdina() {
+        return adina;
+    }
+
+    public void setAdina(int adina) {
+        this.adina = adina;
     }
 }

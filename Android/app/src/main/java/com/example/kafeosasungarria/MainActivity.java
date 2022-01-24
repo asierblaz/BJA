@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         // SQLite datu basea sortu edo atzitu
         db = openOrCreateDatabase("BJA", Context.MODE_PRIVATE, null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS jugador(dni VARCHAR(9) PRIMARY KEY, name VARCHAR, surname VARCHAR, saldo int);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS jugador(dni VARCHAR(9) PRIMARY KEY, name VARCHAR, surname VARCHAR, saldo int, adina int, departamentua VARCHAR);");
         db.execSQL("CREATE TABLE IF NOT EXISTS taza(id int PRIMARY KEY, foto VARCHAR, precio int);");
         db.execSQL("CREATE TABLE IF NOT EXISTS partida(id Integer PRIMARY KEY AUTOINCREMENT, idjugador VARCHAR(9), puntuacion int,fecha DATETIME, FOREIGN KEY (idjugador) REFERENCES jugador(dni));");
         db.execSQL("CREATE TABLE IF NOT EXISTS cosmetico(idjugador int NOT NULL, idtaza int NOT NULL, actual boolean, FOREIGN KEY (idjugador) REFERENCES jugador(dni), FOREIGN KEY (idtaza) REFERENCES taza(id), primary key (idjugador, idtaza));");

@@ -26,7 +26,7 @@ import org.json.JSONObject;
 public class PartidaController {
 
 	   @Autowired
-	   private PartidaDAO partidaDao;
+	 private  PartidaDAO partidaDao;
 	
 	   @GetMapping("/partidak")
 	    public List<Partida> getPartidak() {
@@ -83,7 +83,6 @@ public class PartidaController {
 				OutputStream os = socketBezeroarekin.getOutputStream(); // Bezeroari idazteko zabaldutako fluxua
 				DataInputStream dis = new DataInputStream(is);  		// InputStream-arekin lan egiteko objektu bat
 				DataOutputStream dout = new DataOutputStream(os);		// OutputStream-arekin lan egiteko objektu bat
-				while(str_mezua!="0") {
 					
 				
 				
@@ -125,7 +124,7 @@ public class PartidaController {
 				String str_bidaltzeko = "Zerbitzariak jasotakoa: " + str_mezua + ". OK!!! Agur!";
 				dout.writeUTF(str_bidaltzeko);  						// Bezeroari itzultzeko mezua
 				dout.flush(); 
-				}
+				
 				// Gure protokoloaren arabera, ez dugu ezer gehiago espero, beraz, fluxuak eta socket-ak itxiko ditugu
 				System.out.println("Zerbitzaria: fluxuak eta socket-ak isten...");
 				dout.close();

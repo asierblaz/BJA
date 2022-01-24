@@ -7444,23 +7444,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\suinaga.jon\\.nuget\\packages\\": {},
+    "C:\\Users\\blazquez.asier\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\suinaga.jon\\source\\repos\\WebBja\\WebBja\\WebBja.csproj",
+      "projectUniqueName": "C:\\Users\\blazquez.asier\\Documents\\DAM2\\Erronka3\\BJA\\WebBja\\WebBja\\WebBja.csproj",
       "projectName": "WebBja",
-      "projectPath": "C:\\Users\\suinaga.jon\\source\\repos\\WebBja\\WebBja\\WebBja.csproj",
-      "packagesPath": "C:\\Users\\suinaga.jon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\suinaga.jon\\source\\repos\\WebBja\\WebBja\\obj\\",
+      "projectPath": "C:\\Users\\blazquez.asier\\Documents\\DAM2\\Erronka3\\BJA\\WebBja\\WebBja\\WebBja.csproj",
+      "packagesPath": "C:\\Users\\blazquez.asier\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\blazquez.asier\\Documents\\DAM2\\Erronka3\\BJA\\WebBja\\WebBja\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\suinaga.jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\blazquez.asier\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

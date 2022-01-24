@@ -142,7 +142,7 @@ public class DataConnect extends Thread {
                 try {
 
                     //Query-a
-                    String query = "SELECT identification_id, name, x_saldo FROM hr_employee";
+                    String query = "SELECT identification_id, name, x_saldo,x_adina,x_departamentua FROM hr_employee";
                     //Connect() funtzioari deitzen zaio konexioa gordetzeko
                     Connection conn = Connect();
                     connect2();
@@ -157,6 +157,8 @@ public class DataConnect extends Thread {
                             j.setName(rs.getString(2));
                             j.setSurname("");
                             j.setSaldo(rs.getInt(3));
+                            j.setAdina(rs.getInt(4));
+                            j.setDepartamentua(rs.getString(5));
                             jokalariak.add(j);
                         }
 
@@ -165,7 +167,8 @@ public class DataConnect extends Thread {
                         db.execSQL("DELETE FROM jugador");
 
                         for (Jokalaria j : jokalariak) {
-                            db.execSQL("INSERT INTO jugador(dni, name, saldo)  VALUES ('" + j.getDni() + "', '" + j.getName() + "', '" + j.getSaldo() + "')");
+                            db.execSQL("INSERT INTO jugador(dni, name, saldo, adina, departamentua)  VALUES ('" + j.getDni() + "', '" +
+                                    j.getName() + "', '" + j.getSaldo() + "', '" + j.getAdina() + "', '" + j.getDepartamentua() + "')");
 
                         }
 
@@ -204,8 +207,8 @@ public class DataConnect extends Thread {
 
                     for (Partida p : partidas) {
 
-                        String sql = "INSERT INTO lehiaketa_puntuazioa (name, puntuak, data) "
-                                + "VALUES ('" + p.getJokalaria().getName() + "', '" + p.getPuntuacion() + "', '" + p.getFecha() + "');";
+                        String sql = "INSERT INTO lehiaketa_puntuazioa (name, puntuak, data,adina,departamentua) "
+                                + "VALUES ('" + p.getJokalaria().getName() + "', '" + p.getPuntuacion() + "', '" + p.getFecha() + "','" + p.getJokalaria().getAdina() + "','" + p.getJokalaria().getDepartamentua() + "');";
                         st.executeUpdate(sql);
 
 
