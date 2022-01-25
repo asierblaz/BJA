@@ -85,10 +85,6 @@ public class PartidaController {
 				DataOutputStream dout = new DataOutputStream(os);		// OutputStream-arekin lan egiteko objektu bat
 					
 				
-				
-				
-				
-				
 				str_mezua = (String) dis.readUTF();  			// Mezu bat espero dugu eta irakurri egingo dugu
 				JSONArray jsonArr = new JSONArray(str_mezua);
 

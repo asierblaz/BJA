@@ -100,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
                         j.setName(c1.getString(1));
                         j.setSurname(c1.getString(2));
                         j.setSaldo(c1.getInt(3));
+                        j.setAdina(c1.getInt(4));
+                        j.setDepartamentua(c1.getString(5));
                     }
                     setLogued(j);
                     //inserta el jugador en la tabla login

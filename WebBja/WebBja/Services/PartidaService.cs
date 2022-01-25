@@ -10,7 +10,7 @@ namespace BjaWeb.Services
 {
     public class PartidaService : IPartidaService
     {
-        private Uri rutaTodos = new Uri("http://192.168.65.8:8080/");
+        private Uri rutaTodos = new Uri("http://192.168.65.13:8080/");
         public async Task<IList<Partida>> GetPartidaGuztiak()
         {
             List<Partida> partidaList = new List<Partida>();

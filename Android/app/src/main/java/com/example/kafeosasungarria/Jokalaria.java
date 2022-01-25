@@ -62,4 +62,16 @@ public class Jokalaria implements Serializable {
     public void setAdina(int adina) {
         this.adina = adina;
     }
+
+    @Override
+    public String toString() {
+        return "Jokalaria{" +
+                "dni='" + dni + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", departamentua='" + departamentua + '\'' +
+                ", saldo=" + saldo +
+                ", adina=" + adina +
+                '}';
+    }
 }

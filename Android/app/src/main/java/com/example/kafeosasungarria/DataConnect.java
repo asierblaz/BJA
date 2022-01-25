@@ -120,12 +120,14 @@ public class DataConnect extends Thread {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                Cursor c2 = db.rawQuery("SELECT name,saldo FROM jugador WHERE dni = '" + c.getString(1) + "'", null);
+                Cursor c2 = db.rawQuery("SELECT name,saldo,adina,departamentua FROM jugador WHERE dni = '" + c.getString(1) + "'", null);
                 while (c2.moveToNext()) {
                     Jokalaria j = new Jokalaria();
                     j.setDni(c.getString(1));
                     j.setName(c2.getString(0));
                     j.setSaldo(c2.getInt(1));
+                    j.setAdina(c2.getInt(2));
+                    j.setDepartamentua(c2.getString(3));
                     Partida p = new Partida(c.getInt(0), c.getInt(2), j, date);
                     partidas.add(p);
                 }
@@ -206,7 +208,7 @@ public class DataConnect extends Thread {
                     Statement st = conn.createStatement();
 
                     for (Partida p : partidas) {
-
+                        Log.d("jokalaria",p.getJokalaria().toString());
                         String sql = "INSERT INTO lehiaketa_puntuazioa (name, puntuak, data,adina,departamentua) "
                                 + "VALUES ('" + p.getJokalaria().getName() + "', '" + p.getPuntuacion() + "', '" + p.getFecha() + "','" + p.getJokalaria().getAdina() + "','" + p.getJokalaria().getDepartamentua() + "');";
                         st.executeUpdate(sql);
@@ -319,7 +321,7 @@ public class DataConnect extends Thread {
             public void run() {
                 try {
                     Log.d("json",datosJson());
-                   Socket socketZerbitzareakin = new Socket("192.168.65.17", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
+                   Socket socketZerbitzareakin = new Socket("192.168.65.13", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
              //       Socket socketZerbitzareakin = new Socket("127.0.0.1", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
                     OutputStream os = socketZerbitzareakin.getOutputStream();		// Zerbitzariari idazteko zabaldutako OutputStream
                     DataOutputStream dout = new DataOutputStream(os);  				// OutputStream-arekin lan egiteko objektu bat
