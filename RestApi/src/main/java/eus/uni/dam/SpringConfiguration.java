@@ -19,7 +19,7 @@ public class SpringConfiguration {
 
     
    // private String connectionString="mongodb://localhost:27017";//hobe application.properties fitxategian gordeko bagenu
-    private String connectionString="mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";//hobe application.properties fitxategian gordeko bagenu
+    private String connectionString="mongodb://192.168.65.8:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";//hobe application.properties fitxategian gordeko bagenu
 
     @Bean //Indicates that a method produces a bean to be managed by the Spring container. 
     public MongoClient mongoClient() {

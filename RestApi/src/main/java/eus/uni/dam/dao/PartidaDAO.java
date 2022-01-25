@@ -9,12 +9,14 @@ import eus.uni.dam.model.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 
 @Repository
 public class PartidaDAO {
+	
 	@Autowired
     private MongoClient client;
 	
