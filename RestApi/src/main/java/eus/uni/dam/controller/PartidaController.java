@@ -35,11 +35,12 @@ public class PartidaController implements Runnable{
 	    public List<Partida> getPartidak() {
 	        return partidaDao.findAll();
 	    }
+	   
 	   @GetMapping("/init")
-	   public String prueba() {
-			   String s="<center><h1>Zerbitzaria Martxan</h1><br><img style='height:50%; width:50%' src='https://c.tenor.com/ofRPnrDi9SQAAAAC/loading.gif'></center>"
-			   		+ "<script>window.open('server', '_blank');</script>";
-		   return s;
+	   public String init() {
+	   String s="<center><h1>Zerbitzaria Martxan</h1><br><img style='height:50%; width:50%' src='https://c.tenor.com/ofRPnrDi9SQAAAAC/loading.gif'></center><br><div id='loading'></div>"
+	   + "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\"></script><script>$.ajax({url: 'server',success: function (datos) {$('#loading').html('');}});</script>";
+	   return s;
 	   }
 	   
 
