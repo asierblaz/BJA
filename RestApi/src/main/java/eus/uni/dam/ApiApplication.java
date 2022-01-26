@@ -17,7 +17,7 @@ public class ApiApplication {
 
 		try {
 
-		ProcessBuilder pb = new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe",  "http://localhost:8080/init");
+		ProcessBuilder pb = new ProcessBuilder("C:\\Program Files\\Mozilla Firefox\\firefox.exe",  "http://localhost:8080/server");
 		pb.start();
 
 		} catch (Exception e) {

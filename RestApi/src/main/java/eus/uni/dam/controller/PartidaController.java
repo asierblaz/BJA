@@ -16,18 +16,20 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 @RestController
-public class PartidaController {
+public class PartidaController implements Runnable{
 	
 	   @Autowired
 	    PartidaDAO partidaDao;
-	  
+	   
+	   ServerSocket zerbitzaria;
+	   Socket s = new Socket();
+	   int hariZenbatzailea;
 	
 	   @GetMapping("/partidak")
 	    public List<Partida> getPartidak() {
@@ -43,44 +45,39 @@ public class PartidaController {
 
 	   @GetMapping("/server")
 		public void greatServer() {
-		   
 
-			  	ServerSocket zerbitzaria;
-				Socket bezeroa;
-				int hariZenbatzailea = 0;
+				hariZenbatzailea = 0;
 				try {
 					zerbitzaria = new ServerSocket(12345);
 				
 					System.out.println("Zerbitzaria martxan...");
 					while(true)
 					{
-						bezeroa = new Socket();
-						bezeroa = zerbitzaria.accept(); // bezeroaren zai
+						s = zerbitzaria.accept(); // bezeroaren zai
 						hariZenbatzailea++;
-						inserta(hariZenbatzailea, bezeroa);
-						 // haria martxan jarri eta buklean jarraitu
+						Thread t = new Thread(this, "pc");
+						t.start();
+						// haria martxan jarri eta buklean jarraitu
 					}
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				//	ic.zebitzaria();
 	
 		  }
 	   
-	   private void inserta(int hariZenbatzailea, Socket s) {
-		  	   
+	   
+	   @Override 
+	   public void run() {
 		   System.out.println("Zerbitzaria: HASI da.");
 			try{  
 				System.out.println("Zerbitzaria: 12345 portuan entzuten...");
 				Socket socketBezeroarekin = s; // Konexioaren zai geratu
-				System.out.println("Zerbitzaria: socketBezeroarekin onartuta eta sortuta. Mezuaren zai...");
+				System.out.println("Zerbitzaria: socketBezeroarekin onartuta eta sortuta, hari "+ hariZenbatzailea +" konektatuta dago. Mezuaren zai...");
 				String  str_mezua ="";
 				InputStream is = socketBezeroarekin.getInputStream(); 	// Bezeroarekin zabaldutako socket-etik irakurtzeko
 				OutputStream os = socketBezeroarekin.getOutputStream(); // Bezeroari idazteko zabaldutako fluxua
 				DataInputStream dis = new DataInputStream(is);  		// InputStream-arekin lan egiteko objektu bat
 				DataOutputStream dout = new DataOutputStream(os);		// OutputStream-arekin lan egiteko objektu bat
-		//		while(str_mezua!="0") {
 	
 				str_mezua = (String) dis.readUTF();  			// Mezu bat espero dugu eta irakurri egingo dugu
 				JSONArray jsonArr = new JSONArray(str_mezua);
@@ -117,14 +114,15 @@ public class PartidaController {
 				String str_bidaltzeko = "Zerbitzariak jasotakoa: " + str_mezua + ". OK!!! Agur!";
 				dout.writeUTF(str_bidaltzeko);  						// Bezeroari itzultzeko mezua
 				dout.flush(); 
-				//}
-				// Gure protokoloaren arabera, ez dugu ezer gehiago espero, beraz, fluxuak eta socket-ak itxiko ditugu
+				
 				System.out.println("Zerbitzaria: fluxuak eta socket-ak isten...");
+				
 				dout.close();
 				os.close();
 				dis.close();
 				is.close();
-				socketBezeroarekin.close();
+				s.close();
+				
 			}catch(Exception e)
 			{
 				System.out.println(e);
