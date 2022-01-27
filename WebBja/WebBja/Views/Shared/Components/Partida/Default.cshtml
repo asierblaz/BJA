@@ -12,31 +12,34 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Jokalaria.Name)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Puntuazioa)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Fecha)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Jokalaria.Name)
-            </th>
+
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Puntuazioa)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Fecha)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Jokalaria.Name)
-                </td>
-                
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jokalaria.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Puntuazioa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+
+
+        </tr>
         }
     </tbody>
 </table>

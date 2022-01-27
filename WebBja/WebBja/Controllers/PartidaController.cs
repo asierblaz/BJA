@@ -30,21 +30,35 @@ namespace WebBja.Controllers
         public async Task<IActionResult> Guztiak()
         {
 
+
             return View(await _partidaService.GetPartidaGuztiak());
         }
         // GET: PartidaController/onenak
-        public async Task<ActionResult> Onenak()
-        {
-            return View(await _partidaService.GetPartidaOnenak());
+        public async Task<ActionResult> Onenak() { 
+
+        List<Partida> partidak = new List<Partida>();
+        partidak = await _partidaService.GetPartidaOnenak();
+            @ViewData["1"]= partidak[0].Jokalaria.Name;
+            @ViewData["2"]=partidak[1].Jokalaria.Name;
+            @ViewData["3"] = partidak[2].Jokalaria.Name;
+            @ViewData["4"] = partidak[3].Jokalaria.Name;
+            @ViewData["5"] = partidak[4].Jokalaria.Name;
+
+
+
+            return View(partidak);
         }
         // GET: PartidaController/txarrenak
         public async Task<ActionResult> Txarrenak()
         {
+
             return View(await _partidaService.GetPartidaTxarrenak());
         }
         // GET: PartidaController/nireak
         public async Task<ActionResult> Nireak()
         {
+
+            ViewData["izena"] = "Benito";
 
             return View(await _partidaService.GetPartidakById("Benito"));
         }
