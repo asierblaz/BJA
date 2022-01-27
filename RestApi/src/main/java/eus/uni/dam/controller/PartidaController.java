@@ -2,6 +2,7 @@ package eus.uni.dam.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import eus.uni.dam.dao.PartidaDAO;
@@ -34,6 +35,18 @@ public class PartidaController implements Runnable{
 	   @GetMapping("/partidak")
 	    public List<Partida> getPartidak() {
 	        return partidaDao.findAll();
+	    }
+	   @GetMapping("/partidakById")
+	    public List<Partida> getPartidakById(@RequestParam(value="name")String name) {
+	        return partidaDao.findByJokalari(name);
+	    }
+	   @GetMapping("/txarrenak")
+	    public List<Partida> getPartidaTxarrenak() {
+	        return partidaDao.findTxarrenak();
+	    }
+	   @GetMapping("/onenak")
+	    public List<Partida> getPartidaOnenak() {
+	        return partidaDao.findOnenak();
 	    }
 	   
 	   @GetMapping("/init")
