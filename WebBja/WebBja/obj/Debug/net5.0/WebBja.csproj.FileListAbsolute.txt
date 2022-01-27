@@ -318,3 +318,7 @@ C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5
 C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\ref\WebBja.dll
 C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\WebBja.pdb
 C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\WebBja.genruntimeconfig.cache
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Partida\Guztiak.cshtml.g.cs
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Partida\Onenak.cshtml.g.cs
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Partida\Txarrenak.cshtml.g.cs
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Partida\Nireak.cshtml.g.cs

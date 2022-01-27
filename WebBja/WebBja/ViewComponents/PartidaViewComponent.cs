@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebBja.Models;
 
 namespace WebBja.ViewComponents
 {
@@ -18,9 +19,12 @@ namespace WebBja.ViewComponents
         }
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
-            return View(await _partidaService.GetPartidaGuztiak());
+            List<Partida> partidas = await _partidaService.GetPartidaGuztiak();
+            return View(partidas);
 
-        }
+        }       
+        
+
     }
 }
 

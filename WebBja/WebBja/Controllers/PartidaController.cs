@@ -1,16 +1,49 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BjaWeb.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebBja.Models;
 
 namespace WebBja.Controllers
 {
     public class PartidaController : Controller
     {
+        private readonly ILogger<PartidaController> _logger;
+        private readonly IPartidaService _partidaService;
+        public PartidaController(ILogger<PartidaController> logger, IPartidaService partidaService)
+        {
+            _logger = logger;
+            _partidaService = partidaService;
+        }
         // GET: PartidaController
         public ActionResult Index()
+        {
+            return View();
+  
+        }
+
+        // GET: PartidaController/guztiak
+        public async Task<IActionResult> Guztiak()
+        {
+
+            return View(await _partidaService.GetPartidaGuztiak());
+        }
+        // GET: PartidaController/onenak
+        public ActionResult Onenak()
+        {
+            return View();
+        }
+        // GET: PartidaController/txarrenak
+        public ActionResult Txarrenak()
+        {
+            return View();
+        }
+        // GET: PartidaController/nireak
+        public ActionResult Nireak()
         {
             return View();
         }

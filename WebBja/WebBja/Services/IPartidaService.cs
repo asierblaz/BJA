@@ -8,6 +8,7 @@ namespace BjaWeb.Services
 {
     public interface IPartidaService
     {
-        Task<IList<Partida>> GetPartidaGuztiak();
+        Task<List<Partida>> GetPartidaGuztiak();
+    
     }
 }
