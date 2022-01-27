@@ -33,19 +33,20 @@ namespace WebBja.Controllers
             return View(await _partidaService.GetPartidaGuztiak());
         }
         // GET: PartidaController/onenak
-        public ActionResult Onenak()
+        public async Task<ActionResult> Onenak()
         {
-            return View();
+            return View(await _partidaService.GetPartidaOnenak());
         }
         // GET: PartidaController/txarrenak
-        public ActionResult Txarrenak()
+        public async Task<ActionResult> Txarrenak()
         {
-            return View();
+            return View(await _partidaService.GetPartidaTxarrenak());
         }
         // GET: PartidaController/nireak
-        public ActionResult Nireak()
+        public async Task<ActionResult> Nireak()
         {
-            return View();
+
+            return View(await _partidaService.GetPartidakById("Benito"));
         }
 
         // GET: PartidaController/Details/5
