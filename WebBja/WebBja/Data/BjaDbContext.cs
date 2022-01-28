@@ -7,12 +7,14 @@ using WebBja.Models;
 
 namespace WebBja.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class BjaDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public BjaDbContext(DbContextOptions<BjaDbContext> options)
             : base(options)
         {
         }
-      
+        public DbSet<Formulario> Formulario { get; set; }
+
+
     }
 }

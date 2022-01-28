@@ -38,12 +38,18 @@ namespace WebBja.Controllers
 
         List<Partida> partidak = new List<Partida>();
         partidak = await _partidaService.GetPartidaOnenak();
-            @ViewData["1"]= partidak[0].Jokalaria.Name;
-            @ViewData["2"]=partidak[1].Jokalaria.Name;
-            @ViewData["3"] = partidak[2].Jokalaria.Name;
-            @ViewData["4"] = partidak[3].Jokalaria.Name;
-            @ViewData["5"] = partidak[4].Jokalaria.Name;
+            for (int i = 0; i < partidak.Count; i++)
+            {
 
+                ViewData[ (i + 1)+""] = partidak[i].Jokalaria.Name;
+            }
+
+            //ViewData["1"]= partidak[0].Jokalaria.Name;
+          /* ViewData["2"]=partidak[1].Jokalaria.Name;
+           ViewData["3"] = partidak[2].Jokalaria.Name;
+           ViewData["4"] = partidak[3].Jokalaria.Name;
+           ViewData["5"] = partidak[4].Jokalaria.Name;
+          */
 
 
             return View(partidak);
@@ -58,9 +64,9 @@ namespace WebBja.Controllers
         public async Task<ActionResult> Nireak()
         {
 
-            ViewData["izena"] = "Benito";
-
-            return View(await _partidaService.GetPartidakById("Benito"));
+            var user = User.Identity.Name;
+            ViewData["izena"] = user;
+            return View(await _partidaService.GetPartidakById(user));
         }
 
         // GET: PartidaController/Details/5

@@ -34,6 +34,15 @@ namespace WebBja
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
+
+            //Gure konexioa injektatzen dugu
+            services.AddDbContext<BjaDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("BjaConnection")));
+
+
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
