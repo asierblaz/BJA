@@ -12,4 +12,10 @@ $('.tablas').DataTable({
 
     }
 });
+
+
+    $('.star').fontstar({}, function (value, self) {
+
+    });
+
 });

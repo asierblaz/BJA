@@ -2,50 +2,95 @@
 
 @{
     ViewData["Title"] = "Create";
+
+}
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="~/js/formulario.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+@if (ViewData["existe"]=="1"){ 
+<div class="alert alert-success" role="alert">
+    <p>@ViewData["info"]</p> 
+</div>
 }
 
-<h1>Create</h1>
+<div class="row mt">
+    <div class="col-lg-6 col-lg-offset-3 centered">
+        <h3 id="titulo" data-info="@ViewData[""]">Zure iritzia</h3>
+        <hr>
+        <p>Gure jokuaren iritzia garrantzitsua da guretzat.</p>
+    </div>
 
-<h4>Formulario</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+</div>
+<div class="row mt">
+    <div class="col-lg-8 col-lg-offset-2">
+        @*TempData["mensaje"]
+
+            @if (TempData["mensaje"] != null)
+            {
+                <div class="alert-success alert-dismissable fade show" role="alert">
+                    asdsds  @TempData["mensaje"]
+                    <button type="button" class="close" date-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }*@
+
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
-                <label asp-for="Puntuacion" class="control-label"></label>
-                <input asp-for="Puntuacion" class="form-control" />
-                <span asp-validation-for="Puntuacion" class="text-danger"></span>
+                Puntuazioa:<br /><br />
+                @* <input asp-for="Puntuacion" class="form-control" />*@
+
+
+                <select style="height:1200px;" asp-for="Puntuacion" class="star">
+                    <option value="">--</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4 selected>4</option>
+                    <option value=5>5</option>
+                </select>
+                <span asp-validation-for="Puntuacion" class="text-danger"></span><br /><br />
             </div>
             <div class="form-group">
-                <label asp-for="Horas" class="control-label"></label>
-               @*<input asp-for="Horas" class="form-control" />*@
+                Zenbat ordu jolastu dituzu?
                 <select asp-for="Horas" class="form-control">
                     <option value="1h - 3h">1h - 3h</option>
                     <option value="3h - 5h">3h - 5h</option>
                     <option value="5h - 7h">5h - 7h</option>
                     <option value="7h baino gehiago">7h baino gehiago</option>
                 </select>
-
-
                 <span asp-validation-for="Horas" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Mejoras" class="control-label"></label>
-                <input asp-for="Mejoras" class="form-control" />
-                <span asp-validation-for="Mejoras" class="text-danger"></span>
+                <textarea class="form-control" asp-for="Mejoras" placeholder="Zer hobetuko zenuke?" rows="5" data-rule="required" data-msg="Idatzi zerbait"></textarea>
+                <div class="validate"></div>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+
+            <div class="form-send">
+                <button type="submit" class="btn btn-primary">Bidali Formularioa</button>
             </div>
+
         </form>
+
+
+
+
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+
+
+
+

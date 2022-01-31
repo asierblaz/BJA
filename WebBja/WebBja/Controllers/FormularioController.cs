@@ -38,20 +38,19 @@ namespace WebBja.Controllers
         [Authorize]
         public ActionResult Create()
         {
-
-          /*  Formulario fo = new Formulario();
-
+            ViewData["existe"] = "0";
             var forms = from f in _context.Formulario
                         where f.Username.Equals(User.Identity.Name)
                         select f;
 
-            fo = forms.First();
 
-            if(fo.Username == User.Identity.Name)
-            {
-                return RedirectToAction(nameof(Index));
-            } else
-            {*/
+            if (forms.Count()> 1) {
+
+                ViewData["info"] = "Zure iruzkina gordeta dago, ezin dituzu iruzkin gehiago gorde";
+                ViewData["existe"] = "1";
+            }
+
+
                 return View();
             
 
@@ -65,15 +64,16 @@ namespace WebBja.Controllers
         {
 
             form.Username = User.Identity.Name;
+
             
-         
 
             if (ModelState.IsValid)
             {
-                
                 _context.Add(form);
                 _context.SaveChanges();
 
+                TempData["mensaje"] = "Zure formulario ondo bete da!";
+              
 
             }
 
