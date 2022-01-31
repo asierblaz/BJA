@@ -13,6 +13,8 @@ namespace WebBja.Data
             : base(options)
         {
         }
+        public DbSet<WebBja.Models.Formulario> Formulario { get; set; }
+        public DbSet<WebBja.Models.Comentario> Comentario { get; set; }
       
     }
 }

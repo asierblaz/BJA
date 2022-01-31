@@ -14,6 +14,7 @@ namespace WebBja.Data
         {
         }
         public DbSet<Formulario> Formulario { get; set; }
+        public DbSet<Comentario> Comentario { get; set; }
 
 
     }

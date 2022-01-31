@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebBja.Data;
 
 namespace WebBja.Migrations
 {
     [DbContext(typeof(BjaDbContext))]
-    partial class BjaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220131073059_ComentarioMirion")]
+    partial class ComentarioMirion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

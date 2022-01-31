@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebBja.Data;
 using WebBja.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebBja.Controllers
 {
@@ -34,9 +35,27 @@ namespace WebBja.Controllers
         }
 
         // GET: FormularioController/Create
+        [Authorize]
         public ActionResult Create()
         {
-            return View();
+
+          /*  Formulario fo = new Formulario();
+
+            var forms = from f in _context.Formulario
+                        where f.Username.Equals(User.Identity.Name)
+                        select f;
+
+            fo = forms.First();
+
+            if(fo.Username == User.Identity.Name)
+            {
+                return RedirectToAction(nameof(Index));
+            } else
+            {*/
+                return View();
+            
+
+
         }
 
         // POST: FormularioController/Create
@@ -45,17 +64,13 @@ namespace WebBja.Controllers
         public ActionResult Create(Formulario form)
         {
 
-         /*   var forms = from f in _context.Formulario
-                        where f.Username.Equals("Benito")
-                        select f;
-           
-            forms.Count();*/
-
             form.Username = User.Identity.Name;
+            
          
 
             if (ModelState.IsValid)
             {
+                
                 _context.Add(form);
                 _context.SaveChanges();
 
@@ -74,6 +89,7 @@ namespace WebBja.Controllers
         }
 
         // GET: FormularioController/Edit/5
+        [Authorize]
         public ActionResult Edit(int id)
         {
             return View();
@@ -82,9 +98,20 @@ namespace WebBja.Controllers
         // POST: FormularioController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Formulario form)
         {
-            try
+
+            form.Username = User.Identity.Name;
+
+
+            if (ModelState.IsValid)
+            {
+                _context.Add(form);
+                _context.SaveChanges();
+
+            }
+
+             try
             {
                 return RedirectToAction(nameof(Index));
             }
@@ -95,24 +122,21 @@ namespace WebBja.Controllers
         }
 
         // GET: FormularioController/Delete/5
-        public ActionResult Delete(int id)
+        [Authorize]
+        public ActionResult Delete()
         {
+
             return View();
         }
 
         // POST: FormularioController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(Formulario form)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _context.Remove(form);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

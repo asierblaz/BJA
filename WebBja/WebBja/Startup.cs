@@ -41,6 +41,7 @@ namespace WebBja
                     Configuration.GetConnectionString("BjaConnection")));
 
 
+
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)

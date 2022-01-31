@@ -324,3 +324,7 @@ C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5
 C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Partida\Nireak.cshtml.g.cs
 C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Formulario\Create.cshtml.g.cs
 C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Formulario\Index.cshtml.g.cs
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Formulario\Delete.cshtml.g.cs
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Formulario\Edit.cshtml.g.cs
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Comentario\Index.cshtml.g.cs
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\WebBja\obj\Debug\net5.0\Razor\Views\Comentario\Create.cshtml.g.cs
