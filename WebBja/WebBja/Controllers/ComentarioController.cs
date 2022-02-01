@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebBja.Data;
@@ -26,19 +27,17 @@ namespace WebBja.Controllers
             return View(listaComent);
         }
 
-        // GET: ComentarioController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+
 
         // GET: ComentarioController/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
         }
 
         // POST: ComentarioController/Create
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Comentario com)
@@ -54,7 +53,8 @@ namespace WebBja.Controllers
             }
             try
             {
-                return RedirectToAction(nameof(Index));
+
+                return RedirectToAction("Index", "Home");
             }
             catch
             {
@@ -62,46 +62,23 @@ namespace WebBja.Controllers
             }
         }
 
-        // GET: ComentarioController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
 
-        // POST: ComentarioController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
         // GET: ComentarioController/Delete/5
+        [Authorize]
         public ActionResult Delete(int id)
         {
             return View();
         }
 
         // POST: ComentarioController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        [Authorize]
+        [HttpPost]    
+        public ActionResult Delete(Comentario coment)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _context.Remove(coment);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

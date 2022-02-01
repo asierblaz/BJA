@@ -23,7 +23,13 @@ namespace WebBja.Controllers
         // GET: FormularioController
         public ActionResult Index()
         {
+            if (!User.Identity.Name.Equals("Admin")) {
+
+                return RedirectToAction("Index", "Home");
+
+            }
             IEnumerable<Formulario> listaForms = _context.Formulario;
+
 
             return View(listaForms);
         }
@@ -44,9 +50,9 @@ namespace WebBja.Controllers
                         select f;
 
 
-            if (forms.Count()> 1) {
+            if (forms.Count()>0 ) {
 
-                ViewData["info"] = "Zure iruzkina gordeta dago, ezin dituzu iruzkin gehiago gorde";
+                ViewData["info"] = "Zure formularioa gordeta dago, ezin dituzu formulario gehiago gorde";
                 ViewData["existe"] = "1";
             }
 
@@ -58,6 +64,7 @@ namespace WebBja.Controllers
         }
 
         // POST: FormularioController/Create
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Formulario form)
@@ -73,7 +80,8 @@ namespace WebBja.Controllers
                 _context.SaveChanges();
 
                 TempData["mensaje"] = "Zure formulario ondo bete da!";
-              
+
+                return RedirectToAction(nameof(Create));
 
             }
 
@@ -96,6 +104,7 @@ namespace WebBja.Controllers
         }
 
         // POST: FormularioController/Edit/5
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Formulario form)
@@ -122,6 +131,7 @@ namespace WebBja.Controllers
         }
 
         // GET: FormularioController/Delete/5
+        
         [Authorize]
         public ActionResult Delete()
         {
@@ -130,6 +140,7 @@ namespace WebBja.Controllers
         }
 
         // POST: FormularioController/Delete/5
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(Formulario form)

@@ -1,61 +1,93 @@
-﻿@model IEnumerable<WebBja.Models.Partida>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model IEnumerable<WebBja.Models.Comentario>
 
 @{
     ViewData["Title"] = "Home Page";
 }
-
-<!-- +++++ Welcome Section +++++ -->
 <div id="ww">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 centered">
-                <img src="~/plantilla/img/user.png" alt="Stanley">
-                <h1>Hi, I am Stanley!</h1>
-                <p>Hello everybody. I'm Stanley, a free handsome bootstrap theme coded. A really simple theme for those wanting to showcase their work with a cute & clean style.</p>
-                <p>Please, consider to register to <a href="#">our newsletter</a> to be updated with our latest themes and freebies. Like always, you can use this theme in any project freely. Share it with your friends.</p>
-
+        <div class="col-lg-8 col-lg-offset-2 centered">
+            <img style="height:200px;" src="~/plantilla/img/favicon.png" alt="Logo">
+            <h1>BJA Developers</h1>
+            <p>Kaixo Bja Gara.</p>
+        </div>
+        <div style="background-color: #f2f2f2;" class="container pt">
+            <div class="row mt centered">
+                <div class="col-lg-4">
+                    <a href="#"><img class="img-responsive" src="~/plantilla/img/portfolio/menua.PNG" alt="" /></a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="" #"><img class="img-responsive" src="~/plantilla/img/portfolio/Jokua.PNG" alt="" /></a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#"><img class="img-responsive" src="~/plantilla/img/portfolio/game_over.PNG" alt="" /></a>
+                </div>
             </div>
-            <!-- /col-lg-8 -->
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<!-- /ww -->
-<!-- +++++ Projects Section +++++ -->
 
+        </div>
+    </div>
+</div>
 <div class="container pt">
-    <div class="row mt centered">
-        <div class="col-lg-4">
-            <a href="~/plantilla/work01.html"><img class="img-responsive" src="~/plantilla/img/portfolio/port01.jpg" alt="" /></a>
-            <p>APE</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="~/plantilla/work01.html"><img class="img-responsive" src="~/plantilla/img/portfolio/port02.jpg" alt="" /></a>
-            <p>RAIDERS</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="~/plantilla/work01.html"><img class="img-responsive" src="~/plantilla/img/portfolio/port03.jpg" alt="" /></a>
-            <p>VIKINGS</p>
-        </div>
+    <h3>Iruzkinak</h3>
+    <div id="comentarios">
+
+        @foreach (var item in Model)
+        {
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <p>
+                            <img src="~/plantilla/img/user.png" width="50px" height="50px">
+                            <ba>@Html.DisplayFor(modelItem => item.Username)</ba>
+                        </p>
+                        <p>
+                            <bd>
+                                @Html.DisplayFor(modelItem => item.Fecha)
+
+                                @if (Context.User.Identity.IsAuthenticated && item.Username == Context.User.Identity.Name || Context.User.Identity.Name == "Admin")
+                                {
+                                    <span>&nbsp; |   &nbsp; </span>
+                                    <a style="color:red; text-decoration:underline" id="eliminar" data-idcoment="@Html.DisplayFor(modelItem => item.Id)" href="#">Ezabatu</a>
+                                }
+                            </bd>
+                        </p>
+                        <h4>
+
+                            @Html.DisplayFor(modelItem => item.Tema)
+
+                        </h4>
+                        <p class="bq">" @Html.DisplayFor(modelItem => item.Texto)"</p>
+                    </div>
+
+                </div>
+                <!-- /row -->
+            </div>
+            <hr />
+
+        }
     </div>
-    <!-- /row -->
-    <div class="row mt centered">
-        <div class="col-lg-4">
-            <a href="work01.html"><img class="img-responsive" src="~/plantilla/img/portfolio/port04.jpg" alt="" /></a>
-            <p>YODA</p>
+    <h4>Iruzkin berria idatzi</h4><br />
+
+    @if (SignInManager.IsSignedIn(User))
+    {<div id="formulariolario">
+
         </div>
-        <div class="col-lg-4">
-            <a href="work01.html"><img class="img-responsive" src="~/plantilla/img/portfolio/port05.jpg" alt="" /></a>
-            <p>EMPERORS</p>
-        </div>
-        <div class="col-lg-4">
-            <a href="work01.html"><img class="img-responsive" src="~/plantilla/img/portfolio/port06.jpg" alt="" /></a>
-            <p>CHIEFS</p>
-        </div>
-    </div>
+
+    }
+    else
+    {
+<div>
+    Zure iruzkinak lagatzeko konektatu zaitez &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Login">Login</a>
+
+</div>
+
+    }        <hr />
+
     <!-- /row -->
 </div>
-<!-- /container -->
-<!-- +++++ Footer Section +++++ -->
-</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script src="~/js/comentario.js"></script>

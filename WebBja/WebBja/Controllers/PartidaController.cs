@@ -1,4 +1,5 @@
 ﻿using BjaWeb.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -44,14 +45,7 @@ namespace WebBja.Controllers
                 ViewData[ (i + 1)+""] = partidak[i].Jokalaria.Name;
             }
 
-            //ViewData["1"]= partidak[0].Jokalaria.Name;
-          /* ViewData["2"]=partidak[1].Jokalaria.Name;
-           ViewData["3"] = partidak[2].Jokalaria.Name;
-           ViewData["4"] = partidak[3].Jokalaria.Name;
-           ViewData["5"] = partidak[4].Jokalaria.Name;
-          */
-
-
+         
             return View(partidak);
         }
         // GET: PartidaController/txarrenak
@@ -61,6 +55,7 @@ namespace WebBja.Controllers
             return View(await _partidaService.GetPartidaTxarrenak());
         }
         // GET: PartidaController/nireak
+        [Authorize]
         public async Task<ActionResult> Nireak()
         {
 

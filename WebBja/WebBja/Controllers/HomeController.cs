@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using WebBja.Data;
 using WebBja.Models;
 
 namespace WebBja.Controllers
@@ -12,15 +13,19 @@ namespace WebBja.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly BjaDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, BjaDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            ViewData["ruta"] = HttpContext.Request.Host;//HttpContext.Current.Request.Url.AbsolutePath;
+            IEnumerable<Comentario> listaComent = _context.Comentario;
+            return View(listaComent);
         }
 
         public IActionResult Privacy()

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -22,8 +25,11 @@
 
     <!-- Main Stylesheet File -->
     <link href="~/plantilla/css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+
 
 </head>
+
 
 <body>
 
@@ -31,12 +37,12 @@
     <div class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand"  asp-controller="Home" asp-action="Index">BJA</a>
+                @* <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>*@
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img style="height:100px;margin-top:-40px" src="~/plantilla/img/favicon.png" alt="Logo"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -49,86 +55,95 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Partida" asp-action="Txarrenak">Hall of Shame</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Partida" asp-action="Nireak">Nire Partidak</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Formulario" asp-action="Create">Formularioak</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Comentario" asp-action="Index">Iruzkinak</a>
-                    </li>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Partida" asp-action="Nireak">Nire Partidak</a>
+                        </li>
+                        @if (User.Identity.Name == "Admin")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Formulario" asp-action="Index">Formularioa</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Formulario" asp-action="Create">Formularioa</a>
+                            </li>
+                        }
 
-                    <partial name="_LoginPartial" />
 
+                    }
+                    <li class="nav-item">
+                        <partial name="_LoginPartial" />
+                    </li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
     </div>
+
     <div class="container pt">
 
         @RenderBody()
-        </div>
-        <div id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <h4>My Bunker</h4>
-                        <p>
-                            Some Address 987,<br /> +34 9054 5455, <br /> Madrid, Spain.
-                        </p>
-                    </div>
-                    <!-- /col-lg-4 -->
-
-                    <div class="col-lg-4">
-                        <h4>My Links</h4>
-                        <p>
-                            <a href="#">Dribbble</a><br />
-                            <a href="#">Twitter</a><br />
-                            <a href="#">Facebook</a>
-                        </p>
-                    </div>
-                    <!-- /col-lg-4 -->
-
-                    <div class="col-lg-4">
-                        <h4>About Stanley</h4>
-                        <p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
-                    </div>
-                    <!-- /col-lg-4 -->
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>My Bunker</h4>
+                    <p>
+                        Some Address 987,<br /> +34 9054 5455, <br /> Madrid, Spain.
+                    </p>
                 </div>
+                <!-- /col-lg-4 -->
+
+                <div class="col-lg-4">
+                    <h4>My Links</h4>
+                    <p>
+                        <a href="#">Dribbble</a><br />
+                        <a href="#">Twitter</a><br />
+                        <a href="#">Facebook</a>
+                    </p>
+                </div>
+                <!-- /col-lg-4 -->
+
+                <div class="col-lg-4">
+                    <h4>About Stanley</h4>
+                    <p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
+                </div>
+                <!-- /col-lg-4 -->
             </div>
         </div>
+    </div>
 
-        <div id="copyrights">
-            <div class="container">
-                <p>
-                    &copy; Copyrights <strong>Stanley</strong>. All Rights Reserved
-                </p>
-                <div class="credits">
-                    <!--
-                      You are NOT allowed to delete the credit link to TemplateMag with free version.
-                      You can delete the credit link only if you bought the pro version.
-                      Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/stanley-bootstrap-freelancer-template/
-                      Licensing information: https://templatemag.com/license/
-                    -->
-                    Created with Stanley template by <a href="https://templatemag.com/">TemplateMag</a>
-                </div>
+    <div id="copyrights">
+        <div class="container">
+            <p>
+                &copy; Copyrights <strong>Stanley</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+                <!--
+                  You are NOT allowed to delete the credit link to TemplateMag with free version.
+                  You can delete the credit link only if you bought the pro version.
+                  Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/stanley-bootstrap-freelancer-template/
+                  Licensing information: https://templatemag.com/license/
+                -->
+                Created with Stanley template by <a href="https://templatemag.com/">TemplateMag</a>
             </div>
         </div>
-        <!-- / copyrights -->
-        <!-- JavaScript Libraries -->
-        <script src="~/plantilla/lib/jquery/jquery.min.js"></script>
-        <script src="~/plantilla/lib/php-mail-form/validate.js"></script>
-        <script src="~/plantilla/lib/easing/easing.min.js"></script>
+    </div>
+    <!-- / copyrights -->
+    <!-- JavaScript Libraries -->
 
 
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/DataTables/datatables.min.js"></script>
-        <script src="~/js/jquery.fontstar.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/DataTables/datatables.min.js"></script>
+    <script src="~/js/jquery.fontstar.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 
 
 </body>

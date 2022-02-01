@@ -13,6 +13,8 @@ namespace WebBja.Models
 
         public string Username { get; set; }
 
+        public string Tema { get; set; }
+
         public string Texto { get; set; }
 
         public DateTime Fecha{ get; set; }

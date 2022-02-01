@@ -4,21 +4,18 @@
     ViewData["Title"] = "Create";
 
 }
-<head>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="~/js/formulario.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
 
-</head>
-@if (ViewData["existe"]=="1"){ 
-<div class="alert alert-success" role="alert">
-    <p>@ViewData["info"]</p> 
-</div>
+
+@if (ViewData["existe"] == "1")
+{
+    <div class="alert alert-success" role="alert">
+        <p>@ViewData["info"]</p>
+    </div>
 }
 
 <div class="row mt">
     <div class="col-lg-6 col-lg-offset-3 centered">
-        <h3 id="titulo" data-info="@ViewData[""]">Zure iritzia</h3>
+        <h3 id="titulo" data-info="@ViewData["existe"]">Zure iritzia</h3>
         <hr>
         <p>Gure jokuaren iritzia garrantzitsua da guretzat.</p>
     </div>
@@ -74,7 +71,7 @@
 
 
             <div class="form-send">
-                <button type="submit" class="btn btn-primary">Bidali Formularioa</button>
+                <button id="enviar" type="submit" class="btn btn-primary">Bidali Formularioa</button>
             </div>
 
         </form>
@@ -84,7 +81,8 @@
 
     </div>
 </div>
-
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/formulario.js"></script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

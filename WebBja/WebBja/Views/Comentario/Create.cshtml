@@ -7,19 +7,21 @@
 <h1>Idatzi ezazu zure iruzkina</h1>
 
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div id="formCreate">
+    <div>
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
             <div class="form-group">
+                <label asp-for="Tema" class="control-label"></label>
+                <input asp-for="Tema" class="form-control" />
                 <label asp-for="Texto" class="control-label"></label>
                 <textarea asp-for="Texto" class="form-control"></textarea>
                 <span asp-validation-for="Texto" class="text-danger"></span>
             </div>
             
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Bidali" class="btn btn-primary" />
             </div>
         </form>
     </div>
