@@ -12,6 +12,8 @@ namespace BjaWeb.Services
         Task<List<Partida>> GetPartidakById(string name);
         Task<List<Partida>> GetPartidaOnenak();
         Task<List<Partida>> GetPartidaTxarrenak();
+        Task<List<ReportModel>> GetPartidaOnenenTxostena();
+        Task<List<ReportModel>> GetPartidaTxarrenenTxostena();
 
     }
 }

@@ -35,9 +35,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Fecha)
                 </td>
-
-
             </tr>
         }
     </tbody>
 </table>
+<form method="post">
+    <center>
+        <a target="_blank" class="btn btn-warning text-light" asp-controller="Report" asp-action="txarrenakInprimatu">
+            Informea sortu
+        </a>
+    </center>
+</form>

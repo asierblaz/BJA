@@ -9,60 +9,69 @@
 </head>
 
 <h1>Onenak</h1>
-    <div style="margin-left:250px"class="container podium container2">
-        <div class="podium__item">
-            <p class="podium__city">@ViewData["2"]</p>
-            <div class="podium__rank second">2</div>
-        </div>
-        <div class="podium__item">
-            <p class="podium__city">@ViewData["1"]</p>
-            <div class="podium__rank first">
-                <svg class="podium__number" viewBox="0 0 27.476 75.03" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="matrix(1, 0, 0, 1, 214.957736, -43.117417)">
-                        <path class="st8" d="M -198.928 43.419 C -200.528 47.919 -203.528 51.819 -207.828 55.219 C -210.528 57.319 -213.028 58.819 -215.428 60.019 L -215.428 72.819 C -210.328 70.619 -205.628 67.819 -201.628 64.119 L -201.628 117.219 L -187.528 117.219 L -187.528 43.419 L -198.928 43.419 L -198.928 43.419 Z" style="fill: #000;" />
-                    </g>
-                </svg>
-            </div>
-        </div>
-        <div class="podium__item">
-            <p class="podium__city">@ViewData["3"]</p>
-            <div class="podium__rank third">3</div>
+<div style="margin-left:250px" class="container podium container2">
+    <div class="podium__item">
+        <p class="podium__city">@ViewData["2"]</p>
+        <div class="podium__rank second">2</div>
+    </div>
+    <div class="podium__item">
+        <p class="podium__city">@ViewData["1"]</p>
+        <div class="podium__rank first">
+            <svg class="podium__number" viewBox="0 0 27.476 75.03" xmlns="http://www.w3.org/2000/svg">
+                <g transform="matrix(1, 0, 0, 1, 214.957736, -43.117417)">
+                    <path class="st8" d="M -198.928 43.419 C -200.528 47.919 -203.528 51.819 -207.828 55.219 C -210.528 57.319 -213.028 58.819 -215.428 60.019 L -215.428 72.819 C -210.328 70.619 -205.628 67.819 -201.628 64.119 L -201.628 117.219 L -187.528 117.219 L -187.528 43.419 L -198.928 43.419 L -198.928 43.419 Z" style="fill: #000;" />
+                </g>
+            </svg>
         </div>
     </div>
-<br /><br /><br />
- 
-    <table class="table table-striped tablas">
-        <thead>
+    <div class="podium__item">
+        <p class="podium__city">@ViewData["3"]</p>
+        <div class="podium__rank third">3</div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+
+<table class="table table-striped tablas">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Jokalaria.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puntuazioa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Jokalaria.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Puntuazioa)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Fecha)
-                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jokalaria.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Puntuazioa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+
 
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Jokalaria.Name)
-                    </td>
-
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Puntuazioa)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Fecha)
-                    </td>
-
-
-                </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
+<form method="post">
+    <center>
+        <a target="_blank" class="btn btn-warning text-light" asp-controller="Report" asp-action="onenakInprimatu">
+            Informea sortu
+        </a>
+    </center>
+</form>

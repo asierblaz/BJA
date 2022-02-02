@@ -51,7 +51,6 @@ namespace WebBja.Controllers
         // GET: PartidaController/txarrenak
         public async Task<ActionResult> Txarrenak()
         {
-
             return View(await _partidaService.GetPartidaTxarrenak());
         }
         // GET: PartidaController/nireak

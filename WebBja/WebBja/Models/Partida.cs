@@ -12,6 +12,13 @@ namespace WebBja.Models
         public string Fecha { get; set; }
         public Jokalaria Jokalaria { get; set; }
     }
+    public class Jokalaria
+    {
+        public string Dni { get; set; }
+        public string Name { get; set; }
+        public int Saldo { get; set; }
+
+    }
 
 
 }

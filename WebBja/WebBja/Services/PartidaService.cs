@@ -70,7 +70,31 @@ namespace BjaWeb.Services
             }
             partidaList=partidaList.OrderByDescending(o => o.Puntuazioa).ToList();
             return partidaList;
-        }      
+        }
+        public async Task<List<ReportModel>> GetPartidaOnenenTxostena()
+        {
+            List<Partida> partidaList = new List<Partida>();
+            Uri rutaPartidaGuztiak = new Uri(rutaTodos, "onenak");
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync(rutaPartidaGuztiak))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    partidaList = JsonConvert.DeserializeObject<List<Partida>>(apiResponse);
+                }
+            }
+            List<ReportModel> rmList = new List<ReportModel>();
+            foreach (Partida p in partidaList)
+            {
+                ReportModel rm = new ReportModel();
+                rm.Name = p.Jokalaria.Name;
+                rm.Puntuazioa = p.Puntuazioa;
+                rm.Fecha = p.Fecha.Substring(0, 10);
+                rmList.Add(rm);
+            }
+            rmList = rmList.OrderByDescending(o => o.Puntuazioa).ToList();
+            return rmList;
+        }
         public async Task<List<Partida>> GetPartidaTxarrenak()
         {
             List<Partida> partidaList = new List<Partida>();
@@ -90,7 +114,30 @@ namespace BjaWeb.Services
             partidaList=partidaList.OrderByDescending(o => o.Puntuazioa).ToList();
             return partidaList;
         }
+        public async Task<List<ReportModel>> GetPartidaTxarrenenTxostena()
+        {
+            List<Partida> partidaList = new List<Partida>();
+            Uri rutaPartidaGuztiak = new Uri(rutaTodos, "txarrenak");
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync(rutaPartidaGuztiak))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    partidaList = JsonConvert.DeserializeObject<List<Partida>>(apiResponse);
+                }
+            }
+            List<ReportModel> rmList = new List<ReportModel>();
+            foreach (Partida p in partidaList)
+            {
+                ReportModel rm = new ReportModel();
+                rm.Name = p.Jokalaria.Name;
+                rm.Puntuazioa = p.Puntuazioa;
+                rm.Fecha = p.Fecha.Substring(0, 10);
+                rmList.Add(rm);
+            }
+            rmList = rmList.OrderByDescending(o => o.Puntuazioa).ToList();
+            return rmList;
+        }
 
-   
     }
 }
