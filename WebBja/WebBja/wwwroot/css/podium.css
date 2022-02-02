@@ -38,10 +38,10 @@
 
 .podium .second {
     min-height: 100px;
-    background: blue;
+    background: #b2b2b2;
 }
 
 .podium .third {
-    min-height:50px;
-    background: green;
+    min-height: 50px;
+    background: #be7328;
 }

@@ -1,16 +1,36 @@
 ﻿@model IEnumerable<WebBja.Models.Formulario>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Formulario";
 }
 
-<h1>Index</h1>
+<h1>Formularioa</h1>
 @ViewData["name"]
 
+<div style="float:right">
+    <h5>Batez-besteko puntuazioa:</h5><span>
 
+    @{
+        int media = (int)ViewBag.media;
+        for (int i = 0; i < 5; i++)
+        {
+            if (i < media)
+            {
+                <p class="fa fa-star fa-3x" style="color: rgb(243, 159, 37); list-style: none; float: left; padding: 0px 2px;"></p>
+            }
+            else
+            {
+                <p class="fa fa-star-o fa-3x" style="color: rgb(150, 150, 150); list-style: none; float: left; padding: 0px 2px;"></p>
+            }
+        }
 
+    }
+</span>
+</div><br /><br />
 
-<table class="table">
+<h4>Erabiltzaileen Formularioak</h4>
+
+<table class="table tablas">
     <thead>
         <tr>
             <th>
@@ -45,9 +65,8 @@
                     @Html.DisplayFor(modelItem => item.Mejoras)
                 </td>
                 <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
                 </td>
             </tr>
         }

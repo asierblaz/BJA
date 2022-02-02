@@ -23,24 +23,12 @@
 </div>
 <div class="row mt">
     <div class="col-lg-8 col-lg-offset-2">
-        @*TempData["mensaje"]
-
-            @if (TempData["mensaje"] != null)
-            {
-                <div class="alert-success alert-dismissable fade show" role="alert">
-                    asdsds  @TempData["mensaje"]
-                    <button type="button" class="close" date-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            }*@
-
+       
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
                 Puntuazioa:<br /><br />
-                @* <input asp-for="Puntuacion" class="form-control" />*@
 
 
                 <select style="height:1200px;" asp-for="Puntuacion" class="star">

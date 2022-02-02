@@ -15,11 +15,11 @@ namespace WebBja.Models
 
         public string Username { get; set; } 
         [Required]
-        [Display (Name ="Aukeratu puntuazio bat:")]
+        [Display (Name ="Puntuazioa")]
         public int Puntuacion { get; set; }
 
         [Required]
-        [Display(Name = "Zenbat ordu jolastu duzu gure jokura?:")]
+        [Display(Name = "Zenbat ordu jolastu dituzu gure jokura?:")]
         public string Horas { get; set; }
 
         [Required]

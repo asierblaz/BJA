@@ -23,42 +23,53 @@ namespace WebBja.Controllers
         // GET: FormularioController
         public ActionResult Index()
         {
-            if (!User.Identity.Name.Equals("Admin")) {
+            if (!User.Identity.Name.Equals("Admin"))
+            {
 
                 return RedirectToAction("Index", "Home");
 
             }
             IEnumerable<Formulario> listaForms = _context.Formulario;
 
+            decimal puntuacionMedia = 0;
+            foreach(Formulario f in listaForms)
+            {
+                puntuacionMedia += f.Puntuacion;
+            }
+            puntuacionMedia = puntuacionMedia / listaForms.Count();
+
+            ViewBag.media = puntuacionMedia;
 
             return View(listaForms);
         }
 
-        // GET: FormularioController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
         // GET: FormularioController/Create
         [Authorize]
         public ActionResult Create()
         {
+            if (User.Identity.Name.Equals("Admin"))
+            {
+
+                return RedirectToAction("Index", "Home");
+
+            }
             ViewData["existe"] = "0";
             var forms = from f in _context.Formulario
                         where f.Username.Equals(User.Identity.Name)
                         select f;
 
 
-            if (forms.Count()>0 ) {
+            if (forms.Count() > 0)
+            {
 
                 ViewData["info"] = "Zure formularioa gordeta dago, ezin dituzu formulario gehiago gorde";
                 ViewData["existe"] = "1";
             }
 
 
-                return View();
-            
+            return View();
+
 
 
         }
@@ -72,7 +83,7 @@ namespace WebBja.Controllers
 
             form.Username = User.Identity.Name;
 
-            
+
 
             if (ModelState.IsValid)
             {
@@ -120,7 +131,7 @@ namespace WebBja.Controllers
 
             }
 
-             try
+            try
             {
                 return RedirectToAction(nameof(Index));
             }
@@ -131,12 +142,17 @@ namespace WebBja.Controllers
         }
 
         // GET: FormularioController/Delete/5
-        
-        [Authorize]
-        public ActionResult Delete()
-        {
 
-            return View();
+        [Authorize]
+        public ActionResult Delete(int id)
+        {
+            if (!User.Identity.Name.Equals("Admin"))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var f = _context.Formulario.Find(id);
+            ViewBag.puntuazioa = (int)f.Puntuacion;
+            return View(f);
         }
 
         // POST: FormularioController/Delete/5
