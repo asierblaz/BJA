@@ -36,11 +36,11 @@ public class PartidaDAO {
     	return collection.find(filter).into(new ArrayList<>());
     } 
     public List<Partida> findTxarrenak(){
-    	List<Partida> bostTxarrenak=collection.find().sort(new BasicDBObject("puntuazioa",1)).limit(5).into(new ArrayList<>());    	
+    	List<Partida> bostTxarrenak=collection.find().sort(new BasicDBObject("puntuazioa",1)).limit(10).into(new ArrayList<>());    	
     	return bostTxarrenak;
     }
     public List<Partida> findOnenak(){
-    	List<Partida> bostOnenak=collection.find().sort(new BasicDBObject("puntuazioa",-1)).limit(5).into(new ArrayList<>());    	
+    	List<Partida> bostOnenak=collection.find().sort(new BasicDBObject("puntuazioa",-1)).limit(10).into(new ArrayList<>());    	
     	return bostOnenak;
     }   
     
