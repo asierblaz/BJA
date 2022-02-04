@@ -23,8 +23,8 @@ public class Jolastu extends AppCompatActivity {
     static  Partida p;
     public static int tactual = 0;
    static ArrayList<Bitmap> tazas = new ArrayList<android.graphics.Bitmap>();
-    ImageView imageTaza;
-    Button b1, b2;
+    ImageView imageTaza,b1, b2;
+
 
 
     @Override
