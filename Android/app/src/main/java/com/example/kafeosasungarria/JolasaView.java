@@ -24,6 +24,7 @@ public class JolasaView extends View {
 
     Bitmap fondo, lifeImg;
     int cont=0;
+
     static int pantallaAncho, pantallaAlto;
     ArrayList<Azucar> azucares;
     ArrayList<Esnea> leches;
@@ -58,6 +59,7 @@ public class JolasaView extends View {
         pantallaAncho= size.x;
         handler = new Handler();//evento para movimiento con el dedo
         kikara = new Kikara(context);
+        kikara.kikaraIrudia=Jolastu.tazas.get(Jolastu.tactual);
         esnea= new Esnea(context);
         azucar = new Azucar(context);
         cafe = new Cafe(context);
@@ -72,7 +74,6 @@ public class JolasaView extends View {
         paintPuntuacion.setColor(Color.GREEN);
         paintPuntuacion.setTextSize(80);
         paintPuntuacion.setTextAlign(Paint.Align.LEFT);
-
 
     }
 
