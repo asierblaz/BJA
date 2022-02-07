@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Data.Migrations
+  commentId: N:WebBja.Data.Migrations
+  id: WebBja.Data.Migrations
+  children:
+  - WebBja.Data.Migrations.CreateIdentitySchema
+  langs:
+  - csharp
+  - vb
+  name: WebBja.Data.Migrations
+  nameWithType: WebBja.Data.Migrations
+  fullName: WebBja.Data.Migrations
+  type: Namespace
+  assemblies:
+  - WebBja
+references:
+- uid: WebBja.Data.Migrations.CreateIdentitySchema
+  commentId: T:WebBja.Data.Migrations.CreateIdentitySchema
+  isExternal: true
+  name: CreateIdentitySchema
+  nameWithType: CreateIdentitySchema
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema

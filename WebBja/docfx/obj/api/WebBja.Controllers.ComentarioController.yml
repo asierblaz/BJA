@@ -1,0 +1,287 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Controllers.ComentarioController
+  commentId: T:WebBja.Controllers.ComentarioController
+  id: ComentarioController
+  parent: WebBja.Controllers
+  children:
+  - WebBja.Controllers.ComentarioController.#ctor(WebBja.Data.BjaDbContext)
+  - WebBja.Controllers.ComentarioController.Create
+  - WebBja.Controllers.ComentarioController.Create(WebBja.Models.Comentario)
+  - WebBja.Controllers.ComentarioController.Delete(System.Int32)
+  - WebBja.Controllers.ComentarioController.Delete(WebBja.Models.Comentario)
+  - WebBja.Controllers.ComentarioController.Index
+  langs:
+  - csharp
+  - vb
+  name: ComentarioController
+  nameWithType: ComentarioController
+  fullName: WebBja.Controllers.ComentarioController
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: 'public class ComentarioController : Controller'
+    content.vb: >-
+      Public Class ComentarioController
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Controllers.ComentarioController.#ctor(WebBja.Data.BjaDbContext)
+  commentId: M:WebBja.Controllers.ComentarioController.#ctor(WebBja.Data.BjaDbContext)
+  id: '#ctor(WebBja.Data.BjaDbContext)'
+  parent: WebBja.Controllers.ComentarioController
+  langs:
+  - csharp
+  - vb
+  name: ComentarioController(BjaDbContext)
+  nameWithType: ComentarioController.ComentarioController(BjaDbContext)
+  fullName: WebBja.Controllers.ComentarioController.ComentarioController(WebBja.Data.BjaDbContext)
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nDependentzia injektatzen dugu.\n"
+  syntax:
+    content: public ComentarioController(BjaDbContext context)
+    parameters:
+    - id: context
+      type: WebBja.Data.BjaDbContext
+    content.vb: Public Sub New(context As BjaDbContext)
+  overload: WebBja.Controllers.ComentarioController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.ComentarioController.Index
+  commentId: M:WebBja.Controllers.ComentarioController.Index
+  id: Index
+  parent: WebBja.Controllers.ComentarioController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: ComentarioController.Index()
+  fullName: WebBja.Controllers.ComentarioController.Index()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public ActionResult Index()
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Index As ActionResult
+  overload: WebBja.Controllers.ComentarioController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.ComentarioController.Create
+  commentId: M:WebBja.Controllers.ComentarioController.Create
+  id: Create
+  parent: WebBja.Controllers.ComentarioController
+  langs:
+  - csharp
+  - vb
+  name: Create()
+  nameWithType: ComentarioController.Create()
+  fullName: WebBja.Controllers.ComentarioController.Create()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public ActionResult Create()
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Create As ActionResult
+  overload: WebBja.Controllers.ComentarioController.Create*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.ComentarioController.Create(WebBja.Models.Comentario)
+  commentId: M:WebBja.Controllers.ComentarioController.Create(WebBja.Models.Comentario)
+  id: Create(WebBja.Models.Comentario)
+  parent: WebBja.Controllers.ComentarioController
+  langs:
+  - csharp
+  - vb
+  name: Create(Comentario)
+  nameWithType: ComentarioController.Create(Comentario)
+  fullName: WebBja.Controllers.ComentarioController.Create(WebBja.Models.Comentario)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public ActionResult Create(Comentario com)
+    parameters:
+    - id: com
+      type: WebBja.Models.Comentario
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Create(com As Comentario) As ActionResult
+  overload: WebBja.Controllers.ComentarioController.Create*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.ComentarioController.Delete(System.Int32)
+  commentId: M:WebBja.Controllers.ComentarioController.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: WebBja.Controllers.ComentarioController
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: ComentarioController.Delete(Int32)
+  fullName: WebBja.Controllers.ComentarioController.Delete(System.Int32)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public ActionResult Delete(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Delete(id As Integer) As ActionResult
+  overload: WebBja.Controllers.ComentarioController.Delete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.ComentarioController.Delete(WebBja.Models.Comentario)
+  commentId: M:WebBja.Controllers.ComentarioController.Delete(WebBja.Models.Comentario)
+  id: Delete(WebBja.Models.Comentario)
+  parent: WebBja.Controllers.ComentarioController
+  langs:
+  - csharp
+  - vb
+  name: Delete(Comentario)
+  nameWithType: ComentarioController.Delete(Comentario)
+  fullName: WebBja.Controllers.ComentarioController.Delete(WebBja.Models.Comentario)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public ActionResult Delete(Comentario coment)
+    parameters:
+    - id: coment
+      type: WebBja.Models.Comentario
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Delete(coment As Comentario) As ActionResult
+  overload: WebBja.Controllers.ComentarioController.Delete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Controllers
+  commentId: N:WebBja.Controllers
+  isExternal: true
+  name: WebBja.Controllers
+  nameWithType: WebBja.Controllers
+  fullName: WebBja.Controllers
+- uid: WebBja.Controllers.ComentarioController.#ctor*
+  commentId: Overload:WebBja.Controllers.ComentarioController.#ctor
+  isExternal: true
+  name: ComentarioController
+  nameWithType: ComentarioController.ComentarioController
+  fullName: WebBja.Controllers.ComentarioController.ComentarioController
+- uid: WebBja.Data.BjaDbContext
+  commentId: T:WebBja.Data.BjaDbContext
+  parent: WebBja.Data
+  isExternal: true
+  name: BjaDbContext
+  nameWithType: BjaDbContext
+  fullName: WebBja.Data.BjaDbContext
+- uid: WebBja.Data
+  commentId: N:WebBja.Data
+  isExternal: true
+  name: WebBja.Data
+  nameWithType: WebBja.Data
+  fullName: WebBja.Data
+- uid: WebBja.Controllers.ComentarioController.Index*
+  commentId: Overload:WebBja.Controllers.ComentarioController.Index
+  isExternal: true
+  name: Index
+  nameWithType: ComentarioController.Index
+  fullName: WebBja.Controllers.ComentarioController.Index
+- uid: Microsoft.AspNetCore.Mvc.ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: Microsoft.AspNetCore.Mvc.ActionResult
+- uid: WebBja.Controllers.ComentarioController.Create*
+  commentId: Overload:WebBja.Controllers.ComentarioController.Create
+  isExternal: true
+  name: Create
+  nameWithType: ComentarioController.Create
+  fullName: WebBja.Controllers.ComentarioController.Create
+- uid: WebBja.Models.Comentario
+  commentId: T:WebBja.Models.Comentario
+  parent: WebBja.Models
+  isExternal: true
+  name: Comentario
+  nameWithType: Comentario
+  fullName: WebBja.Models.Comentario
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+- uid: WebBja.Controllers.ComentarioController.Delete*
+  commentId: Overload:WebBja.Controllers.ComentarioController.Delete
+  isExternal: true
+  name: Delete
+  nameWithType: ComentarioController.Delete
+  fullName: WebBja.Controllers.ComentarioController.Delete
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

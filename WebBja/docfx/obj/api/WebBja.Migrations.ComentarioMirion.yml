@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Migrations.ComentarioMirion
+  commentId: T:WebBja.Migrations.ComentarioMirion
+  id: ComentarioMirion
+  parent: WebBja.Migrations
+  children:
+  - WebBja.Migrations.ComentarioMirion.#ctor
+  - WebBja.Migrations.ComentarioMirion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - WebBja.Migrations.ComentarioMirion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  - WebBja.Migrations.ComentarioMirion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  langs:
+  - csharp
+  - vb
+  name: ComentarioMirion
+  nameWithType: ComentarioMirion
+  fullName: WebBja.Migrations.ComentarioMirion
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: 'public class ComentarioMirion : Migration'
+    content.vb: >-
+      Public Class ComentarioMirion
+          Inherits Migration
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Migrations.ComentarioMirion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:WebBja.Migrations.ComentarioMirion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: WebBja.Migrations.ComentarioMirion
+  langs:
+  - csharp
+  - vb
+  name: Up(MigrationBuilder)
+  nameWithType: ComentarioMirion.Up(MigrationBuilder)
+  fullName: WebBja.Migrations.ComentarioMirion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void Up(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Up(migrationBuilder As MigrationBuilder)
+  overload: WebBja.Migrations.ComentarioMirion.Up*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.ComentarioMirion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:WebBja.Migrations.ComentarioMirion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: WebBja.Migrations.ComentarioMirion
+  langs:
+  - csharp
+  - vb
+  name: Down(MigrationBuilder)
+  nameWithType: ComentarioMirion.Down(MigrationBuilder)
+  fullName: WebBja.Migrations.ComentarioMirion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void Down(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Down(migrationBuilder As MigrationBuilder)
+  overload: WebBja.Migrations.ComentarioMirion.Down*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.ComentarioMirion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:WebBja.Migrations.ComentarioMirion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: WebBja.Migrations.ComentarioMirion
+  langs:
+  - csharp
+  - vb
+  name: BuildTargetModel(ModelBuilder)
+  nameWithType: ComentarioMirion.BuildTargetModel(ModelBuilder)
+  fullName: WebBja.Migrations.ComentarioMirion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void BuildTargetModel(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+    content.vb: Protected Overrides Sub BuildTargetModel(modelBuilder As ModelBuilder)
+  overload: WebBja.Migrations.ComentarioMirion.BuildTargetModel*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.ComentarioMirion.#ctor
+  commentId: M:WebBja.Migrations.ComentarioMirion.#ctor
+  id: '#ctor'
+  parent: WebBja.Migrations.ComentarioMirion
+  langs:
+  - csharp
+  - vb
+  name: ComentarioMirion()
+  nameWithType: ComentarioMirion.ComentarioMirion()
+  fullName: WebBja.Migrations.ComentarioMirion.ComentarioMirion()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: public ComentarioMirion()
+    content.vb: Public Sub New
+  overload: WebBja.Migrations.ComentarioMirion.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Migrations
+  commentId: N:WebBja.Migrations
+  isExternal: true
+  name: WebBja.Migrations
+  nameWithType: WebBja.Migrations
+  fullName: WebBja.Migrations
+- uid: WebBja.Migrations.ComentarioMirion.Up*
+  commentId: Overload:WebBja.Migrations.ComentarioMirion.Up
+  isExternal: true
+  name: Up
+  nameWithType: ComentarioMirion.Up
+  fullName: WebBja.Migrations.ComentarioMirion.Up
+- uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+  isExternal: true
+  name: MigrationBuilder
+  nameWithType: MigrationBuilder
+  fullName: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+- uid: WebBja.Migrations.ComentarioMirion.Down*
+  commentId: Overload:WebBja.Migrations.ComentarioMirion.Down
+  isExternal: true
+  name: Down
+  nameWithType: ComentarioMirion.Down
+  fullName: WebBja.Migrations.ComentarioMirion.Down
+- uid: WebBja.Migrations.ComentarioMirion.BuildTargetModel*
+  commentId: Overload:WebBja.Migrations.ComentarioMirion.BuildTargetModel
+  isExternal: true
+  name: BuildTargetModel
+  nameWithType: ComentarioMirion.BuildTargetModel
+  fullName: WebBja.Migrations.ComentarioMirion.BuildTargetModel
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  isExternal: true
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+- uid: WebBja.Migrations.ComentarioMirion.#ctor*
+  commentId: Overload:WebBja.Migrations.ComentarioMirion.#ctor
+  isExternal: true
+  name: ComentarioMirion
+  nameWithType: ComentarioMirion.ComentarioMirion
+  fullName: WebBja.Migrations.ComentarioMirion.ComentarioMirion

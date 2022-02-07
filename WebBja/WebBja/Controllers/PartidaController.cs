@@ -15,25 +15,32 @@ namespace WebBja.Controllers
     {
         private readonly ILogger<PartidaController> _logger;
         private readonly IPartidaService _partidaService;
+
+        /// <summary>
+        /// Dependentziak Injektatzen dira.
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="partidaService"></param>
         public PartidaController(ILogger<PartidaController> logger, IPartidaService partidaService)
         {
             _logger = logger;
             _partidaService = partidaService;
         }
-        // GET: PartidaController
-        public ActionResult Index()
-        {
-            return View();
-  
-        }
 
+        /// <summary>
+        /// Partida guztiak bistaratzen dira.
+        /// </summary>
+        /// <returns></returns>
         // GET: PartidaController/guztiak
         public async Task<IActionResult> Guztiak()
         {
-
-
             return View(await _partidaService.GetPartidaGuztiak());
         }
+
+        /// <summary>
+        /// 10 partida onenak bistaratzen dira.
+        /// </summary>
+        /// <returns></returns>
         // GET: PartidaController/onenak
         public async Task<ActionResult> Onenak() { 
 
@@ -41,18 +48,26 @@ namespace WebBja.Controllers
         partidak = await _partidaService.GetPartidaOnenak();
             for (int i = 0; i < partidak.Count; i++)
             {
-
                 ViewData[ (i + 1)+""] = partidak[i].Jokalaria.Name;
             }
-
          
             return View(partidak);
         }
+
+        /// <summary>
+        /// 10 partida txarrenak bistaratzen dira.
+        /// </summary>
+        /// <returns></returns>
         // GET: PartidaController/txarrenak
         public async Task<ActionResult> Txarrenak()
         {
             return View(await _partidaService.GetPartidaTxarrenak());
         }
+
+        /// <summary>
+        /// Logeatuta dagoen erabiltzailearen partidak erakusten dira.
+        /// </summary>
+        /// <returns></returns>
         // GET: PartidaController/nireak
         [Authorize]
         public async Task<ActionResult> Nireak()
@@ -63,52 +78,5 @@ namespace WebBja.Controllers
             return View(await _partidaService.GetPartidakById(user));
         }
 
-        // GET: PartidaController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: PartidaController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: PartidaController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: PartidaController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: PartidaController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

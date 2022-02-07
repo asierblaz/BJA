@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Models.Partida
+  commentId: T:WebBja.Models.Partida
+  id: Partida
+  parent: WebBja.Models
+  children:
+  - WebBja.Models.Partida.#ctor
+  - WebBja.Models.Partida.Fecha
+  - WebBja.Models.Partida.Jokalaria
+  - WebBja.Models.Partida.Puntuazioa
+  langs:
+  - csharp
+  - vb
+  name: Partida
+  nameWithType: Partida
+  fullName: WebBja.Models.Partida
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  summary: "\nPartida klasea definitzen da\n"
+  syntax:
+    content: 'public class Partida : Object'
+    content.vb: >-
+      Public Class Partida
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Models.Partida.#ctor
+  commentId: M:WebBja.Models.Partida.#ctor
+  id: '#ctor'
+  parent: WebBja.Models.Partida
+  langs:
+  - csharp
+  - vb
+  name: Partida()
+  nameWithType: Partida.Partida()
+  fullName: WebBja.Models.Partida.Partida()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public Partida()
+    content.vb: Public Sub New
+  overload: WebBja.Models.Partida.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Partida.Puntuazioa
+  commentId: P:WebBja.Models.Partida.Puntuazioa
+  id: Puntuazioa
+  parent: WebBja.Models.Partida
+  langs:
+  - csharp
+  - vb
+  name: Puntuazioa
+  nameWithType: Partida.Puntuazioa
+  fullName: WebBja.Models.Partida.Puntuazioa
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public int Puntuazioa { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Puntuazioa As Integer
+  overload: WebBja.Models.Partida.Puntuazioa*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Partida.Fecha
+  commentId: P:WebBja.Models.Partida.Fecha
+  id: Fecha
+  parent: WebBja.Models.Partida
+  langs:
+  - csharp
+  - vb
+  name: Fecha
+  nameWithType: Partida.Fecha
+  fullName: WebBja.Models.Partida.Fecha
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Fecha { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Fecha As String
+  overload: WebBja.Models.Partida.Fecha*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Partida.Jokalaria
+  commentId: P:WebBja.Models.Partida.Jokalaria
+  id: Jokalaria
+  parent: WebBja.Models.Partida
+  langs:
+  - csharp
+  - vb
+  name: Jokalaria
+  nameWithType: Partida.Jokalaria
+  fullName: WebBja.Models.Partida.Jokalaria
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public Jokalaria Jokalaria { get; set; }
+    parameters: []
+    return:
+      type: WebBja.Models.Jokalaria
+    content.vb: Public Property Jokalaria As Jokalaria
+  overload: WebBja.Models.Partida.Jokalaria*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+- uid: WebBja.Models.Partida.#ctor*
+  commentId: Overload:WebBja.Models.Partida.#ctor
+  isExternal: true
+  name: Partida
+  nameWithType: Partida.Partida
+  fullName: WebBja.Models.Partida.Partida
+- uid: WebBja.Models.Partida.Puntuazioa*
+  commentId: Overload:WebBja.Models.Partida.Puntuazioa
+  isExternal: true
+  name: Puntuazioa
+  nameWithType: Partida.Puntuazioa
+  fullName: WebBja.Models.Partida.Puntuazioa
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: WebBja.Models.Partida.Fecha*
+  commentId: Overload:WebBja.Models.Partida.Fecha
+  isExternal: true
+  name: Fecha
+  nameWithType: Partida.Fecha
+  fullName: WebBja.Models.Partida.Fecha
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: WebBja.Models.Partida.Jokalaria*
+  commentId: Overload:WebBja.Models.Partida.Jokalaria
+  isExternal: true
+  name: Jokalaria
+  nameWithType: Partida.Jokalaria
+  fullName: WebBja.Models.Partida.Jokalaria
+- uid: WebBja.Models.Jokalaria
+  commentId: T:WebBja.Models.Jokalaria
+  parent: WebBja.Models
+  isExternal: true
+  name: Jokalaria
+  nameWithType: Jokalaria
+  fullName: WebBja.Models.Jokalaria

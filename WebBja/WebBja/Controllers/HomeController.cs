@@ -12,12 +12,10 @@ namespace WebBja.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private readonly BjaDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, BjaDbContext context)
-        {
-            _logger = logger;
+        public HomeController(BjaDbContext context)
+        {            
             _context = context;
         }
 
@@ -27,12 +25,7 @@ namespace WebBja.Controllers
             IEnumerable<Comentario> listaComent = _context.Comentario;
             return View(listaComent);
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
+       
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: BjaWeb.Services
+  commentId: N:BjaWeb.Services
+  id: BjaWeb.Services
+  children:
+  - BjaWeb.Services.IPartidaService
+  - BjaWeb.Services.PartidaService
+  langs:
+  - csharp
+  - vb
+  name: BjaWeb.Services
+  nameWithType: BjaWeb.Services
+  fullName: BjaWeb.Services
+  type: Namespace
+  assemblies:
+  - WebBja
+references:
+- uid: BjaWeb.Services.IPartidaService
+  commentId: T:BjaWeb.Services.IPartidaService
+  parent: BjaWeb.Services
+  isExternal: true
+  name: IPartidaService
+  nameWithType: IPartidaService
+  fullName: BjaWeb.Services.IPartidaService
+- uid: BjaWeb.Services.PartidaService
+  commentId: T:BjaWeb.Services.PartidaService
+  isExternal: true
+  name: PartidaService
+  nameWithType: PartidaService
+  fullName: BjaWeb.Services.PartidaService
+- uid: BjaWeb.Services
+  commentId: N:BjaWeb.Services
+  isExternal: true
+  name: BjaWeb.Services
+  nameWithType: BjaWeb.Services
+  fullName: BjaWeb.Services

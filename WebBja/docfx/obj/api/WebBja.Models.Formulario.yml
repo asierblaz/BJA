@@ -1,0 +1,278 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Models.Formulario
+  commentId: T:WebBja.Models.Formulario
+  id: Formulario
+  parent: WebBja.Models
+  children:
+  - WebBja.Models.Formulario.#ctor
+  - WebBja.Models.Formulario.Horas
+  - WebBja.Models.Formulario.Id
+  - WebBja.Models.Formulario.Mejoras
+  - WebBja.Models.Formulario.Puntuacion
+  - WebBja.Models.Formulario.Username
+  langs:
+  - csharp
+  - vb
+  name: Formulario
+  nameWithType: Formulario
+  fullName: WebBja.Models.Formulario
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  summary: "\nFormulario klasea definitzen da.\n"
+  syntax:
+    content: 'public class Formulario : Object'
+    content.vb: >-
+      Public Class Formulario
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Models.Formulario.#ctor
+  commentId: M:WebBja.Models.Formulario.#ctor
+  id: '#ctor'
+  parent: WebBja.Models.Formulario
+  langs:
+  - csharp
+  - vb
+  name: Formulario()
+  nameWithType: Formulario.Formulario()
+  fullName: WebBja.Models.Formulario.Formulario()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public Formulario()
+    content.vb: Public Sub New
+  overload: WebBja.Models.Formulario.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Formulario.Id
+  commentId: P:WebBja.Models.Formulario.Id
+  id: Id
+  parent: WebBja.Models.Formulario
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Formulario.Id
+  fullName: WebBja.Models.Formulario.Id
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: WebBja.Models.Formulario.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Formulario.Username
+  commentId: P:WebBja.Models.Formulario.Username
+  id: Username
+  parent: WebBja.Models.Formulario
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: Formulario.Username
+  fullName: WebBja.Models.Formulario.Username
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Username { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Username As String
+  overload: WebBja.Models.Formulario.Username*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Formulario.Puntuacion
+  commentId: P:WebBja.Models.Formulario.Puntuacion
+  id: Puntuacion
+  parent: WebBja.Models.Formulario
+  langs:
+  - csharp
+  - vb
+  name: Puntuacion
+  nameWithType: Formulario.Puntuacion
+  fullName: WebBja.Models.Formulario.Puntuacion
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public int Puntuacion { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Puntuacion As Integer
+  overload: WebBja.Models.Formulario.Puntuacion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Formulario.Horas
+  commentId: P:WebBja.Models.Formulario.Horas
+  id: Horas
+  parent: WebBja.Models.Formulario
+  langs:
+  - csharp
+  - vb
+  name: Horas
+  nameWithType: Formulario.Horas
+  fullName: WebBja.Models.Formulario.Horas
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Horas { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Horas As String
+  overload: WebBja.Models.Formulario.Horas*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Formulario.Mejoras
+  commentId: P:WebBja.Models.Formulario.Mejoras
+  id: Mejoras
+  parent: WebBja.Models.Formulario
+  langs:
+  - csharp
+  - vb
+  name: Mejoras
+  nameWithType: Formulario.Mejoras
+  fullName: WebBja.Models.Formulario.Mejoras
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Mejoras { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Mejoras As String
+  overload: WebBja.Models.Formulario.Mejoras*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+- uid: WebBja.Models.Formulario.#ctor*
+  commentId: Overload:WebBja.Models.Formulario.#ctor
+  isExternal: true
+  name: Formulario
+  nameWithType: Formulario.Formulario
+  fullName: WebBja.Models.Formulario.Formulario
+- uid: WebBja.Models.Formulario.Id*
+  commentId: Overload:WebBja.Models.Formulario.Id
+  isExternal: true
+  name: Id
+  nameWithType: Formulario.Id
+  fullName: WebBja.Models.Formulario.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: WebBja.Models.Formulario.Username*
+  commentId: Overload:WebBja.Models.Formulario.Username
+  isExternal: true
+  name: Username
+  nameWithType: Formulario.Username
+  fullName: WebBja.Models.Formulario.Username
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: WebBja.Models.Formulario.Puntuacion*
+  commentId: Overload:WebBja.Models.Formulario.Puntuacion
+  isExternal: true
+  name: Puntuacion
+  nameWithType: Formulario.Puntuacion
+  fullName: WebBja.Models.Formulario.Puntuacion
+- uid: WebBja.Models.Formulario.Horas*
+  commentId: Overload:WebBja.Models.Formulario.Horas
+  isExternal: true
+  name: Horas
+  nameWithType: Formulario.Horas
+  fullName: WebBja.Models.Formulario.Horas
+- uid: WebBja.Models.Formulario.Mejoras*
+  commentId: Overload:WebBja.Models.Formulario.Mejoras
+  isExternal: true
+  name: Mejoras
+  nameWithType: Formulario.Mejoras
+  fullName: WebBja.Models.Formulario.Mejoras

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BjaWeb.Services
 {
+    /// <summary>
+    /// Zerbitzuak erabiliko dituen metodoak definitzen dituen Interfazea.
+    /// </summary>
     public interface IPartidaService
     {
         Task<List<Partida>> GetPartidaGuztiak();

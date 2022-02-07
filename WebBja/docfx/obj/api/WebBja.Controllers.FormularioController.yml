@@ -1,0 +1,292 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Controllers.FormularioController
+  commentId: T:WebBja.Controllers.FormularioController
+  id: FormularioController
+  parent: WebBja.Controllers
+  children:
+  - WebBja.Controllers.FormularioController.#ctor(WebBja.Data.BjaDbContext)
+  - WebBja.Controllers.FormularioController.Create
+  - WebBja.Controllers.FormularioController.Create(WebBja.Models.Formulario)
+  - WebBja.Controllers.FormularioController.Delete(System.Int32)
+  - WebBja.Controllers.FormularioController.Delete(WebBja.Models.Formulario)
+  - WebBja.Controllers.FormularioController.Index
+  langs:
+  - csharp
+  - vb
+  name: FormularioController
+  nameWithType: FormularioController
+  fullName: WebBja.Controllers.FormularioController
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: 'public class FormularioController : Controller'
+    content.vb: >-
+      Public Class FormularioController
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Controllers.FormularioController.#ctor(WebBja.Data.BjaDbContext)
+  commentId: M:WebBja.Controllers.FormularioController.#ctor(WebBja.Data.BjaDbContext)
+  id: '#ctor(WebBja.Data.BjaDbContext)'
+  parent: WebBja.Controllers.FormularioController
+  langs:
+  - csharp
+  - vb
+  name: FormularioController(BjaDbContext)
+  nameWithType: FormularioController.FormularioController(BjaDbContext)
+  fullName: WebBja.Controllers.FormularioController.FormularioController(WebBja.Data.BjaDbContext)
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nDependentziak injektatzen dira.\n"
+  syntax:
+    content: public FormularioController(BjaDbContext context)
+    parameters:
+    - id: context
+      type: WebBja.Data.BjaDbContext
+    content.vb: Public Sub New(context As BjaDbContext)
+  overload: WebBja.Controllers.FormularioController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.FormularioController.Index
+  commentId: M:WebBja.Controllers.FormularioController.Index
+  id: Index
+  parent: WebBja.Controllers.FormularioController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: FormularioController.Index()
+  fullName: WebBja.Controllers.FormularioController.Index()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nFormularioen bista erakusten du, formulario lista bat kargatuz.\n"
+  syntax:
+    content: public ActionResult Index()
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Index As ActionResult
+  overload: WebBja.Controllers.FormularioController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.FormularioController.Create
+  commentId: M:WebBja.Controllers.FormularioController.Create
+  id: Create
+  parent: WebBja.Controllers.FormularioController
+  langs:
+  - csharp
+  - vb
+  name: Create()
+  nameWithType: FormularioController.Create()
+  fullName: WebBja.Controllers.FormularioController.Create()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nFormulario berriaren bista erakusten du.\n"
+  syntax:
+    content: public ActionResult Create()
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Create As ActionResult
+  overload: WebBja.Controllers.FormularioController.Create*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.FormularioController.Create(WebBja.Models.Formulario)
+  commentId: M:WebBja.Controllers.FormularioController.Create(WebBja.Models.Formulario)
+  id: Create(WebBja.Models.Formulario)
+  parent: WebBja.Controllers.FormularioController
+  langs:
+  - csharp
+  - vb
+  name: Create(Formulario)
+  nameWithType: FormularioController.Create(Formulario)
+  fullName: WebBja.Controllers.FormularioController.Create(WebBja.Models.Formulario)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nEskaera jaso eta datuak gordetzen ditu.\n"
+  syntax:
+    content: public ActionResult Create(Formulario form)
+    parameters:
+    - id: form
+      type: WebBja.Models.Formulario
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Create(form As Formulario) As ActionResult
+  overload: WebBja.Controllers.FormularioController.Create*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.FormularioController.Delete(System.Int32)
+  commentId: M:WebBja.Controllers.FormularioController.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: WebBja.Controllers.FormularioController
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: FormularioController.Delete(Int32)
+  fullName: WebBja.Controllers.FormularioController.Delete(System.Int32)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nBorratu nahi den formularioaren datuak erakusten ditu.\n"
+  syntax:
+    content: public ActionResult Delete(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Delete(id As Integer) As ActionResult
+  overload: WebBja.Controllers.FormularioController.Delete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.FormularioController.Delete(WebBja.Models.Formulario)
+  commentId: M:WebBja.Controllers.FormularioController.Delete(WebBja.Models.Formulario)
+  id: Delete(WebBja.Models.Formulario)
+  parent: WebBja.Controllers.FormularioController
+  langs:
+  - csharp
+  - vb
+  name: Delete(Formulario)
+  nameWithType: FormularioController.Delete(Formulario)
+  fullName: WebBja.Controllers.FormularioController.Delete(WebBja.Models.Formulario)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nAukeratutako formularioa ezabatzen du.\n"
+  syntax:
+    content: public ActionResult Delete(Formulario form)
+    parameters:
+    - id: form
+      type: WebBja.Models.Formulario
+    return:
+      type: Microsoft.AspNetCore.Mvc.ActionResult
+    content.vb: Public Function Delete(form As Formulario) As ActionResult
+  overload: WebBja.Controllers.FormularioController.Delete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Controllers
+  commentId: N:WebBja.Controllers
+  isExternal: true
+  name: WebBja.Controllers
+  nameWithType: WebBja.Controllers
+  fullName: WebBja.Controllers
+- uid: WebBja.Controllers.FormularioController.#ctor*
+  commentId: Overload:WebBja.Controllers.FormularioController.#ctor
+  isExternal: true
+  name: FormularioController
+  nameWithType: FormularioController.FormularioController
+  fullName: WebBja.Controllers.FormularioController.FormularioController
+- uid: WebBja.Data.BjaDbContext
+  commentId: T:WebBja.Data.BjaDbContext
+  parent: WebBja.Data
+  isExternal: true
+  name: BjaDbContext
+  nameWithType: BjaDbContext
+  fullName: WebBja.Data.BjaDbContext
+- uid: WebBja.Data
+  commentId: N:WebBja.Data
+  isExternal: true
+  name: WebBja.Data
+  nameWithType: WebBja.Data
+  fullName: WebBja.Data
+- uid: WebBja.Controllers.FormularioController.Index*
+  commentId: Overload:WebBja.Controllers.FormularioController.Index
+  isExternal: true
+  name: Index
+  nameWithType: FormularioController.Index
+  fullName: WebBja.Controllers.FormularioController.Index
+- uid: Microsoft.AspNetCore.Mvc.ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: Microsoft.AspNetCore.Mvc.ActionResult
+- uid: WebBja.Controllers.FormularioController.Create*
+  commentId: Overload:WebBja.Controllers.FormularioController.Create
+  isExternal: true
+  name: Create
+  nameWithType: FormularioController.Create
+  fullName: WebBja.Controllers.FormularioController.Create
+- uid: WebBja.Models.Formulario
+  commentId: T:WebBja.Models.Formulario
+  parent: WebBja.Models
+  isExternal: true
+  name: Formulario
+  nameWithType: Formulario
+  fullName: WebBja.Models.Formulario
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+- uid: WebBja.Controllers.FormularioController.Delete*
+  commentId: Overload:WebBja.Controllers.FormularioController.Delete
+  isExternal: true
+  name: Delete
+  nameWithType: FormularioController.Delete
+  fullName: WebBja.Controllers.FormularioController.Delete
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

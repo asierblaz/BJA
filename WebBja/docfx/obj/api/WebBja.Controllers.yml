@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Controllers
+  commentId: N:WebBja.Controllers
+  id: WebBja.Controllers
+  children:
+  - WebBja.Controllers.ComentarioController
+  - WebBja.Controllers.FormularioController
+  - WebBja.Controllers.HomeController
+  - WebBja.Controllers.PartidaController
+  - WebBja.Controllers.ReportController
+  langs:
+  - csharp
+  - vb
+  name: WebBja.Controllers
+  nameWithType: WebBja.Controllers
+  fullName: WebBja.Controllers
+  type: Namespace
+  assemblies:
+  - WebBja
+references:
+- uid: WebBja.Controllers.ComentarioController
+  commentId: T:WebBja.Controllers.ComentarioController
+  isExternal: true
+  name: ComentarioController
+  nameWithType: ComentarioController
+  fullName: WebBja.Controllers.ComentarioController
+- uid: WebBja.Controllers.FormularioController
+  commentId: T:WebBja.Controllers.FormularioController
+  isExternal: true
+  name: FormularioController
+  nameWithType: FormularioController
+  fullName: WebBja.Controllers.FormularioController
+- uid: WebBja.Controllers.HomeController
+  commentId: T:WebBja.Controllers.HomeController
+  isExternal: true
+  name: HomeController
+  nameWithType: HomeController
+  fullName: WebBja.Controllers.HomeController
+- uid: WebBja.Controllers.PartidaController
+  commentId: T:WebBja.Controllers.PartidaController
+  isExternal: true
+  name: PartidaController
+  nameWithType: PartidaController
+  fullName: WebBja.Controllers.PartidaController
+- uid: WebBja.Controllers.ReportController
+  commentId: T:WebBja.Controllers.ReportController
+  isExternal: true
+  name: ReportController
+  nameWithType: ReportController
+  fullName: WebBja.Controllers.ReportController

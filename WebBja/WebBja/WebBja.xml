@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebBja</name>
+    </assembly>
+    <members>
+        <member name="M:WebBja.Controllers.ComentarioController.#ctor(WebBja.Data.BjaDbContext)">
+            <summary>
+            Dependentzia injektatzen dugu.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebBja.Controllers.FormularioController.#ctor(WebBja.Data.BjaDbContext)">
+            <summary>
+            Dependentziak injektatzen dira.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebBja.Controllers.FormularioController.Index">
+            <summary>
+            Formularioen bista erakusten du, formulario lista bat kargatuz.
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:WebBja.Controllers.FormularioController.Create">
+            <summary>
+            Formulario berriaren bista erakusten du.
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:WebBja.Controllers.FormularioController.Create(WebBja.Models.Formulario)">
+            <summary>
+            Eskaera jaso eta datuak gordetzen ditu.
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebBja.Controllers.FormularioController.Delete(System.Int32)">
+            <summary>
+            Borratu nahi den formularioaren datuak erakusten ditu.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebBja.Controllers.FormularioController.Delete(WebBja.Models.Formulario)">
+            <summary>
+            Aukeratutako formularioa ezabatzen du.
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebBja.Controllers.PartidaController.#ctor(Microsoft.Extensions.Logging.ILogger{WebBja.Controllers.PartidaController},BjaWeb.Services.IPartidaService)">
+            <summary>
+            Dependentziak Injektatzen dira.
+            </summary>
+            <param name="logger"></param>
+            <param name="partidaService"></param>
+        </member>
+        <member name="M:WebBja.Controllers.PartidaController.Guztiak">
+            <summary>
+            Partida guztiak bistaratzen dira.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebBja.Controllers.PartidaController.Onenak">
+            <summary>
+            10 partida onenak bistaratzen dira.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebBja.Controllers.PartidaController.Txarrenak">
+            <summary>
+            10 partida txarrenak bistaratzen dira.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebBja.Controllers.PartidaController.Nireak">
+            <summary>
+            Logeatuta dagoen erabiltzailearen partidak erakusten dira.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebBja.Controllers.ReportController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,BjaWeb.Services.IPartidaService)">
+            <summary>
+            Dependentziak injektatzen dira.
+            </summary>
+            <param name="webHostEnvironment"></param>
+            <param name="partidaService"></param>
+        </member>
+        <member name="M:WebBja.Controllers.ReportController.txarrenakInprimatu">
+            <summary>
+            Jolastutako 10 partida txarrenen txostena inprimatzen du.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebBja.Controllers.ReportController.onenakInprimatu">
+            <summary>
+            Jolastutako 10 partida onenen txostena inprimatzen du.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebBja.Models.Comentario">
+            <summary>
+            Comentario klasea definitzen da.
+            </summary>
+        </member>
+        <member name="T:WebBja.Models.Formulario">
+            <summary>
+            Formulario klasea definitzen da.
+            </summary>
+        </member>
+        <member name="T:WebBja.Models.Partida">
+            <summary>
+            Partida klasea definitzen da
+            </summary>
+        </member>
+        <member name="T:WebBja.Models.Jokalaria">
+            <summary>
+            Jokalaria klasea definitzen da
+            </summary>
+        </member>
+        <member name="T:WebBja.Models.ReportModel">
+            <summary>
+            ReportModelaq klasea definitzen da.
+            </summary>
+        </member>
+        <member name="T:BjaWeb.Services.IPartidaService">
+            <summary>
+            Zerbitzuak erabiliko dituen metodoak definitzen dituen Interfazea.
+            </summary>
+        </member>
+        <member name="F:BjaWeb.Services.PartidaService.rutaTodos">
+            <summary>
+            Apia, zein helbidetan aurkitzen den.
+            </summary>
+        </member>
+        <member name="M:BjaWeb.Services.PartidaService.GetPartidaGuztiak">
+            <summary>
+            Api-tik partida guztiak hartzen ditu.
+            </summary>
+            <returns>jokatutako partida guztien lista bueltatzen du</returns>
+        </member>
+        <member name="M:BjaWeb.Services.PartidaService.GetPartidakById(System.String)">
+            <summary>
+            Api-tik logeatuta dagoen erabiltzailearen partidak hartzen ditu.
+            </summary>
+            <returns>Erabiltzaile batek jokatutako partida guztien lista bat bueltatzen du</returns>
+        </member>
+        <member name="M:BjaWeb.Services.PartidaService.GetPartidaOnenak">
+            <summary>
+            Api-tik partida onenak hartzen ditu.
+            </summary>
+            <returns>Jolastutako partida hoberenen lista bueltatzen du</returns>
+        </member>
+        <member name="M:BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena">
+            <summary>
+            Api-tik partida onenak hartzen ditu eta inprimatuko den formaturako prestatzen ditu.
+            </summary>
+            <returns>Jolastutako partida onenen lista bueltatzen du, txostena inprimatzeko formatuan</returns>
+        </member>
+        <member name="M:BjaWeb.Services.PartidaService.GetPartidaTxarrenak">
+            <summary>
+            Api-tik partida txarrenak hartzen ditu.
+            </summary>
+            <returns>Jolastutako partida txarrenen lista bueltatzen du</returns>
+        </member>
+        <member name="M:BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena">
+            <summary>
+            Api-tik partida txarrenak hartzen ditu eta inprimatuko den formaturako prestatzen ditu.
+            </summary>
+            <returns>Jolastutako partida txarrenen lista bueltatzen du, txostena inprimatzeko formatuan</returns>
+        </member>
+    </members>
+</doc>

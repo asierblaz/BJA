@@ -1,0 +1,64 @@
+### YamlMime:TableOfContent
+- uid: BjaWeb.Services
+  name: BjaWeb.Services
+  items:
+  - uid: BjaWeb.Services.IPartidaService
+    name: IPartidaService
+  - uid: BjaWeb.Services.PartidaService
+    name: PartidaService
+- uid: WebBja
+  name: WebBja
+  items:
+  - uid: WebBja.Program
+    name: Program
+  - uid: WebBja.Startup
+    name: Startup
+- uid: WebBja.Controllers
+  name: WebBja.Controllers
+  items:
+  - uid: WebBja.Controllers.ComentarioController
+    name: ComentarioController
+  - uid: WebBja.Controllers.FormularioController
+    name: FormularioController
+  - uid: WebBja.Controllers.HomeController
+    name: HomeController
+  - uid: WebBja.Controllers.PartidaController
+    name: PartidaController
+  - uid: WebBja.Controllers.ReportController
+    name: ReportController
+- uid: WebBja.Data
+  name: WebBja.Data
+  items:
+  - uid: WebBja.Data.ApplicationDbContext
+    name: ApplicationDbContext
+  - uid: WebBja.Data.BjaDbContext
+    name: BjaDbContext
+- uid: WebBja.Data.Migrations
+  name: WebBja.Data.Migrations
+  items:
+  - uid: WebBja.Data.Migrations.CreateIdentitySchema
+    name: CreateIdentitySchema
+- uid: WebBja.Migrations
+  name: WebBja.Migrations
+  items:
+  - uid: WebBja.Migrations.Coment
+    name: Coment
+  - uid: WebBja.Migrations.ComentarioMirion
+    name: ComentarioMirion
+  - uid: WebBja.Migrations.Form
+    name: Form
+- uid: WebBja.Models
+  name: WebBja.Models
+  items:
+  - uid: WebBja.Models.Comentario
+    name: Comentario
+  - uid: WebBja.Models.ErrorViewModel
+    name: ErrorViewModel
+  - uid: WebBja.Models.Formulario
+    name: Formulario
+  - uid: WebBja.Models.Jokalaria
+    name: Jokalaria
+  - uid: WebBja.Models.Partida
+    name: Partida
+  - uid: WebBja.Models.ReportModel
+    name: ReportModel

@@ -1,0 +1,440 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Controllers.PartidaController
+  commentId: T:WebBja.Controllers.PartidaController
+  id: PartidaController
+  parent: WebBja.Controllers
+  children:
+  - WebBja.Controllers.PartidaController.#ctor(Microsoft.Extensions.Logging.ILogger{WebBja.Controllers.PartidaController},BjaWeb.Services.IPartidaService)
+  - WebBja.Controllers.PartidaController.Guztiak
+  - WebBja.Controllers.PartidaController.Nireak
+  - WebBja.Controllers.PartidaController.Onenak
+  - WebBja.Controllers.PartidaController.Txarrenak
+  langs:
+  - csharp
+  - vb
+  name: PartidaController
+  nameWithType: PartidaController
+  fullName: WebBja.Controllers.PartidaController
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: 'public class PartidaController : Controller'
+    content.vb: >-
+      Public Class PartidaController
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Controllers.PartidaController.#ctor(Microsoft.Extensions.Logging.ILogger{WebBja.Controllers.PartidaController},BjaWeb.Services.IPartidaService)
+  commentId: M:WebBja.Controllers.PartidaController.#ctor(Microsoft.Extensions.Logging.ILogger{WebBja.Controllers.PartidaController},BjaWeb.Services.IPartidaService)
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{WebBja.Controllers.PartidaController},BjaWeb.Services.IPartidaService)'
+  parent: WebBja.Controllers.PartidaController
+  langs:
+  - csharp
+  - vb
+  name: PartidaController(ILogger<PartidaController>, IPartidaService)
+  nameWithType: PartidaController.PartidaController(ILogger<PartidaController>, IPartidaService)
+  fullName: WebBja.Controllers.PartidaController.PartidaController(Microsoft.Extensions.Logging.ILogger<WebBja.Controllers.PartidaController>, BjaWeb.Services.IPartidaService)
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nDependentziak Injektatzen dira.\n"
+  syntax:
+    content: public PartidaController(ILogger<PartidaController> logger, IPartidaService partidaService)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{WebBja.Controllers.PartidaController}
+    - id: partidaService
+      type: BjaWeb.Services.IPartidaService
+    content.vb: Public Sub New(logger As ILogger(Of PartidaController), partidaService As IPartidaService)
+  overload: WebBja.Controllers.PartidaController.#ctor*
+  nameWithType.vb: PartidaController.PartidaController(ILogger(Of PartidaController), IPartidaService)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: WebBja.Controllers.PartidaController.PartidaController(Microsoft.Extensions.Logging.ILogger(Of WebBja.Controllers.PartidaController), BjaWeb.Services.IPartidaService)
+  name.vb: PartidaController(ILogger(Of PartidaController), IPartidaService)
+- uid: WebBja.Controllers.PartidaController.Guztiak
+  commentId: M:WebBja.Controllers.PartidaController.Guztiak
+  id: Guztiak
+  parent: WebBja.Controllers.PartidaController
+  langs:
+  - csharp
+  - vb
+  name: Guztiak()
+  nameWithType: PartidaController.Guztiak()
+  fullName: WebBja.Controllers.PartidaController.Guztiak()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nPartida guztiak bistaratzen dira.\n"
+  syntax:
+    content: public Task<IActionResult> Guztiak()
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: Public Function Guztiak As Task(Of IActionResult)
+  overload: WebBja.Controllers.PartidaController.Guztiak*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.PartidaController.Onenak
+  commentId: M:WebBja.Controllers.PartidaController.Onenak
+  id: Onenak
+  parent: WebBja.Controllers.PartidaController
+  langs:
+  - csharp
+  - vb
+  name: Onenak()
+  nameWithType: PartidaController.Onenak()
+  fullName: WebBja.Controllers.PartidaController.Onenak()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\n10 partida onenak bistaratzen dira.\n"
+  syntax:
+    content: public Task<ActionResult> Onenak()
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.ActionResult}
+    content.vb: Public Function Onenak As Task(Of ActionResult)
+  overload: WebBja.Controllers.PartidaController.Onenak*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.PartidaController.Txarrenak
+  commentId: M:WebBja.Controllers.PartidaController.Txarrenak
+  id: Txarrenak
+  parent: WebBja.Controllers.PartidaController
+  langs:
+  - csharp
+  - vb
+  name: Txarrenak()
+  nameWithType: PartidaController.Txarrenak()
+  fullName: WebBja.Controllers.PartidaController.Txarrenak()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\n10 partida txarrenak bistaratzen dira.\n"
+  syntax:
+    content: public Task<ActionResult> Txarrenak()
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.ActionResult}
+    content.vb: Public Function Txarrenak As Task(Of ActionResult)
+  overload: WebBja.Controllers.PartidaController.Txarrenak*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.PartidaController.Nireak
+  commentId: M:WebBja.Controllers.PartidaController.Nireak
+  id: Nireak
+  parent: WebBja.Controllers.PartidaController
+  langs:
+  - csharp
+  - vb
+  name: Nireak()
+  nameWithType: PartidaController.Nireak()
+  fullName: WebBja.Controllers.PartidaController.Nireak()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nLogeatuta dagoen erabiltzailearen partidak erakusten dira.\n"
+  syntax:
+    content: public Task<ActionResult> Nireak()
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.ActionResult}
+    content.vb: Public Function Nireak As Task(Of ActionResult)
+  overload: WebBja.Controllers.PartidaController.Nireak*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Controllers
+  commentId: N:WebBja.Controllers
+  isExternal: true
+  name: WebBja.Controllers
+  nameWithType: WebBja.Controllers
+  fullName: WebBja.Controllers
+- uid: WebBja.Controllers.PartidaController.#ctor*
+  commentId: Overload:WebBja.Controllers.PartidaController.#ctor
+  isExternal: true
+  name: PartidaController
+  nameWithType: PartidaController.PartidaController
+  fullName: WebBja.Controllers.PartidaController.PartidaController
+- uid: Microsoft.Extensions.Logging.ILogger{WebBja.Controllers.PartidaController}
+  commentId: '!:Microsoft.Extensions.Logging.ILogger{WebBja.Controllers.PartidaController}'
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  name: ILogger<PartidaController>
+  nameWithType: ILogger<PartidaController>
+  fullName: Microsoft.Extensions.Logging.ILogger<WebBja.Controllers.PartidaController>
+  nameWithType.vb: ILogger(Of PartidaController)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of WebBja.Controllers.PartidaController)
+  name.vb: ILogger(Of PartidaController)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WebBja.Controllers.PartidaController
+    name: PartidaController
+    nameWithType: PartidaController
+    fullName: WebBja.Controllers.PartidaController
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WebBja.Controllers.PartidaController
+    name: PartidaController
+    nameWithType: PartidaController
+    fullName: WebBja.Controllers.PartidaController
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BjaWeb.Services.IPartidaService
+  commentId: T:BjaWeb.Services.IPartidaService
+  parent: BjaWeb.Services
+  isExternal: true
+  name: IPartidaService
+  nameWithType: IPartidaService
+  fullName: BjaWeb.Services.IPartidaService
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: '!:Microsoft.Extensions.Logging.ILogger`1'
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: Microsoft.Extensions.Logging.ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BjaWeb.Services
+  commentId: N:BjaWeb.Services
+  isExternal: true
+  name: BjaWeb.Services
+  nameWithType: BjaWeb.Services
+  fullName: BjaWeb.Services
+- uid: WebBja.Controllers.PartidaController.Guztiak*
+  commentId: Overload:WebBja.Controllers.PartidaController.Guztiak
+  isExternal: true
+  name: Guztiak
+  nameWithType: PartidaController.Guztiak
+  fullName: WebBja.Controllers.PartidaController.Guztiak
+- uid: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+  commentId: '!:System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Microsoft.AspNetCore.Mvc.IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Microsoft.AspNetCore.Mvc.IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: Microsoft.AspNetCore.Mvc.IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Microsoft.AspNetCore.Mvc.IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: Microsoft.AspNetCore.Mvc.IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WebBja.Controllers.PartidaController.Onenak*
+  commentId: Overload:WebBja.Controllers.PartidaController.Onenak
+  isExternal: true
+  name: Onenak
+  nameWithType: PartidaController.Onenak
+  fullName: WebBja.Controllers.PartidaController.Onenak
+- uid: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.ActionResult}
+  commentId: '!:System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.ActionResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<ActionResult>
+  nameWithType: Task<ActionResult>
+  fullName: System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult>
+  nameWithType.vb: Task(Of ActionResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Microsoft.AspNetCore.Mvc.ActionResult)
+  name.vb: Task(Of ActionResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Microsoft.AspNetCore.Mvc.ActionResult
+    name: ActionResult
+    nameWithType: ActionResult
+    fullName: Microsoft.AspNetCore.Mvc.ActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Microsoft.AspNetCore.Mvc.ActionResult
+    name: ActionResult
+    nameWithType: ActionResult
+    fullName: Microsoft.AspNetCore.Mvc.ActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WebBja.Controllers.PartidaController.Txarrenak*
+  commentId: Overload:WebBja.Controllers.PartidaController.Txarrenak
+  isExternal: true
+  name: Txarrenak
+  nameWithType: PartidaController.Txarrenak
+  fullName: WebBja.Controllers.PartidaController.Txarrenak
+- uid: WebBja.Controllers.PartidaController.Nireak*
+  commentId: Overload:WebBja.Controllers.PartidaController.Nireak
+  isExternal: true
+  name: Nireak
+  nameWithType: PartidaController.Nireak
+  fullName: WebBja.Controllers.PartidaController.Nireak

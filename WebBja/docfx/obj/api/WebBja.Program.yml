@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Program
+  commentId: T:WebBja.Program
+  id: Program
+  parent: WebBja
+  children:
+  - WebBja.Program.#ctor
+  - WebBja.Program.CreateHostBuilder(System.String[])
+  - WebBja.Program.Main(System.String[])
+  langs:
+  - csharp
+  - vb
+  name: Program
+  nameWithType: Program
+  fullName: WebBja.Program
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: 'public class Program : Object'
+    content.vb: >-
+      Public Class Program
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Program.Main(System.String[])
+  commentId: M:WebBja.Program.Main(System.String[])
+  id: Main(System.String[])
+  parent: WebBja.Program
+  langs:
+  - csharp
+  - vb
+  name: Main(String[])
+  nameWithType: Program.Main(String[])
+  fullName: WebBja.Program.Main(System.String[])
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: public static void Main(string[] args)
+    parameters:
+    - id: args
+      type: System.String[]
+    content.vb: Public Shared Sub Main(args As String())
+  overload: WebBja.Program.Main*
+  nameWithType.vb: Program.Main(String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: WebBja.Program.Main(System.String())
+  name.vb: Main(String())
+- uid: WebBja.Program.CreateHostBuilder(System.String[])
+  commentId: M:WebBja.Program.CreateHostBuilder(System.String[])
+  id: CreateHostBuilder(System.String[])
+  parent: WebBja.Program
+  langs:
+  - csharp
+  - vb
+  name: CreateHostBuilder(String[])
+  nameWithType: Program.CreateHostBuilder(String[])
+  fullName: WebBja.Program.CreateHostBuilder(System.String[])
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: public static IHostBuilder CreateHostBuilder(string[] args)
+    parameters:
+    - id: args
+      type: System.String[]
+    return:
+      type: Microsoft.Extensions.Hosting.IHostBuilder
+    content.vb: Public Shared Function CreateHostBuilder(args As String()) As IHostBuilder
+  overload: WebBja.Program.CreateHostBuilder*
+  nameWithType.vb: Program.CreateHostBuilder(String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: WebBja.Program.CreateHostBuilder(System.String())
+  name.vb: CreateHostBuilder(String())
+- uid: WebBja.Program.#ctor
+  commentId: M:WebBja.Program.#ctor
+  id: '#ctor'
+  parent: WebBja.Program
+  langs:
+  - csharp
+  - vb
+  name: Program()
+  nameWithType: Program.Program()
+  fullName: WebBja.Program.Program()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: public Program()
+    content.vb: Public Sub New
+  overload: WebBja.Program.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja
+  commentId: N:WebBja
+  isExternal: true
+  name: WebBja
+  nameWithType: WebBja
+  fullName: WebBja
+- uid: WebBja.Program.Main*
+  commentId: Overload:WebBja.Program.Main
+  isExternal: true
+  name: Main
+  nameWithType: Program.Main
+  fullName: WebBja.Program.Main
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: WebBja.Program.CreateHostBuilder*
+  commentId: Overload:WebBja.Program.CreateHostBuilder
+  isExternal: true
+  name: CreateHostBuilder
+  nameWithType: Program.CreateHostBuilder
+  fullName: WebBja.Program.CreateHostBuilder
+- uid: Microsoft.Extensions.Hosting.IHostBuilder
+  commentId: '!:Microsoft.Extensions.Hosting.IHostBuilder'
+  isExternal: true
+  name: IHostBuilder
+  nameWithType: IHostBuilder
+  fullName: Microsoft.Extensions.Hosting.IHostBuilder
+- uid: WebBja.Program.#ctor*
+  commentId: Overload:WebBja.Program.#ctor
+  isExternal: true
+  name: Program
+  nameWithType: Program.Program
+  fullName: WebBja.Program.Program

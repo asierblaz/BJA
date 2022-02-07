@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Http;
 
 namespace WebBja.Models
 {
+    /// <summary>
+    /// Formulario klasea definitzen da.
+    /// </summary>
     public class Formulario
     {
         [Key]

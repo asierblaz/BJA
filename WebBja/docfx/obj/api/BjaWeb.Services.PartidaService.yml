@@ -1,0 +1,690 @@
+### YamlMime:ManagedReference
+items:
+- uid: BjaWeb.Services.PartidaService
+  commentId: T:BjaWeb.Services.PartidaService
+  id: PartidaService
+  parent: BjaWeb.Services
+  children:
+  - BjaWeb.Services.PartidaService.#ctor
+  - BjaWeb.Services.PartidaService.GetPartidaGuztiak
+  - BjaWeb.Services.PartidaService.GetPartidakById(System.String)
+  - BjaWeb.Services.PartidaService.GetPartidaOnenak
+  - BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena
+  - BjaWeb.Services.PartidaService.GetPartidaTxarrenak
+  - BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena
+  langs:
+  - csharp
+  - vb
+  name: PartidaService
+  nameWithType: PartidaService
+  fullName: BjaWeb.Services.PartidaService
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: BjaWeb.Services
+  syntax:
+    content: 'public class PartidaService : Object, IPartidaService'
+    content.vb: >-
+      Public Class PartidaService
+          Inherits Object
+          Implements IPartidaService
+  inheritance:
+  - System.Object
+  implements:
+  - BjaWeb.Services.IPartidaService
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: BjaWeb.Services.PartidaService.GetPartidaGuztiak
+  commentId: M:BjaWeb.Services.PartidaService.GetPartidaGuztiak
+  id: GetPartidaGuztiak
+  parent: BjaWeb.Services.PartidaService
+  langs:
+  - csharp
+  - vb
+  name: GetPartidaGuztiak()
+  nameWithType: PartidaService.GetPartidaGuztiak()
+  fullName: BjaWeb.Services.PartidaService.GetPartidaGuztiak()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: BjaWeb.Services
+  summary: "\nApi-tik partida guztiak hartzen ditu.\n"
+  syntax:
+    content: public Task<List<Partida>> GetPartidaGuztiak()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.Partida}}
+      description: jokatutako partida guztien lista bueltatzen du
+    content.vb: Public Function GetPartidaGuztiak As Task(Of List(Of Partida))
+  overload: BjaWeb.Services.PartidaService.GetPartidaGuztiak*
+  implements:
+  - BjaWeb.Services.IPartidaService.GetPartidaGuztiak
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BjaWeb.Services.PartidaService.GetPartidakById(System.String)
+  commentId: M:BjaWeb.Services.PartidaService.GetPartidakById(System.String)
+  id: GetPartidakById(System.String)
+  parent: BjaWeb.Services.PartidaService
+  langs:
+  - csharp
+  - vb
+  name: GetPartidakById(String)
+  nameWithType: PartidaService.GetPartidakById(String)
+  fullName: BjaWeb.Services.PartidaService.GetPartidakById(System.String)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: BjaWeb.Services
+  summary: "\nApi-tik logeatuta dagoen erabiltzailearen partidak hartzen ditu.\n"
+  syntax:
+    content: public Task<List<Partida>> GetPartidakById(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.Partida}}
+      description: Erabiltzaile batek jokatutako partida guztien lista bat bueltatzen du
+    content.vb: Public Function GetPartidakById(name As String) As Task(Of List(Of Partida))
+  overload: BjaWeb.Services.PartidaService.GetPartidakById*
+  implements:
+  - BjaWeb.Services.IPartidaService.GetPartidakById(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BjaWeb.Services.PartidaService.GetPartidaOnenak
+  commentId: M:BjaWeb.Services.PartidaService.GetPartidaOnenak
+  id: GetPartidaOnenak
+  parent: BjaWeb.Services.PartidaService
+  langs:
+  - csharp
+  - vb
+  name: GetPartidaOnenak()
+  nameWithType: PartidaService.GetPartidaOnenak()
+  fullName: BjaWeb.Services.PartidaService.GetPartidaOnenak()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: BjaWeb.Services
+  summary: "\nApi-tik partida onenak hartzen ditu.\n"
+  syntax:
+    content: public Task<List<Partida>> GetPartidaOnenak()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.Partida}}
+      description: Jolastutako partida hoberenen lista bueltatzen du
+    content.vb: Public Function GetPartidaOnenak As Task(Of List(Of Partida))
+  overload: BjaWeb.Services.PartidaService.GetPartidaOnenak*
+  implements:
+  - BjaWeb.Services.IPartidaService.GetPartidaOnenak
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena
+  commentId: M:BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena
+  id: GetPartidaOnenenTxostena
+  parent: BjaWeb.Services.PartidaService
+  langs:
+  - csharp
+  - vb
+  name: GetPartidaOnenenTxostena()
+  nameWithType: PartidaService.GetPartidaOnenenTxostena()
+  fullName: BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: BjaWeb.Services
+  summary: "\nApi-tik partida onenak hartzen ditu eta inprimatuko den formaturako prestatzen ditu.\n"
+  syntax:
+    content: public Task<List<ReportModel>> GetPartidaOnenenTxostena()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.ReportModel}}
+      description: Jolastutako partida onenen lista bueltatzen du, txostena inprimatzeko formatuan
+    content.vb: Public Function GetPartidaOnenenTxostena As Task(Of List(Of ReportModel))
+  overload: BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena*
+  implements:
+  - BjaWeb.Services.IPartidaService.GetPartidaOnenenTxostena
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BjaWeb.Services.PartidaService.GetPartidaTxarrenak
+  commentId: M:BjaWeb.Services.PartidaService.GetPartidaTxarrenak
+  id: GetPartidaTxarrenak
+  parent: BjaWeb.Services.PartidaService
+  langs:
+  - csharp
+  - vb
+  name: GetPartidaTxarrenak()
+  nameWithType: PartidaService.GetPartidaTxarrenak()
+  fullName: BjaWeb.Services.PartidaService.GetPartidaTxarrenak()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: BjaWeb.Services
+  summary: "\nApi-tik partida txarrenak hartzen ditu.\n"
+  syntax:
+    content: public Task<List<Partida>> GetPartidaTxarrenak()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.Partida}}
+      description: Jolastutako partida txarrenen lista bueltatzen du
+    content.vb: Public Function GetPartidaTxarrenak As Task(Of List(Of Partida))
+  overload: BjaWeb.Services.PartidaService.GetPartidaTxarrenak*
+  implements:
+  - BjaWeb.Services.IPartidaService.GetPartidaTxarrenak
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena
+  commentId: M:BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena
+  id: GetPartidaTxarrenenTxostena
+  parent: BjaWeb.Services.PartidaService
+  langs:
+  - csharp
+  - vb
+  name: GetPartidaTxarrenenTxostena()
+  nameWithType: PartidaService.GetPartidaTxarrenenTxostena()
+  fullName: BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: BjaWeb.Services
+  summary: "\nApi-tik partida txarrenak hartzen ditu eta inprimatuko den formaturako prestatzen ditu.\n"
+  syntax:
+    content: public Task<List<ReportModel>> GetPartidaTxarrenenTxostena()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.ReportModel}}
+      description: Jolastutako partida txarrenen lista bueltatzen du, txostena inprimatzeko formatuan
+    content.vb: Public Function GetPartidaTxarrenenTxostena As Task(Of List(Of ReportModel))
+  overload: BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena*
+  implements:
+  - BjaWeb.Services.IPartidaService.GetPartidaTxarrenenTxostena
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: BjaWeb.Services.PartidaService.#ctor
+  commentId: M:BjaWeb.Services.PartidaService.#ctor
+  id: '#ctor'
+  parent: BjaWeb.Services.PartidaService
+  langs:
+  - csharp
+  - vb
+  name: PartidaService()
+  nameWithType: PartidaService.PartidaService()
+  fullName: BjaWeb.Services.PartidaService.PartidaService()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: BjaWeb.Services
+  syntax:
+    content: public PartidaService()
+    content.vb: Public Sub New
+  overload: BjaWeb.Services.PartidaService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: BjaWeb.Services
+  commentId: N:BjaWeb.Services
+  isExternal: true
+  name: BjaWeb.Services
+  nameWithType: BjaWeb.Services
+  fullName: BjaWeb.Services
+- uid: BjaWeb.Services.IPartidaService
+  commentId: T:BjaWeb.Services.IPartidaService
+  parent: BjaWeb.Services
+  isExternal: true
+  name: IPartidaService
+  nameWithType: IPartidaService
+  fullName: BjaWeb.Services.IPartidaService
+- uid: BjaWeb.Services.PartidaService.GetPartidaGuztiak*
+  commentId: Overload:BjaWeb.Services.PartidaService.GetPartidaGuztiak
+  isExternal: true
+  name: GetPartidaGuztiak
+  nameWithType: PartidaService.GetPartidaGuztiak
+  fullName: BjaWeb.Services.PartidaService.GetPartidaGuztiak
+- uid: BjaWeb.Services.IPartidaService.GetPartidaGuztiak
+  commentId: M:BjaWeb.Services.IPartidaService.GetPartidaGuztiak
+  parent: BjaWeb.Services.IPartidaService
+  isExternal: true
+  name: GetPartidaGuztiak()
+  nameWithType: IPartidaService.GetPartidaGuztiak()
+  fullName: BjaWeb.Services.IPartidaService.GetPartidaGuztiak()
+  spec.csharp:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaGuztiak
+    name: GetPartidaGuztiak
+    nameWithType: IPartidaService.GetPartidaGuztiak
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaGuztiak
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaGuztiak
+    name: GetPartidaGuztiak
+    nameWithType: IPartidaService.GetPartidaGuztiak
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaGuztiak
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.Partida}}
+  commentId: '!:System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.Partida}}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<List<Partida>>
+  nameWithType: Task<List<Partida>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<WebBja.Models.Partida>>
+  nameWithType.vb: Task(Of List(Of Partida))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of WebBja.Models.Partida))
+  name.vb: Task(Of List(Of Partida))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WebBja.Models.Partida
+    name: Partida
+    nameWithType: Partida
+    fullName: WebBja.Models.Partida
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WebBja.Models.Partida
+    name: Partida
+    nameWithType: Partida
+    fullName: WebBja.Models.Partida
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BjaWeb.Services.PartidaService.GetPartidakById*
+  commentId: Overload:BjaWeb.Services.PartidaService.GetPartidakById
+  isExternal: true
+  name: GetPartidakById
+  nameWithType: PartidaService.GetPartidakById
+  fullName: BjaWeb.Services.PartidaService.GetPartidakById
+- uid: BjaWeb.Services.IPartidaService.GetPartidakById(System.String)
+  commentId: M:BjaWeb.Services.IPartidaService.GetPartidakById(System.String)
+  parent: BjaWeb.Services.IPartidaService
+  isExternal: true
+  name: GetPartidakById(String)
+  nameWithType: IPartidaService.GetPartidakById(String)
+  fullName: BjaWeb.Services.IPartidaService.GetPartidakById(System.String)
+  spec.csharp:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidakById(System.String)
+    name: GetPartidakById
+    nameWithType: IPartidaService.GetPartidakById
+    fullName: BjaWeb.Services.IPartidaService.GetPartidakById
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidakById(System.String)
+    name: GetPartidakById
+    nameWithType: IPartidaService.GetPartidakById
+    fullName: BjaWeb.Services.IPartidaService.GetPartidakById
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BjaWeb.Services.PartidaService.GetPartidaOnenak*
+  commentId: Overload:BjaWeb.Services.PartidaService.GetPartidaOnenak
+  isExternal: true
+  name: GetPartidaOnenak
+  nameWithType: PartidaService.GetPartidaOnenak
+  fullName: BjaWeb.Services.PartidaService.GetPartidaOnenak
+- uid: BjaWeb.Services.IPartidaService.GetPartidaOnenak
+  commentId: M:BjaWeb.Services.IPartidaService.GetPartidaOnenak
+  parent: BjaWeb.Services.IPartidaService
+  isExternal: true
+  name: GetPartidaOnenak()
+  nameWithType: IPartidaService.GetPartidaOnenak()
+  fullName: BjaWeb.Services.IPartidaService.GetPartidaOnenak()
+  spec.csharp:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaOnenak
+    name: GetPartidaOnenak
+    nameWithType: IPartidaService.GetPartidaOnenak
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaOnenak
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaOnenak
+    name: GetPartidaOnenak
+    nameWithType: IPartidaService.GetPartidaOnenak
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaOnenak
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena*
+  commentId: Overload:BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena
+  isExternal: true
+  name: GetPartidaOnenenTxostena
+  nameWithType: PartidaService.GetPartidaOnenenTxostena
+  fullName: BjaWeb.Services.PartidaService.GetPartidaOnenenTxostena
+- uid: BjaWeb.Services.IPartidaService.GetPartidaOnenenTxostena
+  commentId: M:BjaWeb.Services.IPartidaService.GetPartidaOnenenTxostena
+  parent: BjaWeb.Services.IPartidaService
+  isExternal: true
+  name: GetPartidaOnenenTxostena()
+  nameWithType: IPartidaService.GetPartidaOnenenTxostena()
+  fullName: BjaWeb.Services.IPartidaService.GetPartidaOnenenTxostena()
+  spec.csharp:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaOnenenTxostena
+    name: GetPartidaOnenenTxostena
+    nameWithType: IPartidaService.GetPartidaOnenenTxostena
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaOnenenTxostena
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaOnenenTxostena
+    name: GetPartidaOnenenTxostena
+    nameWithType: IPartidaService.GetPartidaOnenenTxostena
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaOnenenTxostena
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.ReportModel}}
+  commentId: '!:System.Threading.Tasks.Task{System.Collections.Generic.List{WebBja.Models.ReportModel}}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<List<ReportModel>>
+  nameWithType: Task<List<ReportModel>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<WebBja.Models.ReportModel>>
+  nameWithType.vb: Task(Of List(Of ReportModel))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of WebBja.Models.ReportModel))
+  name.vb: Task(Of List(Of ReportModel))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WebBja.Models.ReportModel
+    name: ReportModel
+    nameWithType: ReportModel
+    fullName: WebBja.Models.ReportModel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WebBja.Models.ReportModel
+    name: ReportModel
+    nameWithType: ReportModel
+    fullName: WebBja.Models.ReportModel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BjaWeb.Services.PartidaService.GetPartidaTxarrenak*
+  commentId: Overload:BjaWeb.Services.PartidaService.GetPartidaTxarrenak
+  isExternal: true
+  name: GetPartidaTxarrenak
+  nameWithType: PartidaService.GetPartidaTxarrenak
+  fullName: BjaWeb.Services.PartidaService.GetPartidaTxarrenak
+- uid: BjaWeb.Services.IPartidaService.GetPartidaTxarrenak
+  commentId: M:BjaWeb.Services.IPartidaService.GetPartidaTxarrenak
+  parent: BjaWeb.Services.IPartidaService
+  isExternal: true
+  name: GetPartidaTxarrenak()
+  nameWithType: IPartidaService.GetPartidaTxarrenak()
+  fullName: BjaWeb.Services.IPartidaService.GetPartidaTxarrenak()
+  spec.csharp:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaTxarrenak
+    name: GetPartidaTxarrenak
+    nameWithType: IPartidaService.GetPartidaTxarrenak
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaTxarrenak
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaTxarrenak
+    name: GetPartidaTxarrenak
+    nameWithType: IPartidaService.GetPartidaTxarrenak
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaTxarrenak
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena*
+  commentId: Overload:BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena
+  isExternal: true
+  name: GetPartidaTxarrenenTxostena
+  nameWithType: PartidaService.GetPartidaTxarrenenTxostena
+  fullName: BjaWeb.Services.PartidaService.GetPartidaTxarrenenTxostena
+- uid: BjaWeb.Services.IPartidaService.GetPartidaTxarrenenTxostena
+  commentId: M:BjaWeb.Services.IPartidaService.GetPartidaTxarrenenTxostena
+  parent: BjaWeb.Services.IPartidaService
+  isExternal: true
+  name: GetPartidaTxarrenenTxostena()
+  nameWithType: IPartidaService.GetPartidaTxarrenenTxostena()
+  fullName: BjaWeb.Services.IPartidaService.GetPartidaTxarrenenTxostena()
+  spec.csharp:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaTxarrenenTxostena
+    name: GetPartidaTxarrenenTxostena
+    nameWithType: IPartidaService.GetPartidaTxarrenenTxostena
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaTxarrenenTxostena
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: BjaWeb.Services.IPartidaService.GetPartidaTxarrenenTxostena
+    name: GetPartidaTxarrenenTxostena
+    nameWithType: IPartidaService.GetPartidaTxarrenenTxostena
+    fullName: BjaWeb.Services.IPartidaService.GetPartidaTxarrenenTxostena
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: BjaWeb.Services.PartidaService.#ctor*
+  commentId: Overload:BjaWeb.Services.PartidaService.#ctor
+  isExternal: true
+  name: PartidaService
+  nameWithType: PartidaService.PartidaService
+  fullName: BjaWeb.Services.PartidaService.PartidaService

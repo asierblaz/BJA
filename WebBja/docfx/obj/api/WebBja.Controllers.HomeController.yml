@@ -1,0 +1,161 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Controllers.HomeController
+  commentId: T:WebBja.Controllers.HomeController
+  id: HomeController
+  parent: WebBja.Controllers
+  children:
+  - WebBja.Controllers.HomeController.#ctor(WebBja.Data.BjaDbContext)
+  - WebBja.Controllers.HomeController.Error
+  - WebBja.Controllers.HomeController.Index
+  langs:
+  - csharp
+  - vb
+  name: HomeController
+  nameWithType: HomeController
+  fullName: WebBja.Controllers.HomeController
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: 'public class HomeController : Controller'
+    content.vb: >-
+      Public Class HomeController
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Controllers.HomeController.#ctor(WebBja.Data.BjaDbContext)
+  commentId: M:WebBja.Controllers.HomeController.#ctor(WebBja.Data.BjaDbContext)
+  id: '#ctor(WebBja.Data.BjaDbContext)'
+  parent: WebBja.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: HomeController(BjaDbContext)
+  nameWithType: HomeController.HomeController(BjaDbContext)
+  fullName: WebBja.Controllers.HomeController.HomeController(WebBja.Data.BjaDbContext)
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public HomeController(BjaDbContext context)
+    parameters:
+    - id: context
+      type: WebBja.Data.BjaDbContext
+    content.vb: Public Sub New(context As BjaDbContext)
+  overload: WebBja.Controllers.HomeController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.HomeController.Index
+  commentId: M:WebBja.Controllers.HomeController.Index
+  id: Index
+  parent: WebBja.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: HomeController.Index()
+  fullName: WebBja.Controllers.HomeController.Index()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public IActionResult Index()
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Public Function Index As IActionResult
+  overload: WebBja.Controllers.HomeController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.HomeController.Error
+  commentId: M:WebBja.Controllers.HomeController.Error
+  id: Error
+  parent: WebBja.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Error()
+  nameWithType: HomeController.Error()
+  fullName: WebBja.Controllers.HomeController.Error()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public IActionResult Error()
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Public Function Error As IActionResult
+  overload: WebBja.Controllers.HomeController.Error*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Controllers
+  commentId: N:WebBja.Controllers
+  isExternal: true
+  name: WebBja.Controllers
+  nameWithType: WebBja.Controllers
+  fullName: WebBja.Controllers
+- uid: WebBja.Controllers.HomeController.#ctor*
+  commentId: Overload:WebBja.Controllers.HomeController.#ctor
+  isExternal: true
+  name: HomeController
+  nameWithType: HomeController.HomeController
+  fullName: WebBja.Controllers.HomeController.HomeController
+- uid: WebBja.Data.BjaDbContext
+  commentId: T:WebBja.Data.BjaDbContext
+  parent: WebBja.Data
+  isExternal: true
+  name: BjaDbContext
+  nameWithType: BjaDbContext
+  fullName: WebBja.Data.BjaDbContext
+- uid: WebBja.Data
+  commentId: N:WebBja.Data
+  isExternal: true
+  name: WebBja.Data
+  nameWithType: WebBja.Data
+  fullName: WebBja.Data
+- uid: WebBja.Controllers.HomeController.Index*
+  commentId: Overload:WebBja.Controllers.HomeController.Index
+  isExternal: true
+  name: Index
+  nameWithType: HomeController.Index
+  fullName: WebBja.Controllers.HomeController.Index
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult
+- uid: WebBja.Controllers.HomeController.Error*
+  commentId: Overload:WebBja.Controllers.HomeController.Error
+  isExternal: true
+  name: Error
+  nameWithType: HomeController.Error
+  fullName: WebBja.Controllers.HomeController.Error

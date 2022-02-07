@@ -1,0 +1,284 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Models.Comentario
+  commentId: T:WebBja.Models.Comentario
+  id: Comentario
+  parent: WebBja.Models
+  children:
+  - WebBja.Models.Comentario.#ctor
+  - WebBja.Models.Comentario.Fecha
+  - WebBja.Models.Comentario.Id
+  - WebBja.Models.Comentario.Tema
+  - WebBja.Models.Comentario.Texto
+  - WebBja.Models.Comentario.Username
+  langs:
+  - csharp
+  - vb
+  name: Comentario
+  nameWithType: Comentario
+  fullName: WebBja.Models.Comentario
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  summary: "\nComentario klasea definitzen da.\n"
+  syntax:
+    content: 'public class Comentario : Object'
+    content.vb: >-
+      Public Class Comentario
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Models.Comentario.#ctor
+  commentId: M:WebBja.Models.Comentario.#ctor
+  id: '#ctor'
+  parent: WebBja.Models.Comentario
+  langs:
+  - csharp
+  - vb
+  name: Comentario()
+  nameWithType: Comentario.Comentario()
+  fullName: WebBja.Models.Comentario.Comentario()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public Comentario()
+    content.vb: Public Sub New
+  overload: WebBja.Models.Comentario.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Comentario.Id
+  commentId: P:WebBja.Models.Comentario.Id
+  id: Id
+  parent: WebBja.Models.Comentario
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Comentario.Id
+  fullName: WebBja.Models.Comentario.Id
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: WebBja.Models.Comentario.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Comentario.Username
+  commentId: P:WebBja.Models.Comentario.Username
+  id: Username
+  parent: WebBja.Models.Comentario
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: Comentario.Username
+  fullName: WebBja.Models.Comentario.Username
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Username { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Username As String
+  overload: WebBja.Models.Comentario.Username*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Comentario.Tema
+  commentId: P:WebBja.Models.Comentario.Tema
+  id: Tema
+  parent: WebBja.Models.Comentario
+  langs:
+  - csharp
+  - vb
+  name: Tema
+  nameWithType: Comentario.Tema
+  fullName: WebBja.Models.Comentario.Tema
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Tema { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Tema As String
+  overload: WebBja.Models.Comentario.Tema*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Comentario.Texto
+  commentId: P:WebBja.Models.Comentario.Texto
+  id: Texto
+  parent: WebBja.Models.Comentario
+  langs:
+  - csharp
+  - vb
+  name: Texto
+  nameWithType: Comentario.Texto
+  fullName: WebBja.Models.Comentario.Texto
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Texto { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Texto As String
+  overload: WebBja.Models.Comentario.Texto*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Comentario.Fecha
+  commentId: P:WebBja.Models.Comentario.Fecha
+  id: Fecha
+  parent: WebBja.Models.Comentario
+  langs:
+  - csharp
+  - vb
+  name: Fecha
+  nameWithType: Comentario.Fecha
+  fullName: WebBja.Models.Comentario.Fecha
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public DateTime Fecha { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Fecha As DateTime
+  overload: WebBja.Models.Comentario.Fecha*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+- uid: WebBja.Models.Comentario.#ctor*
+  commentId: Overload:WebBja.Models.Comentario.#ctor
+  isExternal: true
+  name: Comentario
+  nameWithType: Comentario.Comentario
+  fullName: WebBja.Models.Comentario.Comentario
+- uid: WebBja.Models.Comentario.Id*
+  commentId: Overload:WebBja.Models.Comentario.Id
+  isExternal: true
+  name: Id
+  nameWithType: Comentario.Id
+  fullName: WebBja.Models.Comentario.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: WebBja.Models.Comentario.Username*
+  commentId: Overload:WebBja.Models.Comentario.Username
+  isExternal: true
+  name: Username
+  nameWithType: Comentario.Username
+  fullName: WebBja.Models.Comentario.Username
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: WebBja.Models.Comentario.Tema*
+  commentId: Overload:WebBja.Models.Comentario.Tema
+  isExternal: true
+  name: Tema
+  nameWithType: Comentario.Tema
+  fullName: WebBja.Models.Comentario.Tema
+- uid: WebBja.Models.Comentario.Texto*
+  commentId: Overload:WebBja.Models.Comentario.Texto
+  isExternal: true
+  name: Texto
+  nameWithType: Comentario.Texto
+  fullName: WebBja.Models.Comentario.Texto
+- uid: WebBja.Models.Comentario.Fecha*
+  commentId: Overload:WebBja.Models.Comentario.Fecha
+  isExternal: true
+  name: Fecha
+  nameWithType: Comentario.Fecha
+  fullName: WebBja.Models.Comentario.Fecha
+- uid: System.DateTime
+  commentId: '!:System.DateTime'
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime

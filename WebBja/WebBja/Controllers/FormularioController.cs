@@ -15,23 +15,30 @@ namespace WebBja.Controllers
     {
         private readonly BjaDbContext _context;
 
+        /// <summary>
+        /// Dependentziak injektatzen dira.
+        /// </summary>
+        /// <param name="context"></param>
         public FormularioController(BjaDbContext context)
         {
             _context = context;
         }
-
+        /// <summary>
+        /// Formularioen bista erakusten du, formulario lista bat kargatuz.
+        /// </summary>
+        /// <returns></returns>
+        /// 
         // GET: FormularioController
         public ActionResult Index()
         {
             if (!User.Identity.Name.Equals("Admin"))
             {
-
                 return RedirectToAction("Index", "Home");
-
             }
-            IEnumerable<Formulario> listaForms = _context.Formulario;
 
+            IEnumerable<Formulario> listaForms = _context.Formulario;
             decimal puntuacionMedia = 0;
+
             foreach(Formulario f in listaForms)
             {
                 puntuacionMedia += f.Puntuacion;
@@ -43,22 +50,23 @@ namespace WebBja.Controllers
             return View(listaForms);
         }
 
-
+        /// <summary>
+        /// Formulario berriaren bista erakusten du.
+        /// </summary>
+        /// <returns></returns>        
         // GET: FormularioController/Create
         [Authorize]
         public ActionResult Create()
         {
             if (User.Identity.Name.Equals("Admin"))
             {
-
                 return RedirectToAction("Index", "Home");
-
             }
+
             ViewData["existe"] = "0";
             var forms = from f in _context.Formulario
                         where f.Username.Equals(User.Identity.Name)
                         select f;
-
 
             if (forms.Count() > 0)
             {
@@ -67,23 +75,22 @@ namespace WebBja.Controllers
                 ViewData["existe"] = "1";
             }
 
-
             return View();
-
-
-
         }
 
+
+        /// <summary>
+        /// Eskaera jaso eta datuak gordetzen ditu.
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns></returns>
         // POST: FormularioController/Create
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Formulario form)
         {
-
             form.Username = User.Identity.Name;
-
-
 
             if (ModelState.IsValid)
             {
@@ -93,7 +100,6 @@ namespace WebBja.Controllers
                 TempData["mensaje"] = "Zure formulario ondo bete da!";
 
                 return RedirectToAction(nameof(Create));
-
             }
 
 
@@ -107,42 +113,12 @@ namespace WebBja.Controllers
             }
         }
 
-        // GET: FormularioController/Edit/5
-        [Authorize]
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: FormularioController/Edit/5
-        [Authorize]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Formulario form)
-        {
-
-            form.Username = User.Identity.Name;
-
-
-            if (ModelState.IsValid)
-            {
-                _context.Add(form);
-                _context.SaveChanges();
-
-            }
-
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
+        /// <summary>
+        /// Borratu nahi den formularioaren datuak erakusten ditu.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: FormularioController/Delete/5
-
         [Authorize]
         public ActionResult Delete(int id)
         {
@@ -155,6 +131,11 @@ namespace WebBja.Controllers
             return View(f);
         }
 
+        /// <summary>
+        /// Aukeratutako formularioa ezabatzen du.
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns></returns>
         // POST: FormularioController/Delete/5
         [Authorize]
         [HttpPost]

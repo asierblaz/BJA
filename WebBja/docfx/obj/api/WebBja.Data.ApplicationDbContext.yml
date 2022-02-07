@@ -1,0 +1,357 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Data.ApplicationDbContext
+  commentId: T:WebBja.Data.ApplicationDbContext
+  id: ApplicationDbContext
+  parent: WebBja.Data
+  children:
+  - WebBja.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{WebBja.Data.ApplicationDbContext})
+  - WebBja.Data.ApplicationDbContext.Comentario
+  - WebBja.Data.ApplicationDbContext.Formulario
+  langs:
+  - csharp
+  - vb
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext
+  fullName: WebBja.Data.ApplicationDbContext
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data
+  syntax:
+    content: 'public class ApplicationDbContext : IdentityDbContext'
+    content.vb: >-
+      Public Class ApplicationDbContext
+          Inherits IdentityDbContext
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{WebBja.Data.ApplicationDbContext})
+  commentId: M:WebBja.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{WebBja.Data.ApplicationDbContext})
+  id: '#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{WebBja.Data.ApplicationDbContext})'
+  parent: WebBja.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: ApplicationDbContext(DbContextOptions<ApplicationDbContext>)
+  nameWithType: ApplicationDbContext.ApplicationDbContext(DbContextOptions<ApplicationDbContext>)
+  fullName: WebBja.Data.ApplicationDbContext.ApplicationDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<WebBja.Data.ApplicationDbContext>)
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data
+  syntax:
+    content: public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    parameters:
+    - id: options
+      type: Microsoft.EntityFrameworkCore.DbContextOptions{WebBja.Data.ApplicationDbContext}
+    content.vb: Public Sub New(options As DbContextOptions(Of ApplicationDbContext))
+  overload: WebBja.Data.ApplicationDbContext.#ctor*
+  nameWithType.vb: ApplicationDbContext.ApplicationDbContext(DbContextOptions(Of ApplicationDbContext))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: WebBja.Data.ApplicationDbContext.ApplicationDbContext(Microsoft.EntityFrameworkCore.DbContextOptions(Of WebBja.Data.ApplicationDbContext))
+  name.vb: ApplicationDbContext(DbContextOptions(Of ApplicationDbContext))
+- uid: WebBja.Data.ApplicationDbContext.Formulario
+  commentId: P:WebBja.Data.ApplicationDbContext.Formulario
+  id: Formulario
+  parent: WebBja.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Formulario
+  nameWithType: ApplicationDbContext.Formulario
+  fullName: WebBja.Data.ApplicationDbContext.Formulario
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data
+  syntax:
+    content: public DbSet<Formulario> Formulario { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{WebBja.Models.Formulario}
+    content.vb: Public Property Formulario As DbSet(Of Formulario)
+  overload: WebBja.Data.ApplicationDbContext.Formulario*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Data.ApplicationDbContext.Comentario
+  commentId: P:WebBja.Data.ApplicationDbContext.Comentario
+  id: Comentario
+  parent: WebBja.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Comentario
+  nameWithType: ApplicationDbContext.Comentario
+  fullName: WebBja.Data.ApplicationDbContext.Comentario
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data
+  syntax:
+    content: public DbSet<Comentario> Comentario { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{WebBja.Models.Comentario}
+    content.vb: Public Property Comentario As DbSet(Of Comentario)
+  overload: WebBja.Data.ApplicationDbContext.Comentario*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Data
+  commentId: N:WebBja.Data
+  isExternal: true
+  name: WebBja.Data
+  nameWithType: WebBja.Data
+  fullName: WebBja.Data
+- uid: WebBja.Data.ApplicationDbContext.#ctor*
+  commentId: Overload:WebBja.Data.ApplicationDbContext.#ctor
+  isExternal: true
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext.ApplicationDbContext
+  fullName: WebBja.Data.ApplicationDbContext.ApplicationDbContext
+- uid: Microsoft.EntityFrameworkCore.DbContextOptions{WebBja.Data.ApplicationDbContext}
+  commentId: '!:Microsoft.EntityFrameworkCore.DbContextOptions{WebBja.Data.ApplicationDbContext}'
+  definition: Microsoft.EntityFrameworkCore.DbContextOptions`1
+  name: DbContextOptions<ApplicationDbContext>
+  nameWithType: DbContextOptions<ApplicationDbContext>
+  fullName: Microsoft.EntityFrameworkCore.DbContextOptions<WebBja.Data.ApplicationDbContext>
+  nameWithType.vb: DbContextOptions(Of ApplicationDbContext)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContextOptions(Of WebBja.Data.ApplicationDbContext)
+  name.vb: DbContextOptions(Of ApplicationDbContext)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    nameWithType: DbContextOptions
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WebBja.Data.ApplicationDbContext
+    name: ApplicationDbContext
+    nameWithType: ApplicationDbContext
+    fullName: WebBja.Data.ApplicationDbContext
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    nameWithType: DbContextOptions
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WebBja.Data.ApplicationDbContext
+    name: ApplicationDbContext
+    nameWithType: ApplicationDbContext
+    fullName: WebBja.Data.ApplicationDbContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+  isExternal: true
+  name: DbContextOptions<>
+  nameWithType: DbContextOptions<>
+  fullName: Microsoft.EntityFrameworkCore.DbContextOptions<>
+  nameWithType.vb: DbContextOptions(Of )
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContextOptions(Of )
+  name.vb: DbContextOptions(Of )
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    nameWithType: DbContextOptions
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    nameWithType: DbContextOptions
+    fullName: Microsoft.EntityFrameworkCore.DbContextOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WebBja.Data.ApplicationDbContext.Formulario*
+  commentId: Overload:WebBja.Data.ApplicationDbContext.Formulario
+  isExternal: true
+  name: Formulario
+  nameWithType: ApplicationDbContext.Formulario
+  fullName: WebBja.Data.ApplicationDbContext.Formulario
+- uid: Microsoft.EntityFrameworkCore.DbSet{WebBja.Models.Formulario}
+  commentId: '!:Microsoft.EntityFrameworkCore.DbSet{WebBja.Models.Formulario}'
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  name: DbSet<Formulario>
+  nameWithType: DbSet<Formulario>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<WebBja.Models.Formulario>
+  nameWithType.vb: DbSet(Of Formulario)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of WebBja.Models.Formulario)
+  name.vb: DbSet(Of Formulario)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WebBja.Models.Formulario
+    name: Formulario
+    nameWithType: Formulario
+    fullName: WebBja.Models.Formulario
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WebBja.Models.Formulario
+    name: Formulario
+    nameWithType: Formulario
+    fullName: WebBja.Models.Formulario
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.DbSet`1
+  isExternal: true
+  name: DbSet<>
+  nameWithType: DbSet<>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<>
+  nameWithType.vb: DbSet(Of )
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of )
+  name.vb: DbSet(Of )
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WebBja.Data.ApplicationDbContext.Comentario*
+  commentId: Overload:WebBja.Data.ApplicationDbContext.Comentario
+  isExternal: true
+  name: Comentario
+  nameWithType: ApplicationDbContext.Comentario
+  fullName: WebBja.Data.ApplicationDbContext.Comentario
+- uid: Microsoft.EntityFrameworkCore.DbSet{WebBja.Models.Comentario}
+  commentId: '!:Microsoft.EntityFrameworkCore.DbSet{WebBja.Models.Comentario}'
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  name: DbSet<Comentario>
+  nameWithType: DbSet<Comentario>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<WebBja.Models.Comentario>
+  nameWithType.vb: DbSet(Of Comentario)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of WebBja.Models.Comentario)
+  name.vb: DbSet(Of Comentario)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WebBja.Models.Comentario
+    name: Comentario
+    nameWithType: Comentario
+    fullName: WebBja.Models.Comentario
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WebBja.Models.Comentario
+    name: Comentario
+    nameWithType: Comentario
+    fullName: WebBja.Models.Comentario
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

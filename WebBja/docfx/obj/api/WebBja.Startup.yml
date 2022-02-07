@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Startup
+  commentId: T:WebBja.Startup
+  id: Startup
+  parent: WebBja
+  children:
+  - WebBja.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  - WebBja.Startup.Configuration
+  - WebBja.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+  - WebBja.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  langs:
+  - csharp
+  - vb
+  name: Startup
+  nameWithType: Startup
+  fullName: WebBja.Startup
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: 'public class Startup : Object'
+    content.vb: >-
+      Public Class Startup
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:WebBja.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration)'
+  parent: WebBja.Startup
+  langs:
+  - csharp
+  - vb
+  name: Startup(IConfiguration)
+  nameWithType: Startup.Startup(IConfiguration)
+  fullName: WebBja.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: public Startup(IConfiguration configuration)
+    parameters:
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    content.vb: Public Sub New(configuration As IConfiguration)
+  overload: WebBja.Startup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:WebBja.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  parent: WebBja.Startup
+  langs:
+  - csharp
+  - vb
+  name: ConfigureServices(IServiceCollection)
+  nameWithType: Startup.ConfigureServices(IServiceCollection)
+  fullName: WebBja.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: public void ConfigureServices(IServiceCollection services)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Sub ConfigureServices(services As IServiceCollection)
+  overload: WebBja.Startup.ConfigureServices*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+  commentId: M:WebBja.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+  id: Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+  parent: WebBja.Startup
+  langs:
+  - csharp
+  - vb
+  name: Configure(IApplicationBuilder, IWebHostEnvironment)
+  nameWithType: Startup.Configure(IApplicationBuilder, IWebHostEnvironment)
+  fullName: WebBja.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
+    - id: env
+      type: Microsoft.AspNetCore.Hosting.IWebHostEnvironment
+    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IWebHostEnvironment)
+  overload: WebBja.Startup.Configure*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Startup.Configuration
+  commentId: P:WebBja.Startup.Configuration
+  id: Configuration
+  parent: WebBja.Startup
+  langs:
+  - csharp
+  - vb
+  name: Configuration
+  nameWithType: Startup.Configuration
+  fullName: WebBja.Startup.Configuration
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja
+  syntax:
+    content: public IConfiguration Configuration { get; }
+    parameters: []
+    return:
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    content.vb: Public ReadOnly Property Configuration As IConfiguration
+  overload: WebBja.Startup.Configuration*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: WebBja
+  commentId: N:WebBja
+  isExternal: true
+  name: WebBja
+  nameWithType: WebBja
+  fullName: WebBja
+- uid: WebBja.Startup.#ctor*
+  commentId: Overload:WebBja.Startup.#ctor
+  isExternal: true
+  name: Startup
+  nameWithType: Startup.Startup
+  fullName: WebBja.Startup.Startup
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  isExternal: true
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: WebBja.Startup.ConfigureServices*
+  commentId: Overload:WebBja.Startup.ConfigureServices
+  isExternal: true
+  name: ConfigureServices
+  nameWithType: Startup.ConfigureServices
+  fullName: WebBja.Startup.ConfigureServices
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: '!:Microsoft.Extensions.DependencyInjection.IServiceCollection'
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: WebBja.Startup.Configure*
+  commentId: Overload:WebBja.Startup.Configure
+  isExternal: true
+  name: Configure
+  nameWithType: Startup.Configure
+  fullName: WebBja.Startup.Configure
+- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
+  commentId: '!:Microsoft.AspNetCore.Builder.IApplicationBuilder'
+  isExternal: true
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
+- uid: Microsoft.AspNetCore.Hosting.IWebHostEnvironment
+  isExternal: true
+  name: IWebHostEnvironment
+  nameWithType: IWebHostEnvironment
+  fullName: Microsoft.AspNetCore.Hosting.IWebHostEnvironment
+- uid: WebBja.Startup.Configuration*
+  commentId: Overload:WebBja.Startup.Configuration
+  isExternal: true
+  name: Configuration
+  nameWithType: Startup.Configuration
+  fullName: WebBja.Startup.Configuration

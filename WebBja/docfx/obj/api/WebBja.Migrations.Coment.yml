@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Migrations.Coment
+  commentId: T:WebBja.Migrations.Coment
+  id: Coment
+  parent: WebBja.Migrations
+  children:
+  - WebBja.Migrations.Coment.#ctor
+  - WebBja.Migrations.Coment.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - WebBja.Migrations.Coment.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  - WebBja.Migrations.Coment.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  langs:
+  - csharp
+  - vb
+  name: Coment
+  nameWithType: Coment
+  fullName: WebBja.Migrations.Coment
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: 'public class Coment : Migration'
+    content.vb: >-
+      Public Class Coment
+          Inherits Migration
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Migrations.Coment.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:WebBja.Migrations.Coment.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: WebBja.Migrations.Coment
+  langs:
+  - csharp
+  - vb
+  name: Up(MigrationBuilder)
+  nameWithType: Coment.Up(MigrationBuilder)
+  fullName: WebBja.Migrations.Coment.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void Up(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Up(migrationBuilder As MigrationBuilder)
+  overload: WebBja.Migrations.Coment.Up*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.Coment.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:WebBja.Migrations.Coment.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: WebBja.Migrations.Coment
+  langs:
+  - csharp
+  - vb
+  name: Down(MigrationBuilder)
+  nameWithType: Coment.Down(MigrationBuilder)
+  fullName: WebBja.Migrations.Coment.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void Down(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Down(migrationBuilder As MigrationBuilder)
+  overload: WebBja.Migrations.Coment.Down*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.Coment.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:WebBja.Migrations.Coment.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: WebBja.Migrations.Coment
+  langs:
+  - csharp
+  - vb
+  name: BuildTargetModel(ModelBuilder)
+  nameWithType: Coment.BuildTargetModel(ModelBuilder)
+  fullName: WebBja.Migrations.Coment.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void BuildTargetModel(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+    content.vb: Protected Overrides Sub BuildTargetModel(modelBuilder As ModelBuilder)
+  overload: WebBja.Migrations.Coment.BuildTargetModel*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.Coment.#ctor
+  commentId: M:WebBja.Migrations.Coment.#ctor
+  id: '#ctor'
+  parent: WebBja.Migrations.Coment
+  langs:
+  - csharp
+  - vb
+  name: Coment()
+  nameWithType: Coment.Coment()
+  fullName: WebBja.Migrations.Coment.Coment()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: public Coment()
+    content.vb: Public Sub New
+  overload: WebBja.Migrations.Coment.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Migrations
+  commentId: N:WebBja.Migrations
+  isExternal: true
+  name: WebBja.Migrations
+  nameWithType: WebBja.Migrations
+  fullName: WebBja.Migrations
+- uid: WebBja.Migrations.Coment.Up*
+  commentId: Overload:WebBja.Migrations.Coment.Up
+  isExternal: true
+  name: Up
+  nameWithType: Coment.Up
+  fullName: WebBja.Migrations.Coment.Up
+- uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+  isExternal: true
+  name: MigrationBuilder
+  nameWithType: MigrationBuilder
+  fullName: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+- uid: WebBja.Migrations.Coment.Down*
+  commentId: Overload:WebBja.Migrations.Coment.Down
+  isExternal: true
+  name: Down
+  nameWithType: Coment.Down
+  fullName: WebBja.Migrations.Coment.Down
+- uid: WebBja.Migrations.Coment.BuildTargetModel*
+  commentId: Overload:WebBja.Migrations.Coment.BuildTargetModel
+  isExternal: true
+  name: BuildTargetModel
+  nameWithType: Coment.BuildTargetModel
+  fullName: WebBja.Migrations.Coment.BuildTargetModel
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  isExternal: true
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+- uid: WebBja.Migrations.Coment.#ctor*
+  commentId: Overload:WebBja.Migrations.Coment.#ctor
+  isExternal: true
+  name: Coment
+  nameWithType: Coment.Coment
+  fullName: WebBja.Migrations.Coment.Coment

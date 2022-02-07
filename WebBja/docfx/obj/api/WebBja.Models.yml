@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  id: WebBja.Models
+  children:
+  - WebBja.Models.Comentario
+  - WebBja.Models.ErrorViewModel
+  - WebBja.Models.Formulario
+  - WebBja.Models.Jokalaria
+  - WebBja.Models.Partida
+  - WebBja.Models.ReportModel
+  langs:
+  - csharp
+  - vb
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+  type: Namespace
+  assemblies:
+  - WebBja
+references:
+- uid: WebBja.Models.Comentario
+  commentId: T:WebBja.Models.Comentario
+  parent: WebBja.Models
+  isExternal: true
+  name: Comentario
+  nameWithType: Comentario
+  fullName: WebBja.Models.Comentario
+- uid: WebBja.Models.ErrorViewModel
+  commentId: T:WebBja.Models.ErrorViewModel
+  isExternal: true
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: WebBja.Models.ErrorViewModel
+- uid: WebBja.Models.Formulario
+  commentId: T:WebBja.Models.Formulario
+  parent: WebBja.Models
+  isExternal: true
+  name: Formulario
+  nameWithType: Formulario
+  fullName: WebBja.Models.Formulario
+- uid: WebBja.Models.Partida
+  commentId: T:WebBja.Models.Partida
+  isExternal: true
+  name: Partida
+  nameWithType: Partida
+  fullName: WebBja.Models.Partida
+- uid: WebBja.Models.Jokalaria
+  commentId: T:WebBja.Models.Jokalaria
+  parent: WebBja.Models
+  isExternal: true
+  name: Jokalaria
+  nameWithType: Jokalaria
+  fullName: WebBja.Models.Jokalaria
+- uid: WebBja.Models.ReportModel
+  commentId: T:WebBja.Models.ReportModel
+  isExternal: true
+  name: ReportModel
+  nameWithType: ReportModel
+  fullName: WebBja.Models.ReportModel
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models

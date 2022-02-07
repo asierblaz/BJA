@@ -14,6 +14,10 @@ namespace WebBja.Controllers
     {
         private readonly BjaDbContext _context;
 
+        /// <summary>
+        /// Dependentzia injektatzen dugu.
+        /// </summary>
+        /// <param name="context"></param>
         public ComentarioController(BjaDbContext context)
         {
             _context = context;
@@ -26,8 +30,6 @@ namespace WebBja.Controllers
             IEnumerable<Comentario> listaComent = _context.Comentario;
             return View(listaComent);
         }
-
-
 
         // GET: ComentarioController/Create
         [Authorize]
@@ -49,11 +51,9 @@ namespace WebBja.Controllers
             {
                 _context.Add(com);
                 _context.SaveChanges();
-
             }
             try
             {
-
                 return RedirectToAction("Index", "Home");
             }
             catch

@@ -1,0 +1,204 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Models.Jokalaria
+  commentId: T:WebBja.Models.Jokalaria
+  id: Jokalaria
+  parent: WebBja.Models
+  children:
+  - WebBja.Models.Jokalaria.#ctor
+  - WebBja.Models.Jokalaria.Dni
+  - WebBja.Models.Jokalaria.Name
+  - WebBja.Models.Jokalaria.Saldo
+  langs:
+  - csharp
+  - vb
+  name: Jokalaria
+  nameWithType: Jokalaria
+  fullName: WebBja.Models.Jokalaria
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  summary: "\nJokalaria klasea definitzen da\n"
+  syntax:
+    content: 'public class Jokalaria : Object'
+    content.vb: >-
+      Public Class Jokalaria
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Models.Jokalaria.#ctor
+  commentId: M:WebBja.Models.Jokalaria.#ctor
+  id: '#ctor'
+  parent: WebBja.Models.Jokalaria
+  langs:
+  - csharp
+  - vb
+  name: Jokalaria()
+  nameWithType: Jokalaria.Jokalaria()
+  fullName: WebBja.Models.Jokalaria.Jokalaria()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public Jokalaria()
+    content.vb: Public Sub New
+  overload: WebBja.Models.Jokalaria.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Jokalaria.Dni
+  commentId: P:WebBja.Models.Jokalaria.Dni
+  id: Dni
+  parent: WebBja.Models.Jokalaria
+  langs:
+  - csharp
+  - vb
+  name: Dni
+  nameWithType: Jokalaria.Dni
+  fullName: WebBja.Models.Jokalaria.Dni
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Dni { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Dni As String
+  overload: WebBja.Models.Jokalaria.Dni*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Jokalaria.Name
+  commentId: P:WebBja.Models.Jokalaria.Name
+  id: Name
+  parent: WebBja.Models.Jokalaria
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Jokalaria.Name
+  fullName: WebBja.Models.Jokalaria.Name
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: WebBja.Models.Jokalaria.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.Jokalaria.Saldo
+  commentId: P:WebBja.Models.Jokalaria.Saldo
+  id: Saldo
+  parent: WebBja.Models.Jokalaria
+  langs:
+  - csharp
+  - vb
+  name: Saldo
+  nameWithType: Jokalaria.Saldo
+  fullName: WebBja.Models.Jokalaria.Saldo
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public int Saldo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Saldo As Integer
+  overload: WebBja.Models.Jokalaria.Saldo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+- uid: WebBja.Models.Jokalaria.#ctor*
+  commentId: Overload:WebBja.Models.Jokalaria.#ctor
+  isExternal: true
+  name: Jokalaria
+  nameWithType: Jokalaria.Jokalaria
+  fullName: WebBja.Models.Jokalaria.Jokalaria
+- uid: WebBja.Models.Jokalaria.Dni*
+  commentId: Overload:WebBja.Models.Jokalaria.Dni
+  isExternal: true
+  name: Dni
+  nameWithType: Jokalaria.Dni
+  fullName: WebBja.Models.Jokalaria.Dni
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: WebBja.Models.Jokalaria.Name*
+  commentId: Overload:WebBja.Models.Jokalaria.Name
+  isExternal: true
+  name: Name
+  nameWithType: Jokalaria.Name
+  fullName: WebBja.Models.Jokalaria.Name
+- uid: WebBja.Models.Jokalaria.Saldo*
+  commentId: Overload:WebBja.Models.Jokalaria.Saldo
+  isExternal: true
+  name: Saldo
+  nameWithType: Jokalaria.Saldo
+  fullName: WebBja.Models.Jokalaria.Saldo
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

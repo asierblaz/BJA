@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Migrations.Form
+  commentId: T:WebBja.Migrations.Form
+  id: Form
+  parent: WebBja.Migrations
+  children:
+  - WebBja.Migrations.Form.#ctor
+  - WebBja.Migrations.Form.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - WebBja.Migrations.Form.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  - WebBja.Migrations.Form.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  langs:
+  - csharp
+  - vb
+  name: Form
+  nameWithType: Form
+  fullName: WebBja.Migrations.Form
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: 'public class Form : Migration'
+    content.vb: >-
+      Public Class Form
+          Inherits Migration
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Migrations.Form.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:WebBja.Migrations.Form.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: WebBja.Migrations.Form
+  langs:
+  - csharp
+  - vb
+  name: Up(MigrationBuilder)
+  nameWithType: Form.Up(MigrationBuilder)
+  fullName: WebBja.Migrations.Form.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void Up(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Up(migrationBuilder As MigrationBuilder)
+  overload: WebBja.Migrations.Form.Up*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.Form.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:WebBja.Migrations.Form.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: WebBja.Migrations.Form
+  langs:
+  - csharp
+  - vb
+  name: Down(MigrationBuilder)
+  nameWithType: Form.Down(MigrationBuilder)
+  fullName: WebBja.Migrations.Form.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void Down(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Down(migrationBuilder As MigrationBuilder)
+  overload: WebBja.Migrations.Form.Down*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.Form.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:WebBja.Migrations.Form.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: WebBja.Migrations.Form
+  langs:
+  - csharp
+  - vb
+  name: BuildTargetModel(ModelBuilder)
+  nameWithType: Form.BuildTargetModel(ModelBuilder)
+  fullName: WebBja.Migrations.Form.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: protected override void BuildTargetModel(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+    content.vb: Protected Overrides Sub BuildTargetModel(modelBuilder As ModelBuilder)
+  overload: WebBja.Migrations.Form.BuildTargetModel*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Migrations.Form.#ctor
+  commentId: M:WebBja.Migrations.Form.#ctor
+  id: '#ctor'
+  parent: WebBja.Migrations.Form
+  langs:
+  - csharp
+  - vb
+  name: Form()
+  nameWithType: Form.Form()
+  fullName: WebBja.Migrations.Form.Form()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Migrations
+  syntax:
+    content: public Form()
+    content.vb: Public Sub New
+  overload: WebBja.Migrations.Form.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Migrations
+  commentId: N:WebBja.Migrations
+  isExternal: true
+  name: WebBja.Migrations
+  nameWithType: WebBja.Migrations
+  fullName: WebBja.Migrations
+- uid: WebBja.Migrations.Form.Up*
+  commentId: Overload:WebBja.Migrations.Form.Up
+  isExternal: true
+  name: Up
+  nameWithType: Form.Up
+  fullName: WebBja.Migrations.Form.Up
+- uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+  isExternal: true
+  name: MigrationBuilder
+  nameWithType: MigrationBuilder
+  fullName: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+- uid: WebBja.Migrations.Form.Down*
+  commentId: Overload:WebBja.Migrations.Form.Down
+  isExternal: true
+  name: Down
+  nameWithType: Form.Down
+  fullName: WebBja.Migrations.Form.Down
+- uid: WebBja.Migrations.Form.BuildTargetModel*
+  commentId: Overload:WebBja.Migrations.Form.BuildTargetModel
+  isExternal: true
+  name: BuildTargetModel
+  nameWithType: Form.BuildTargetModel
+  fullName: WebBja.Migrations.Form.BuildTargetModel
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  isExternal: true
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+- uid: WebBja.Migrations.Form.#ctor*
+  commentId: Overload:WebBja.Migrations.Form.#ctor
+  isExternal: true
+  name: Form
+  nameWithType: Form.Form
+  fullName: WebBja.Migrations.Form.Form

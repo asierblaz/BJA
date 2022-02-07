@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Data.Migrations.CreateIdentitySchema
+  commentId: T:WebBja.Data.Migrations.CreateIdentitySchema
+  id: CreateIdentitySchema
+  parent: WebBja.Data.Migrations
+  children:
+  - WebBja.Data.Migrations.CreateIdentitySchema.#ctor
+  - WebBja.Data.Migrations.CreateIdentitySchema.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - WebBja.Data.Migrations.CreateIdentitySchema.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  - WebBja.Data.Migrations.CreateIdentitySchema.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  langs:
+  - csharp
+  - vb
+  name: CreateIdentitySchema
+  nameWithType: CreateIdentitySchema
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data.Migrations
+  syntax:
+    content: 'public class CreateIdentitySchema : Migration'
+    content.vb: >-
+      Public Class CreateIdentitySchema
+          Inherits Migration
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Data.Migrations.CreateIdentitySchema.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:WebBja.Data.Migrations.CreateIdentitySchema.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: WebBja.Data.Migrations.CreateIdentitySchema
+  langs:
+  - csharp
+  - vb
+  name: Up(MigrationBuilder)
+  nameWithType: CreateIdentitySchema.Up(MigrationBuilder)
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data.Migrations
+  syntax:
+    content: protected override void Up(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Up(migrationBuilder As MigrationBuilder)
+  overload: WebBja.Data.Migrations.CreateIdentitySchema.Up*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Data.Migrations.CreateIdentitySchema.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:WebBja.Data.Migrations.CreateIdentitySchema.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: WebBja.Data.Migrations.CreateIdentitySchema
+  langs:
+  - csharp
+  - vb
+  name: Down(MigrationBuilder)
+  nameWithType: CreateIdentitySchema.Down(MigrationBuilder)
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data.Migrations
+  syntax:
+    content: protected override void Down(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Down(migrationBuilder As MigrationBuilder)
+  overload: WebBja.Data.Migrations.CreateIdentitySchema.Down*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Data.Migrations.CreateIdentitySchema.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:WebBja.Data.Migrations.CreateIdentitySchema.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: WebBja.Data.Migrations.CreateIdentitySchema
+  langs:
+  - csharp
+  - vb
+  name: BuildTargetModel(ModelBuilder)
+  nameWithType: CreateIdentitySchema.BuildTargetModel(ModelBuilder)
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data.Migrations
+  syntax:
+    content: protected override void BuildTargetModel(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+    content.vb: Protected Overrides Sub BuildTargetModel(modelBuilder As ModelBuilder)
+  overload: WebBja.Data.Migrations.CreateIdentitySchema.BuildTargetModel*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: WebBja.Data.Migrations.CreateIdentitySchema.#ctor
+  commentId: M:WebBja.Data.Migrations.CreateIdentitySchema.#ctor
+  id: '#ctor'
+  parent: WebBja.Data.Migrations.CreateIdentitySchema
+  langs:
+  - csharp
+  - vb
+  name: CreateIdentitySchema()
+  nameWithType: CreateIdentitySchema.CreateIdentitySchema()
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema.CreateIdentitySchema()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Data.Migrations
+  syntax:
+    content: public CreateIdentitySchema()
+    content.vb: Public Sub New
+  overload: WebBja.Data.Migrations.CreateIdentitySchema.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Data.Migrations
+  commentId: N:WebBja.Data.Migrations
+  isExternal: true
+  name: WebBja.Data.Migrations
+  nameWithType: WebBja.Data.Migrations
+  fullName: WebBja.Data.Migrations
+- uid: WebBja.Data.Migrations.CreateIdentitySchema.Up*
+  commentId: Overload:WebBja.Data.Migrations.CreateIdentitySchema.Up
+  isExternal: true
+  name: Up
+  nameWithType: CreateIdentitySchema.Up
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema.Up
+- uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+  isExternal: true
+  name: MigrationBuilder
+  nameWithType: MigrationBuilder
+  fullName: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+- uid: WebBja.Data.Migrations.CreateIdentitySchema.Down*
+  commentId: Overload:WebBja.Data.Migrations.CreateIdentitySchema.Down
+  isExternal: true
+  name: Down
+  nameWithType: CreateIdentitySchema.Down
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema.Down
+- uid: WebBja.Data.Migrations.CreateIdentitySchema.BuildTargetModel*
+  commentId: Overload:WebBja.Data.Migrations.CreateIdentitySchema.BuildTargetModel
+  isExternal: true
+  name: BuildTargetModel
+  nameWithType: CreateIdentitySchema.BuildTargetModel
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema.BuildTargetModel
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  isExternal: true
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+- uid: WebBja.Data.Migrations.CreateIdentitySchema.#ctor*
+  commentId: Overload:WebBja.Data.Migrations.CreateIdentitySchema.#ctor
+  isExternal: true
+  name: CreateIdentitySchema
+  nameWithType: CreateIdentitySchema.CreateIdentitySchema
+  fullName: WebBja.Data.Migrations.CreateIdentitySchema.CreateIdentitySchema

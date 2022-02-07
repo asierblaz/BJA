@@ -1,0 +1,276 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Controllers.ReportController
+  commentId: T:WebBja.Controllers.ReportController
+  id: ReportController
+  parent: WebBja.Controllers
+  children:
+  - WebBja.Controllers.ReportController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,BjaWeb.Services.IPartidaService)
+  - WebBja.Controllers.ReportController._partidaService
+  - WebBja.Controllers.ReportController.onenakInprimatu
+  - WebBja.Controllers.ReportController.txarrenakInprimatu
+  langs:
+  - csharp
+  - vb
+  name: ReportController
+  nameWithType: ReportController
+  fullName: WebBja.Controllers.ReportController
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: 'public class ReportController : Controller'
+    content.vb: >-
+      Public Class ReportController
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Controllers.ReportController._partidaService
+  commentId: F:WebBja.Controllers.ReportController._partidaService
+  id: _partidaService
+  parent: WebBja.Controllers.ReportController
+  langs:
+  - csharp
+  - vb
+  name: _partidaService
+  nameWithType: ReportController._partidaService
+  fullName: WebBja.Controllers.ReportController._partidaService
+  type: Field
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  syntax:
+    content: public readonly IPartidaService _partidaService
+    return:
+      type: BjaWeb.Services.IPartidaService
+    content.vb: Public ReadOnly _partidaService As IPartidaService
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: WebBja.Controllers.ReportController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,BjaWeb.Services.IPartidaService)
+  commentId: M:WebBja.Controllers.ReportController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,BjaWeb.Services.IPartidaService)
+  id: '#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,BjaWeb.Services.IPartidaService)'
+  parent: WebBja.Controllers.ReportController
+  langs:
+  - csharp
+  - vb
+  name: ReportController(IWebHostEnvironment, IPartidaService)
+  nameWithType: ReportController.ReportController(IWebHostEnvironment, IPartidaService)
+  fullName: WebBja.Controllers.ReportController.ReportController(Microsoft.AspNetCore.Hosting.IWebHostEnvironment, BjaWeb.Services.IPartidaService)
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nDependentziak injektatzen dira.\n"
+  syntax:
+    content: public ReportController(IWebHostEnvironment webHostEnvironment, IPartidaService partidaService)
+    parameters:
+    - id: webHostEnvironment
+      type: Microsoft.AspNetCore.Hosting.IWebHostEnvironment
+    - id: partidaService
+      type: BjaWeb.Services.IPartidaService
+    content.vb: Public Sub New(webHostEnvironment As IWebHostEnvironment, partidaService As IPartidaService)
+  overload: WebBja.Controllers.ReportController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.ReportController.txarrenakInprimatu
+  commentId: M:WebBja.Controllers.ReportController.txarrenakInprimatu
+  id: txarrenakInprimatu
+  parent: WebBja.Controllers.ReportController
+  langs:
+  - csharp
+  - vb
+  name: txarrenakInprimatu()
+  nameWithType: ReportController.txarrenakInprimatu()
+  fullName: WebBja.Controllers.ReportController.txarrenakInprimatu()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nJolastutako 10 partida txarrenen txostena inprimatzen du.\n"
+  syntax:
+    content: public Task<IActionResult> txarrenakInprimatu()
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: Public Function txarrenakInprimatu As Task(Of IActionResult)
+  overload: WebBja.Controllers.ReportController.txarrenakInprimatu*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Controllers.ReportController.onenakInprimatu
+  commentId: M:WebBja.Controllers.ReportController.onenakInprimatu
+  id: onenakInprimatu
+  parent: WebBja.Controllers.ReportController
+  langs:
+  - csharp
+  - vb
+  name: onenakInprimatu()
+  nameWithType: ReportController.onenakInprimatu()
+  fullName: WebBja.Controllers.ReportController.onenakInprimatu()
+  type: Method
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Controllers
+  summary: "\nJolastutako 10 partida onenen txostena inprimatzen du.\n"
+  syntax:
+    content: public Task<IActionResult> onenakInprimatu()
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: Public Function onenakInprimatu As Task(Of IActionResult)
+  overload: WebBja.Controllers.ReportController.onenakInprimatu*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Controllers
+  commentId: N:WebBja.Controllers
+  isExternal: true
+  name: WebBja.Controllers
+  nameWithType: WebBja.Controllers
+  fullName: WebBja.Controllers
+- uid: BjaWeb.Services.IPartidaService
+  commentId: T:BjaWeb.Services.IPartidaService
+  parent: BjaWeb.Services
+  isExternal: true
+  name: IPartidaService
+  nameWithType: IPartidaService
+  fullName: BjaWeb.Services.IPartidaService
+- uid: BjaWeb.Services
+  commentId: N:BjaWeb.Services
+  isExternal: true
+  name: BjaWeb.Services
+  nameWithType: BjaWeb.Services
+  fullName: BjaWeb.Services
+- uid: WebBja.Controllers.ReportController.#ctor*
+  commentId: Overload:WebBja.Controllers.ReportController.#ctor
+  isExternal: true
+  name: ReportController
+  nameWithType: ReportController.ReportController
+  fullName: WebBja.Controllers.ReportController.ReportController
+- uid: Microsoft.AspNetCore.Hosting.IWebHostEnvironment
+  isExternal: true
+  name: IWebHostEnvironment
+  nameWithType: IWebHostEnvironment
+  fullName: Microsoft.AspNetCore.Hosting.IWebHostEnvironment
+- uid: WebBja.Controllers.ReportController.txarrenakInprimatu*
+  commentId: Overload:WebBja.Controllers.ReportController.txarrenakInprimatu
+  isExternal: true
+  name: txarrenakInprimatu
+  nameWithType: ReportController.txarrenakInprimatu
+  fullName: WebBja.Controllers.ReportController.txarrenakInprimatu
+- uid: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+  commentId: '!:System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Microsoft.AspNetCore.Mvc.IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Microsoft.AspNetCore.Mvc.IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: Microsoft.AspNetCore.Mvc.IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Microsoft.AspNetCore.Mvc.IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: Microsoft.AspNetCore.Mvc.IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WebBja.Controllers.ReportController.onenakInprimatu*
+  commentId: Overload:WebBja.Controllers.ReportController.onenakInprimatu
+  isExternal: true
+  name: onenakInprimatu
+  nameWithType: ReportController.onenakInprimatu
+  fullName: WebBja.Controllers.ReportController.onenakInprimatu

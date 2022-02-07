@@ -1,0 +1,166 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Models.ErrorViewModel
+  commentId: T:WebBja.Models.ErrorViewModel
+  id: ErrorViewModel
+  parent: WebBja.Models
+  children:
+  - WebBja.Models.ErrorViewModel.#ctor
+  - WebBja.Models.ErrorViewModel.RequestId
+  - WebBja.Models.ErrorViewModel.ShowRequestId
+  langs:
+  - csharp
+  - vb
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: WebBja.Models.ErrorViewModel
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: 'public class ErrorViewModel : Object'
+    content.vb: >-
+      Public Class ErrorViewModel
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Models.ErrorViewModel.#ctor
+  commentId: M:WebBja.Models.ErrorViewModel.#ctor
+  id: '#ctor'
+  parent: WebBja.Models.ErrorViewModel
+  langs:
+  - csharp
+  - vb
+  name: ErrorViewModel()
+  nameWithType: ErrorViewModel.ErrorViewModel()
+  fullName: WebBja.Models.ErrorViewModel.ErrorViewModel()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public ErrorViewModel()
+    content.vb: Public Sub New
+  overload: WebBja.Models.ErrorViewModel.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.ErrorViewModel.RequestId
+  commentId: P:WebBja.Models.ErrorViewModel.RequestId
+  id: RequestId
+  parent: WebBja.Models.ErrorViewModel
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: ErrorViewModel.RequestId
+  fullName: WebBja.Models.ErrorViewModel.RequestId
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string RequestId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RequestId As String
+  overload: WebBja.Models.ErrorViewModel.RequestId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.ErrorViewModel.ShowRequestId
+  commentId: P:WebBja.Models.ErrorViewModel.ShowRequestId
+  id: ShowRequestId
+  parent: WebBja.Models.ErrorViewModel
+  langs:
+  - csharp
+  - vb
+  name: ShowRequestId
+  nameWithType: ErrorViewModel.ShowRequestId
+  fullName: WebBja.Models.ErrorViewModel.ShowRequestId
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public bool ShowRequestId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ShowRequestId As Boolean
+  overload: WebBja.Models.ErrorViewModel.ShowRequestId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+- uid: WebBja.Models.ErrorViewModel.#ctor*
+  commentId: Overload:WebBja.Models.ErrorViewModel.#ctor
+  isExternal: true
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel.ErrorViewModel
+  fullName: WebBja.Models.ErrorViewModel.ErrorViewModel
+- uid: WebBja.Models.ErrorViewModel.RequestId*
+  commentId: Overload:WebBja.Models.ErrorViewModel.RequestId
+  isExternal: true
+  name: RequestId
+  nameWithType: ErrorViewModel.RequestId
+  fullName: WebBja.Models.ErrorViewModel.RequestId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: WebBja.Models.ErrorViewModel.ShowRequestId*
+  commentId: Overload:WebBja.Models.ErrorViewModel.ShowRequestId
+  isExternal: true
+  name: ShowRequestId
+  nameWithType: ErrorViewModel.ShowRequestId
+  fullName: WebBja.Models.ErrorViewModel.ShowRequestId
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

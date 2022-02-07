@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Data
+  commentId: N:WebBja.Data
+  id: WebBja.Data
+  children:
+  - WebBja.Data.ApplicationDbContext
+  - WebBja.Data.BjaDbContext
+  langs:
+  - csharp
+  - vb
+  name: WebBja.Data
+  nameWithType: WebBja.Data
+  fullName: WebBja.Data
+  type: Namespace
+  assemblies:
+  - WebBja
+references:
+- uid: WebBja.Data.ApplicationDbContext
+  commentId: T:WebBja.Data.ApplicationDbContext
+  isExternal: true
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext
+  fullName: WebBja.Data.ApplicationDbContext
+- uid: WebBja.Data.BjaDbContext
+  commentId: T:WebBja.Data.BjaDbContext
+  parent: WebBja.Data
+  isExternal: true
+  name: BjaDbContext
+  nameWithType: BjaDbContext
+  fullName: WebBja.Data.BjaDbContext
+- uid: WebBja.Data
+  commentId: N:WebBja.Data
+  isExternal: true
+  name: WebBja.Data
+  nameWithType: WebBja.Data
+  fullName: WebBja.Data

@@ -1,0 +1,204 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Models.ReportModel
+  commentId: T:WebBja.Models.ReportModel
+  id: ReportModel
+  parent: WebBja.Models
+  children:
+  - WebBja.Models.ReportModel.#ctor
+  - WebBja.Models.ReportModel.Fecha
+  - WebBja.Models.ReportModel.Name
+  - WebBja.Models.ReportModel.Puntuazioa
+  langs:
+  - csharp
+  - vb
+  name: ReportModel
+  nameWithType: ReportModel
+  fullName: WebBja.Models.ReportModel
+  type: Class
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  summary: "\nReportModelaq klasea definitzen da.\n"
+  syntax:
+    content: 'public class ReportModel : Object'
+    content.vb: >-
+      Public Class ReportModel
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WebBja.Models.ReportModel.#ctor
+  commentId: M:WebBja.Models.ReportModel.#ctor
+  id: '#ctor'
+  parent: WebBja.Models.ReportModel
+  langs:
+  - csharp
+  - vb
+  name: ReportModel()
+  nameWithType: ReportModel.ReportModel()
+  fullName: WebBja.Models.ReportModel.ReportModel()
+  type: Constructor
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public ReportModel()
+    content.vb: Public Sub New
+  overload: WebBja.Models.ReportModel.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.ReportModel.Puntuazioa
+  commentId: P:WebBja.Models.ReportModel.Puntuazioa
+  id: Puntuazioa
+  parent: WebBja.Models.ReportModel
+  langs:
+  - csharp
+  - vb
+  name: Puntuazioa
+  nameWithType: ReportModel.Puntuazioa
+  fullName: WebBja.Models.ReportModel.Puntuazioa
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public int Puntuazioa { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Puntuazioa As Integer
+  overload: WebBja.Models.ReportModel.Puntuazioa*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.ReportModel.Fecha
+  commentId: P:WebBja.Models.ReportModel.Fecha
+  id: Fecha
+  parent: WebBja.Models.ReportModel
+  langs:
+  - csharp
+  - vb
+  name: Fecha
+  nameWithType: ReportModel.Fecha
+  fullName: WebBja.Models.ReportModel.Fecha
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Fecha { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Fecha As String
+  overload: WebBja.Models.ReportModel.Fecha*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: WebBja.Models.ReportModel.Name
+  commentId: P:WebBja.Models.ReportModel.Name
+  id: Name
+  parent: WebBja.Models.ReportModel
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ReportModel.Name
+  fullName: WebBja.Models.ReportModel.Name
+  type: Property
+  source:
+    path: WebBja
+    isExternal: true
+  assemblies:
+  - WebBja
+  namespace: WebBja.Models
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: WebBja.Models.ReportModel.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: WebBja.Models
+  commentId: N:WebBja.Models
+  isExternal: true
+  name: WebBja.Models
+  nameWithType: WebBja.Models
+  fullName: WebBja.Models
+- uid: WebBja.Models.ReportModel.#ctor*
+  commentId: Overload:WebBja.Models.ReportModel.#ctor
+  isExternal: true
+  name: ReportModel
+  nameWithType: ReportModel.ReportModel
+  fullName: WebBja.Models.ReportModel.ReportModel
+- uid: WebBja.Models.ReportModel.Puntuazioa*
+  commentId: Overload:WebBja.Models.ReportModel.Puntuazioa
+  isExternal: true
+  name: Puntuazioa
+  nameWithType: ReportModel.Puntuazioa
+  fullName: WebBja.Models.ReportModel.Puntuazioa
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: WebBja.Models.ReportModel.Fecha*
+  commentId: Overload:WebBja.Models.ReportModel.Fecha
+  isExternal: true
+  name: Fecha
+  nameWithType: ReportModel.Fecha
+  fullName: WebBja.Models.ReportModel.Fecha
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: WebBja.Models.ReportModel.Name*
+  commentId: Overload:WebBja.Models.ReportModel.Name
+  isExternal: true
+  name: Name
+  nameWithType: ReportModel.Name
+  fullName: WebBja.Models.ReportModel.Name

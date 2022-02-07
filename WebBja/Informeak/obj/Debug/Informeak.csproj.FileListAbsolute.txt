@@ -1,0 +1,9 @@
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\obj\Debug\Informeak.csproj.AssemblyReference.cache
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\obj\Debug\Informeak.Properties.Resources.resources
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\obj\Debug\Informeak.csproj.GenerateResource.cache
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\obj\Debug\Informeak.csproj.CoreCompileInputs.cache
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\bin\Debug\Informeak.exe.config
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\bin\Debug\Informeak.exe
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\bin\Debug\Informeak.pdb
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\obj\Debug\Informeak.exe
+C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\obj\Debug\Informeak.pdb

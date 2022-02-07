@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja.Migrations
+  commentId: N:WebBja.Migrations
+  id: WebBja.Migrations
+  children:
+  - WebBja.Migrations.Coment
+  - WebBja.Migrations.ComentarioMirion
+  - WebBja.Migrations.Form
+  langs:
+  - csharp
+  - vb
+  name: WebBja.Migrations
+  nameWithType: WebBja.Migrations
+  fullName: WebBja.Migrations
+  type: Namespace
+  assemblies:
+  - WebBja
+references:
+- uid: WebBja.Migrations.Form
+  commentId: T:WebBja.Migrations.Form
+  isExternal: true
+  name: Form
+  nameWithType: Form
+  fullName: WebBja.Migrations.Form
+- uid: WebBja.Migrations.ComentarioMirion
+  commentId: T:WebBja.Migrations.ComentarioMirion
+  isExternal: true
+  name: ComentarioMirion
+  nameWithType: ComentarioMirion
+  fullName: WebBja.Migrations.ComentarioMirion
+- uid: WebBja.Migrations.Coment
+  commentId: T:WebBja.Migrations.Coment
+  isExternal: true
+  name: Coment
+  nameWithType: Coment
+  fullName: WebBja.Migrations.Coment

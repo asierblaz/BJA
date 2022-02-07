@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebBja
+  commentId: N:WebBja
+  id: WebBja
+  children:
+  - WebBja.Program
+  - WebBja.Startup
+  langs:
+  - csharp
+  - vb
+  name: WebBja
+  nameWithType: WebBja
+  fullName: WebBja
+  type: Namespace
+  assemblies:
+  - WebBja
+references:
+- uid: WebBja.Program
+  commentId: T:WebBja.Program
+  isExternal: true
+  name: Program
+  nameWithType: Program
+  fullName: WebBja.Program
+- uid: WebBja.Startup
+  commentId: T:WebBja.Startup
+  isExternal: true
+  name: Startup
+  nameWithType: Startup
+  fullName: WebBja.Startup

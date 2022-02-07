@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WebBja.Models
 {
+    /// <summary>
+    /// ReportModelaq klasea definitzen da.
+    /// </summary>
     public class ReportModel
     {
         public int Puntuazioa { get; set; }
