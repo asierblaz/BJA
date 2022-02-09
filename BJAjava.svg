@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="58cm" height="30cm" viewBox="-4227 -1744 1158 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="-4225.78" y="-1722.34" width="519.52" height="316.459"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4225.78" y="-1722.34" width="519.52" height="316.459"/>
+      <rect style="fill: #ffffff" x="-4225.78" y="-1742.34" width="134.9" height="20"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4225.78" y="-1742.34" width="134.9" height="20"/>
+      <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4223.78" y="-1728.34">uni.eus.dam.model</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="-4214.58" y="-1709.87" width="348.8" height="28"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4214.58" y="-1709.87" width="348.8" height="28"/>
+      <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-4040.18" y="-1689.87">Jokalaria</text>
+      <rect style="fill: #ffffff" x="-4214.58" y="-1681.87" width="348.8" height="52"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4214.58" y="-1681.87" width="348.8" height="52"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4211.58" y="-1668.67">-dni: String</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4211.58" y="-1652.67">-name: String</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4211.58" y="-1636.67">-saldo: int</text>
+      <rect style="fill: #ffffff" x="-4214.58" y="-1629.87" width="348.8" height="36"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4214.58" y="-1629.87" width="348.8" height="36"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4211.58" y="-1616.67">+Jokalaria()</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4211.58" y="-1600.67">+Jokalaria(dni:String,name:String,saldo:int)</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="-4212.36" y="-1566.02" width="433.5" height="28"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4212.36" y="-1566.02" width="433.5" height="28"/>
+      <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-3995.61" y="-1546.02">Partida</text>
+      <rect style="fill: #ffffff" x="-4212.36" y="-1538.02" width="433.5" height="52"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4212.36" y="-1538.02" width="433.5" height="52"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4209.36" y="-1524.82">-puntuazioa: int</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4209.36" y="-1508.82">-fecha: Date</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4209.36" y="-1492.82">+jokalaria: Jokalaria</text>
+      <rect style="fill: #ffffff" x="-4212.36" y="-1486.02" width="433.5" height="36"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4212.36" y="-1486.02" width="433.5" height="36"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4209.36" y="-1472.82">+Partida()</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4209.36" y="-1456.82">+Partida(puntuazioa:int,fecha:Date,jokalaria:Jokalaria)</text>
+    </g>
+    <g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-3752.68,-1508.02 -3742.85,-1508.02 -3742.85,-1655.87 -3865.78,-1655.87 "/>
+      <polygon style="fill: #ffffff" points="-3777.85,-1508.02 -3763.85,-1512.82 -3749.85,-1508.02 -3763.85,-1503.22 "/>
+      <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-3777.85,-1508.02 -3763.85,-1512.82 -3749.85,-1508.02 -3763.85,-1503.22 "/>
+      <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3740.85" y="-1585.95"></text>
+      <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3745.85" y="-1512.02"></text>
+      <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3861.78" y="-1659.87"> 1</text>
+      <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3861.78" y="-1643.87"></text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="-4214.4" y="-1371.39" width="483.981" height="205.489"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4214.4" y="-1371.39" width="483.981" height="205.489"/>
+      <rect style="fill: #ffffff" x="-4214.4" y="-1391.39" width="119.5" height="20"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4214.4" y="-1391.39" width="119.5" height="20"/>
+      <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4212.4" y="-1377.39">eus.uni.dam.dao</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="-4156.72" y="-1354.27" width="341.1" height="28"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4156.72" y="-1354.27" width="341.1" height="28"/>
+      <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-3986.17" y="-1334.27">PartidaDAO</text>
+      <rect style="fill: #ffffff" x="-4156.72" y="-1326.27" width="341.1" height="36"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4156.72" y="-1326.27" width="341.1" height="36"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4153.72" y="-1313.07">-client: MongoClient</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4153.72" y="-1297.07">-collection: MongoCollection&lt;Partida&gt;</text>
+      <rect style="fill: #ffffff" x="-4156.72" y="-1290.27" width="341.1" height="100"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-4156.72" y="-1290.27" width="341.1" height="100"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4153.72" y="-1277.07">+datuakKargatu(): void</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4153.72" y="-1261.07">+findAll(): List&lt;Partida&gt;</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4153.72" y="-1245.07">+findByJokalari(name:String): List&lt;Partida&gt;</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4153.72" y="-1229.07">+findTxarrenak(): List&lt;Partida&gt;</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4153.72" y="-1213.07">+findOnenak(): List&lt;Partida&gt;</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-4153.72" y="-1197.07">+insertPartida(p:Partida): void</text>
+    </g>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-3180.64" y="-1573.28" width="110.1" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3180.64" y="-1573.28" width="110.1" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-3125.59" y="-1558.08">&lt;&lt;Interface&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-3125.59" y="-1537.28">Runnable</text>
+    <rect style="fill: #ffffff" x="-3180.64" y="-1529.28" width="110.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3180.64" y="-1529.28" width="110.1" height="8"/>
+    <rect style="fill: #ffffff" x="-3180.64" y="-1521.28" width="110.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3180.64" y="-1521.28" width="110.1" height="8"/>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="-3679.66" y="-1696.3" width="477.672" height="246.046"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3679.66" y="-1696.3" width="477.672" height="246.046"/>
+      <rect style="fill: #ffffff" x="-3679.66" y="-1716.3" width="88.7" height="20"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3679.66" y="-1716.3" width="88.7" height="20"/>
+      <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3677.66" y="-1702.3">eus.uni.dam</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="-3652.74" y="-1685.04" width="210.2" height="44"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3652.74" y="-1685.04" width="210.2" height="44"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-3547.64" y="-1669.84">&lt;&lt;@SpringBootApplication
+&gt;&gt;</text>
+      <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-3547.64" y="-1649.04">ApiApplication</text>
+      <rect style="fill: #ffffff" x="-3652.74" y="-1641.04" width="210.2" height="8"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3652.74" y="-1641.04" width="210.2" height="8"/>
+      <rect style="fill: #ffffff" x="-3652.74" y="-1633.04" width="210.2" height="36"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3652.74" y="-1633.04" width="210.2" height="36"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3649.74" y="-1619.84">+main(args:String[]): void</text>
+      <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="-3649.74" y1="-1618.24" x2="-3449.54" y2="-1618.24"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3649.74" y="-1603.84">+logaIrekiProcess(): void</text>
+      <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="-3649.74" y1="-1602.24" x2="-3457.24" y2="-1602.24"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="-3651.72" y="-1568.32" width="364.2" height="44"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3651.72" y="-1568.32" width="364.2" height="44"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-3469.62" y="-1553.12">&lt;&lt;@Configuration&gt;&gt;</text>
+      <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-3469.62" y="-1532.32">SpringConfiguration</text>
+      <rect style="fill: #ffffff" x="-3651.72" y="-1524.32" width="364.2" height="20"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3651.72" y="-1524.32" width="364.2" height="20"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3648.72" y="-1511.12">-connectionString: String = "connectionString"</text>
+      <rect style="fill: #ffffff" x="-3651.72" y="-1504.32" width="364.2" height="20"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3651.72" y="-1504.32" width="364.2" height="20"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3648.72" y="-1491.12">+mongoClient(): MongoClient</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="-3411.98" y="-1666.56" width="148.6" height="44"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3411.98" y="-1666.56" width="148.6" height="44"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-3337.68" y="-1651.36">&lt;&lt;@Configuration&gt;&gt;</text>
+      <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-3337.68" y="-1630.56">SpringFoxConfig</text>
+      <rect style="fill: #ffffff" x="-3411.98" y="-1622.56" width="148.6" height="8"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3411.98" y="-1622.56" width="148.6" height="8"/>
+      <rect style="fill: #ffffff" x="-3411.98" y="-1614.56" width="148.6" height="20"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3411.98" y="-1614.56" width="148.6" height="20"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3408.98" y="-1601.36">+api(): Docket</text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="-3657.18" y="-1399.78" width="459.398" height="254.739"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3657.18" y="-1399.78" width="459.398" height="254.739"/>
+      <rect style="fill: #ffffff" x="-3657.18" y="-1419.78" width="173.4" height="20"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3657.18" y="-1419.78" width="173.4" height="20"/>
+      <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3655.18" y="-1405.78">eus.uni.dam.controller</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="-3620.24" y="-1386.23" width="348.8" height="44"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3620.24" y="-1386.23" width="348.8" height="44"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="-3445.84" y="-1371.03">&lt;&lt;@RestController
+&gt;&gt;</text>
+      <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-3445.84" y="-1350.23">PartidaController</text>
+      <rect style="fill: #ffffff" x="-3620.24" y="-1342.23" width="348.8" height="68"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3620.24" y="-1342.23" width="348.8" height="68"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1329.03">+partidaDao: PartidaDAO</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1313.03">+zerbitzaria: ServerSocket</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1297.03">+s: Socket</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1281.03">+hariZenbatzailea: int</text>
+      <rect style="fill: #ffffff" x="-3620.24" y="-1274.23" width="348.8" height="116"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-3620.24" y="-1274.23" width="348.8" height="116"/>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1261.03">+getPartidak(): List&lt;Partida&gt;</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1245.03">+getPartidakById(name:String): List&lt;Partida&gt;</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1229.03">+getPartidaTxarrenak(): List&lt;Partida&gt;</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1213.03">+getPartidaOnenak(): List&lt;Partida&gt;</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1197.03">+init(): String</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1181.03">+greatServer(): void</text>
+      <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-3617.24" y="-1165.03">+run(): void</text>
+    </g>
+    <g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 8; stroke: #000000" points="-3125.59,-1495.04 -3125.59,-1441.75 -3445.84,-1441.75 -3445.84,-1386.23 "/>
+      <polygon style="fill: #ffffff" points="-3117.59,-1495.04 -3125.59,-1511.04 -3133.59,-1495.04 "/>
+      <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="-3117.59,-1495.04 -3125.59,-1511.04 -3133.59,-1495.04 "/>
+    </g>
+  </g>
+</svg>
