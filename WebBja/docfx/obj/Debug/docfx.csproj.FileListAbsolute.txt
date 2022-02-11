@@ -8,3 +8,13 @@ C:\Users\suinaga.jon\Documents\BJA\WebBja\docfx\obj\Debug\docfx.csproj.GenerateR
 C:\Users\suinaga.jon\Documents\BJA\WebBja\docfx\obj\Debug\docfx.csproj.CoreCompileInputs.cache
 C:\Users\suinaga.jon\Documents\BJA\WebBja\docfx\obj\Debug\docfx.exe
 C:\Users\suinaga.jon\Documents\BJA\WebBja\docfx\obj\Debug\docfx.pdb
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\bin\Debug\docfx.exe.config
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\bin\Debug\docfx.xml
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\bin\Debug\docfx.exe
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\bin\Debug\docfx.pdb
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\obj\Debug\docfx.csproj.AssemblyReference.cache
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\obj\Debug\docfx.Properties.Resources.resources
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\obj\Debug\docfx.csproj.GenerateResource.cache
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\obj\Debug\docfx.csproj.CoreCompileInputs.cache
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\obj\Debug\docfx.exe
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\docfx\obj\Debug\docfx.pdb

@@ -248,37 +248,6 @@ public class DataConnect extends Thread {
     }
 
 
-  /*  public ArrayList<String> json() throws JSONException {
-
-        ArrayList<String> a = new ArrayList<>();
-
-
-        int i=0;
-        for (Partida p : getPartidas()) {
-            JSONObject datos = new JSONObject();
-            datos.put("id",i++);
-            JSONObject jokalariObj = new JSONObject();
-
-            jokalariObj.put("dni", p.getJokalaria().getDni());
-            jokalariObj.put("name", p.getJokalaria().getName());
-            jokalariObj.put("surname", p.getJokalaria().getSurname());
-            jokalariObj.put("saldo", p.getJokalaria().getSaldo());
-
-
-            JSONObject partidaObj = new JSONObject();
-            partidaObj.put("puntuacion", p.getPuntuacion());
-            partidaObj.put("fecha", p.printFecha());
-            partidaObj.put("jokalaria", jokalariObj);
-
-            datos.put("partida",partidaObj);
-
-            a.add(datos.toString());
-        }
-
-
-        return a;
-
-    }*/
 
     public String datosJson() throws JSONException {
         String s="[";
@@ -340,51 +309,4 @@ public class DataConnect extends Thread {
         t2.start();
     }
 
-   /*public void connectSocket(){
-        Thread t2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                try {
-                    socketZerbitzareakin = new Socket("192.168.65.17", 12345);  	// Zerbitzariarekin konektatzen saiatuko naiz
-
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
-        t2.start();
-    }*/
-   /* public void connectSocket2(){
-        Thread t2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-
-                    os = socketZerbitzareakin.getOutputStream();		// Zerbitzariari idazteko zabaldutako OutputStream
-                    dout = new DataOutputStream(os);  				// OutputStream-arekin lan egiteko objektu bat
-
-                    if(datosJson() == "agur") {
-                        try {
-                            dout.close();
-                            os.close();
-                            socketZerbitzareakin.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    } else {
-                        Log.d("json",datosJson());
-                        dout.writeUTF(datosJson());  								// Zerbitzariari bidalitako mezua
-
-                    }
-                } catch (IOException | JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
-        t2.start();
-    }*/
 }

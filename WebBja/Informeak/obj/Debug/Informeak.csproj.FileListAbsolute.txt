@@ -7,3 +7,12 @@ C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\bin\Debug\Informeak.exe
 C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\bin\Debug\Informeak.pdb
 C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\obj\Debug\Informeak.exe
 C:\Users\suinaga.jon\Documents\BJA\WebBja\Informeak\obj\Debug\Informeak.pdb
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\bin\Debug\Informeak.exe.config
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\bin\Debug\Informeak.exe
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\bin\Debug\Informeak.pdb
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\obj\Debug\Informeak.csproj.AssemblyReference.cache
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\obj\Debug\Informeak.Properties.Resources.resources
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\obj\Debug\Informeak.csproj.GenerateResource.cache
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\obj\Debug\Informeak.csproj.CoreCompileInputs.cache
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\obj\Debug\Informeak.exe
+C:\Users\blazquez.asier\Documents\DAM2\Erronka3\BJA\WebBja\Informeak\obj\Debug\Informeak.pdb
